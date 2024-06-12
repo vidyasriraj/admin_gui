@@ -1,0 +1,21 @@
+<RCC>
+    <qresource prefix="/logos">
+        <file>images/Align Text Left.png</file>
+        <file>images/CMakeLists.txt.user</file>
+        <file>images/Dashboard Layout.png</file>
+        <file>images/connect_icon.png</file>
+        <file>images/Group 9.png</file>
+        <file>images/Group 11.png</file>
+        <file>images/Info.png</file>
+        <file>images/Menu.png</file>
+        <file>images/qaig_logo.png</file>
+        <file>images/Ellipse 3.png</file>
+        <file>images/Group 10.png</file>
+        <file>images/connected_icon.png</file>
+        <file>images/connection.svg</file>
+        <file>images/clock.png</file>
+        <file>images/Downloading.png</file>
+        <file>images/upload.png</file>
+        <file>images/location.png</file>
+    </qresource>
+</RCC>
