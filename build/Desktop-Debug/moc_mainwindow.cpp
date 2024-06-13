@@ -50,7 +50,12 @@ constexpr auto qt_meta_stringdata_CLASSMainWindowENDCLASS = QtMocHelpers::string
     "setDashBoardPage",
     "setLogsPage",
     "setSettingsPage",
-    "setInfoPage"
+    "setInfoPage",
+    "setSettings",
+    "selectedSettingsBtn",
+    "setGeneralSettings",
+    "setProxySettings",
+    "setAdvancedSettings"
 );
 #else  // !QT_MOC_HAS_STRINGDATA
 #error "qtmochelpers.h not found or too old."
@@ -63,7 +68,7 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSMainWindowENDCLASS[] = {
       12,       // revision
        0,       // classname
        0,    0, // classinfo
-       9,   14, // methods
+      13,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -71,15 +76,19 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSMainWindowENDCLASS[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,   68,    2, 0x08,    1 /* Private */,
-       3,    0,   69,    2, 0x08,    2 /* Private */,
-       4,    0,   70,    2, 0x08,    3 /* Private */,
-       5,    2,   71,    2, 0x08,    4 /* Private */,
-       8,    2,   76,    2, 0x08,    7 /* Private */,
-      12,    0,   81,    2, 0x08,   10 /* Private */,
-      13,    0,   82,    2, 0x08,   11 /* Private */,
-      14,    0,   83,    2, 0x08,   12 /* Private */,
-      15,    0,   84,    2, 0x08,   13 /* Private */,
+       1,    0,   92,    2, 0x08,    1 /* Private */,
+       3,    0,   93,    2, 0x08,    2 /* Private */,
+       4,    0,   94,    2, 0x08,    3 /* Private */,
+       5,    2,   95,    2, 0x08,    4 /* Private */,
+       8,    2,  100,    2, 0x08,    7 /* Private */,
+      12,    0,  105,    2, 0x08,   10 /* Private */,
+      13,    0,  106,    2, 0x08,   11 /* Private */,
+      14,    0,  107,    2, 0x08,   12 /* Private */,
+      15,    0,  108,    2, 0x08,   13 /* Private */,
+      16,    2,  109,    2, 0x08,   14 /* Private */,
+      18,    0,  114,    2, 0x08,   17 /* Private */,
+      19,    0,  115,    2, 0x08,   18 /* Private */,
+      20,    0,  116,    2, 0x08,   19 /* Private */,
 
  // slots: parameters
     QMetaType::Void,
@@ -88,6 +97,10 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSMainWindowENDCLASS[] = {
     QMetaType::Void, QMetaType::QPixmap, QMetaType::QReal,    6,    7,
     QMetaType::Void, QMetaType::Int, 0x80000000 | 10,    9,   11,
     QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void, QMetaType::Int, 0x80000000 | 10,    9,   17,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
@@ -125,6 +138,16 @@ Q_CONSTINIT const QMetaObject MainWindow::staticMetaObject = { {
         // method 'setSettingsPage'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'setInfoPage'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'setSettings'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<int, std::false_type>,
+        QtPrivate::TypeAndForceComplete<QPushButton *, std::false_type>,
+        // method 'setGeneralSettings'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'setProxySettings'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'setAdvancedSettings'
         QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
     nullptr
@@ -145,12 +168,23 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 6: _t->setLogsPage(); break;
         case 7: _t->setSettingsPage(); break;
         case 8: _t->setInfoPage(); break;
+        case 9: _t->setSettings((*reinterpret_cast< std::add_pointer_t<int>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QPushButton*>>(_a[2]))); break;
+        case 10: _t->setGeneralSettings(); break;
+        case 11: _t->setProxySettings(); break;
+        case 12: _t->setAdvancedSettings(); break;
         default: ;
         }
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
         switch (_id) {
         default: *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType(); break;
         case 4:
+            switch (*reinterpret_cast<int*>(_a[1])) {
+            default: *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType(); break;
+            case 1:
+                *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType::fromType< QPushButton* >(); break;
+            }
+            break;
+        case 9:
             switch (*reinterpret_cast<int*>(_a[1])) {
             default: *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType(); break;
             case 1:
@@ -180,13 +214,13 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 9)
+        if (_id < 13)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 9;
+        _id -= 13;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 9)
+        if (_id < 13)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 9;
+        _id -= 13;
     }
     return _id;
 }

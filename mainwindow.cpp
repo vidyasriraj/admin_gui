@@ -14,6 +14,7 @@ MainWindow::MainWindow(QWidget *parent)
     this->resize(900, 600);
 
     previousButton = nullptr;
+    previousSettings = nullptr;
 
     setDashBoardPage();
     ui->expandedNav->hide();
@@ -23,13 +24,22 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->expandedNavBtn, SIGNAL(clicked(bool)), this, SLOT(hideExpandeded()));
     connect(ui->connectIcon, SIGNAL(clicked(bool)), this, SLOT(connectServer()));
 
-
+    // page navigation signals
     connect(ui->compressedDashboardBtn, SIGNAL(clicked()), this, SLOT(setDashBoardPage()));
     connect(ui->expandedDashboardBtn, SIGNAL(clicked()), this, SLOT(setDashBoardPage()));
     connect(ui->compressedLogsBtn, SIGNAL(clicked()), this, SLOT(setLogsPage()));
     connect(ui->expandedLogsBtn, SIGNAL(clicked()), this, SLOT(setLogsPage()));
     connect(ui->compressedSettingsBtn, SIGNAL(clicked()), this, SLOT(setSettingsPage()));
     connect(ui->expandedSettingsBtn, SIGNAL(clicked()), this, SLOT(setSettingsPage()));
+    connect(ui->compressedInfoBtn, SIGNAL(clicked()), this, SLOT(setInfoPage()));
+    connect(ui->expandedInfoBtn, SIGNAL(clicked()), this, SLOT(setInfoPage()));
+
+    // settings navigation signals
+    setGeneralSettings();
+
+    connect(ui->generalSettingsBtn, SIGNAL(clicked()), this, SLOT(setGeneralSettings()));
+    connect(ui->proxySettingsBtn, SIGNAL(clicked()), this, SLOT(setProxySettings()));
+    connect(ui->advancedSettingsBtn, SIGNAL(clicked()), this, SLOT(setAdvancedSettings()));
 }
 
 MainWindow::~MainWindow()
@@ -100,8 +110,6 @@ void MainWindow::setLogsPage() {
     shadowEffect->setOffset(5, 5);
     shadowEffect->setColor(Qt::black);
     ui->logsContainer->setGraphicsEffect(shadowEffect);
-
-    // ui->logsContainer->setSpacing(15);
 }
 
 void MainWindow::setSettingsPage() {
@@ -110,6 +118,12 @@ void MainWindow::setSettingsPage() {
 
 void MainWindow::setInfoPage() {
     setViewPage(3, ui->expandedInfoBtn);
+
+    QGraphicsDropShadowEffect *shadowEffect = new QGraphicsDropShadowEffect(this);
+    shadowEffect->setBlurRadius(10);
+    shadowEffect->setOffset(5, 5);
+    shadowEffect->setColor(Qt::black);
+    ui->infoContainer->setGraphicsEffect(shadowEffect);
 }
 
 void MainWindow::setViewPage(int index, QPushButton *clickedButton) {
@@ -124,4 +138,33 @@ void MainWindow::setViewPage(int index, QPushButton *clickedButton) {
     }
 
     previousButton = clickedButton;
+}
+
+
+// set settings
+
+void MainWindow:: setGeneralSettings() {
+    setSettings(0, ui->generalSettingsBtn);
+}
+
+void MainWindow:: setProxySettings() {
+    setSettings(1, ui->proxySettingsBtn);
+}
+
+void MainWindow:: setAdvancedSettings() {
+    setSettings(2, ui->advancedSettingsBtn);
+}
+
+void MainWindow::setSettings(int index, QPushButton *selectedSettingsBtn) {
+    ui->stackedSettingsView->setCurrentIndex(index);
+
+    if (selectedSettingsBtn != nullptr) {
+        selectedSettingsBtn->setStyleSheet("background-color: rgba(45, 50, 51, 1); padding-left: 8px;");
+    }
+
+    if (previousSettings != nullptr && previousSettings != selectedSettingsBtn) {
+        previousSettings->setStyleSheet("background-color: transparent; padding-left: 8px;");
+    }
+
+    previousSettings = selectedSettingsBtn;
 }

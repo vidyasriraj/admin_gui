@@ -23,15 +23,24 @@ private slots:
     void hideExpandeded();
     void connectServer();
     void setConnectedIcon(const QPixmap &pixmap, qreal opacity);
+
+    // changing navigations function
     void setViewPage(int index, QPushButton *clickedButton);
     void setDashBoardPage();
     void setLogsPage();
     void setSettingsPage();
     void setInfoPage();
 
+    // changing settings
+    void setSettings(int index, QPushButton *selectedSettingsBtn);
+    void setGeneralSettings();
+    void setProxySettings();
+    void setAdvancedSettings();
+
 private:
     Ui::MainWindow *ui;
     QPushButton *previousButton;
+    QPushButton *previousSettings;
     QPixmap setPixmapOpacity(const QPixmap &pixmap, qreal opacity);
 };
 #endif // MAINWINDOW_H
