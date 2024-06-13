@@ -100,6 +100,8 @@ void MainWindow::setLogsPage() {
     shadowEffect->setOffset(5, 5);
     shadowEffect->setColor(Qt::black);
     ui->logsContainer->setGraphicsEffect(shadowEffect);
+
+    // ui->logsContainer->setSpacing(15);
 }
 
 void MainWindow::setSettingsPage() {
