@@ -708,7 +708,7 @@ outline: none;
            <item>
             <layout class="QHBoxLayout" name="connectionStatsLayout">
              <item>
-              <widget class="QFrame" name="frame">
+              <widget class="QFrame" name="uploadFrame">
                <property name="maximumSize">
                 <size>
                  <width>16777215</width>
@@ -728,7 +728,7 @@ text-align: center;</string>
                </property>
                <layout class="QVBoxLayout" name="verticalLayout_2">
                 <item alignment="Qt::AlignHCenter">
-                 <widget class="QPushButton" name="pushButton">
+                 <widget class="QPushButton" name="uploadIconAndText">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                     <horstretch>0</horstretch>
@@ -757,7 +757,7 @@ text-align: center;</string>
                  </widget>
                 </item>
                 <item alignment="Qt::AlignHCenter">
-                 <widget class="QLabel" name="label_3">
+                 <widget class="QLabel" name="uploadSpeedvalue">
                   <property name="font">
                    <font>
                     <pointsize>14</pointsize>
@@ -776,7 +776,7 @@ text-align: center;</string>
               </widget>
              </item>
              <item>
-              <widget class="QFrame" name="frame_4">
+              <widget class="QFrame" name="downloadFrame">
                <property name="maximumSize">
                 <size>
                  <width>16777215</width>
@@ -796,7 +796,7 @@ text-align: center;</string>
                </property>
                <layout class="QVBoxLayout" name="verticalLayout_3">
                 <item alignment="Qt::AlignHCenter">
-                 <widget class="QPushButton" name="pushButton_2">
+                 <widget class="QPushButton" name="downloadIconAndText">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                     <horstretch>0</horstretch>
@@ -825,7 +825,7 @@ text-align: center;</string>
                  </widget>
                 </item>
                 <item alignment="Qt::AlignHCenter">
-                 <widget class="QLabel" name="label_4">
+                 <widget class="QLabel" name="downloadSpeedvalue">
                   <property name="font">
                    <font>
                     <pointsize>14</pointsize>
@@ -844,7 +844,7 @@ text-align: center;</string>
               </widget>
              </item>
              <item>
-              <widget class="QFrame" name="frame_3">
+              <widget class="QFrame" name="upTimeFrame">
                <property name="maximumSize">
                 <size>
                  <width>16777215</width>
@@ -864,7 +864,7 @@ text-align: center;</string>
                </property>
                <layout class="QVBoxLayout" name="verticalLayout_4">
                 <item alignment="Qt::AlignHCenter">
-                 <widget class="QPushButton" name="pushButton_3">
+                 <widget class="QPushButton" name="upTimeIconAndText">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                     <horstretch>0</horstretch>
@@ -893,7 +893,7 @@ text-align: center;</string>
                  </widget>
                 </item>
                 <item alignment="Qt::AlignHCenter">
-                 <widget class="QLabel" name="label_5">
+                 <widget class="QLabel" name="upTimeValue">
                   <property name="font">
                    <font>
                     <pointsize>14</pointsize>
@@ -912,7 +912,7 @@ text-align: center;</string>
               </widget>
              </item>
              <item>
-              <widget class="QFrame" name="frame_2">
+              <widget class="QFrame" name="ipAddressFrame">
                <property name="maximumSize">
                 <size>
                  <width>16777215</width>
@@ -932,7 +932,7 @@ text-align: center;</string>
                </property>
                <layout class="QVBoxLayout" name="verticalLayout_5">
                 <item alignment="Qt::AlignHCenter">
-                 <widget class="QPushButton" name="pushButton_4">
+                 <widget class="QPushButton" name="ipAddressIconAndText">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                     <horstretch>0</horstretch>
@@ -961,7 +961,7 @@ text-align: center;</string>
                  </widget>
                 </item>
                 <item alignment="Qt::AlignHCenter">
-                 <widget class="QLabel" name="label_2">
+                 <widget class="QLabel" name="ipAddressValue">
                   <property name="font">
                    <font>
                     <pointsize>15</pointsize>
@@ -1002,12 +1002,12 @@ text-align: center;</string>
             <number>19</number>
            </property>
            <item row="2" column="0">
-            <layout class="QHBoxLayout" name="horizontalLayout_4">
+            <layout class="QHBoxLayout" name="logsBodyHorizontalLayout">
              <property name="spacing">
               <number>6</number>
              </property>
              <item>
-              <spacer name="horizontalSpacer_3">
+              <spacer name="LogsHorizontalSpacerLeft">
                <property name="orientation">
                 <enum>Qt::Horizontal</enum>
                </property>
@@ -1451,7 +1451,7 @@ Wed Jun 12 14:36:55 2024 us=634721 UDP WRITE [76] to [AF_INET]100.25.183.23:1194
               </widget>
              </item>
              <item>
-              <spacer name="horizontalSpacer_4">
+              <spacer name="LogsHorizontalSpacerRight">
                <property name="orientation">
                 <enum>Qt::Horizontal</enum>
                </property>
@@ -1466,7 +1466,7 @@ Wed Jun 12 14:36:55 2024 us=634721 UDP WRITE [76] to [AF_INET]100.25.183.23:1194
             </layout>
            </item>
            <item row="1" column="0">
-            <layout class="QHBoxLayout" name="horizontalLayout_2">
+            <layout class="QHBoxLayout" name="logsLogoLayout">
              <property name="topMargin">
               <number>8</number>
              </property>
@@ -1499,7 +1499,7 @@ outline: none;
               </widget>
              </item>
              <item>
-              <spacer name="horizontalSpacer">
+              <spacer name="logsLogoLayoutHorizontalSpacer">
                <property name="orientation">
                 <enum>Qt::Horizontal</enum>
                </property>
@@ -1609,7 +1609,7 @@ text-align: left;
                <number>0</number>
               </property>
               <item alignment="Qt::AlignHCenter">
-               <widget class="QLabel" name="label_7">
+               <widget class="QLabel" name="settingsTitle">
                 <property name="font">
                  <font>
                   <pointsize>14</pointsize>
@@ -2507,7 +2507,7 @@ outline: none;
            <item row="2" column="0" rowspan="2">
             <layout class="QHBoxLayout" name="infoContainerLayout">
              <item>
-              <spacer name="horizontalSpacer_5">
+              <spacer name="InfohorizontalSpacerLeft">
                <property name="orientation">
                 <enum>Qt::Horizontal</enum>
                </property>
@@ -2556,7 +2556,7 @@ border-radius: &quot;20px&quot;;
                  <number>15</number>
                 </property>
                 <item row="2" column="0">
-                 <widget class="QLabel" name="label_6">
+                 <widget class="QLabel" name="infoDescription">
                   <property name="font">
                    <font>
                     <family>Sans Serif</family>
@@ -2620,7 +2620,7 @@ outline: none;
               </widget>
              </item>
              <item>
-              <spacer name="horizontalSpacer_6">
+              <spacer name="InfohorizontalSpacerRight">
                <property name="orientation">
                 <enum>Qt::Horizontal</enum>
                </property>

@@ -36,9 +36,9 @@ namespace {
 struct qt_meta_stringdata_CLASSMainWindowENDCLASS_t {};
 constexpr auto qt_meta_stringdata_CLASSMainWindowENDCLASS = QtMocHelpers::stringData(
     "MainWindow",
-    "hideCompressed",
+    "showExpandedNavbar",
     "",
-    "hideExpandeded",
+    "showCompressedNavbar",
     "connectServer",
     "setConnectedIcon",
     "pixmap",
@@ -117,9 +117,9 @@ Q_CONSTINIT const QMetaObject MainWindow::staticMetaObject = { {
     qt_incomplete_metaTypeArray<qt_meta_stringdata_CLASSMainWindowENDCLASS_t,
         // Q_OBJECT / Q_GADGET
         QtPrivate::TypeAndForceComplete<MainWindow, std::true_type>,
-        // method 'hideCompressed'
+        // method 'showExpandedNavbar'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        // method 'hideExpandeded'
+        // method 'showCompressedNavbar'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'connectServer'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
@@ -159,8 +159,8 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         auto *_t = static_cast<MainWindow *>(_o);
         (void)_t;
         switch (_id) {
-        case 0: _t->hideCompressed(); break;
-        case 1: _t->hideExpandeded(); break;
+        case 0: _t->showExpandedNavbar(); break;
+        case 1: _t->showCompressedNavbar(); break;
         case 2: _t->connectServer(); break;
         case 3: _t->setConnectedIcon((*reinterpret_cast< std::add_pointer_t<QPixmap>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<qreal>>(_a[2]))); break;
         case 4: _t->setViewPage((*reinterpret_cast< std::add_pointer_t<int>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QPushButton*>>(_a[2]))); break;

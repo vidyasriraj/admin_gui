@@ -65,26 +65,26 @@ public:
     QPushButton *connectIcon;
     QLabel *connectText;
     QHBoxLayout *connectionStatsLayout;
-    QFrame *frame;
+    QFrame *uploadFrame;
     QVBoxLayout *verticalLayout_2;
-    QPushButton *pushButton;
-    QLabel *label_3;
-    QFrame *frame_4;
+    QPushButton *uploadIconAndText;
+    QLabel *uploadSpeedvalue;
+    QFrame *downloadFrame;
     QVBoxLayout *verticalLayout_3;
-    QPushButton *pushButton_2;
-    QLabel *label_4;
-    QFrame *frame_3;
+    QPushButton *downloadIconAndText;
+    QLabel *downloadSpeedvalue;
+    QFrame *upTimeFrame;
     QVBoxLayout *verticalLayout_4;
-    QPushButton *pushButton_3;
-    QLabel *label_5;
-    QFrame *frame_2;
+    QPushButton *upTimeIconAndText;
+    QLabel *upTimeValue;
+    QFrame *ipAddressFrame;
     QVBoxLayout *verticalLayout_5;
-    QPushButton *pushButton_4;
-    QLabel *label_2;
+    QPushButton *ipAddressIconAndText;
+    QLabel *ipAddressValue;
     QWidget *logsPage;
     QGridLayout *gridLayout_6;
-    QHBoxLayout *horizontalLayout_4;
-    QSpacerItem *horizontalSpacer_3;
+    QHBoxLayout *logsBodyHorizontalLayout;
+    QSpacerItem *LogsHorizontalSpacerLeft;
     QFrame *logsContainer;
     QGridLayout *gridLayout_5;
     QScrollArea *scrollArea;
@@ -92,16 +92,16 @@ public:
     QGridLayout *gridLayout_7;
     QLabel *logsBody;
     QLabel *logsTitle;
-    QSpacerItem *horizontalSpacer_4;
-    QHBoxLayout *horizontalLayout_2;
+    QSpacerItem *LogsHorizontalSpacerRight;
+    QHBoxLayout *logsLogoLayout;
     QLabel *label;
-    QSpacerItem *horizontalSpacer;
+    QSpacerItem *logsLogoLayoutHorizontalSpacer;
     QLabel *user;
     QWidget *settingsPage;
     QGridLayout *gridLayout_8;
     QFrame *selectSettingsFrame;
     QVBoxLayout *verticalLayout_9;
-    QLabel *label_7;
+    QLabel *settingsTitle;
     QPushButton *generalSettingsBtn;
     QPushButton *proxySettingsBtn;
     QPushButton *advancedSettingsBtn;
@@ -161,13 +161,13 @@ public:
     QGridLayout *gridLayout_10;
     QLabel *userLogoInfo;
     QHBoxLayout *infoContainerLayout;
-    QSpacerItem *horizontalSpacer_5;
+    QSpacerItem *InfohorizontalSpacerLeft;
     QFrame *infoContainer;
     QGridLayout *gridLayout_9;
-    QLabel *label_6;
+    QLabel *infoDescription;
     QLabel *infoTitle;
     QLabel *quantumLogoInfo;
-    QSpacerItem *horizontalSpacer_6;
+    QSpacerItem *InfohorizontalSpacerRight;
 
     void setupUi(QMainWindow *MainWindow)
     {
@@ -471,136 +471,136 @@ public:
 
         connectionStatsLayout = new QHBoxLayout();
         connectionStatsLayout->setObjectName("connectionStatsLayout");
-        frame = new QFrame(dashboardPage);
-        frame->setObjectName("frame");
-        frame->setMaximumSize(QSize(16777215, 130));
-        frame->setStyleSheet(QString::fromUtf8("background-color: \"#545759\";\n"
+        uploadFrame = new QFrame(dashboardPage);
+        uploadFrame->setObjectName("uploadFrame");
+        uploadFrame->setMaximumSize(QSize(16777215, 130));
+        uploadFrame->setStyleSheet(QString::fromUtf8("background-color: \"#545759\";\n"
 "border-radius: \"12px\";\n"
 "text-align: center;"));
-        frame->setFrameShape(QFrame::StyledPanel);
-        frame->setFrameShadow(QFrame::Raised);
-        verticalLayout_2 = new QVBoxLayout(frame);
+        uploadFrame->setFrameShape(QFrame::StyledPanel);
+        uploadFrame->setFrameShadow(QFrame::Raised);
+        verticalLayout_2 = new QVBoxLayout(uploadFrame);
         verticalLayout_2->setObjectName("verticalLayout_2");
-        pushButton = new QPushButton(frame);
-        pushButton->setObjectName("pushButton");
-        sizePolicy.setHeightForWidth(pushButton->sizePolicy().hasHeightForWidth());
-        pushButton->setSizePolicy(sizePolicy);
+        uploadIconAndText = new QPushButton(uploadFrame);
+        uploadIconAndText->setObjectName("uploadIconAndText");
+        sizePolicy.setHeightForWidth(uploadIconAndText->sizePolicy().hasHeightForWidth());
+        uploadIconAndText->setSizePolicy(sizePolicy);
         QFont font2;
         font2.setPointSize(16);
         font2.setWeight(QFont::Black);
-        pushButton->setFont(font2);
+        uploadIconAndText->setFont(font2);
         QIcon icon6;
         icon6.addFile(QString::fromUtf8(":/logos/images/upload.png"), QSize(), QIcon::Normal, QIcon::Off);
-        pushButton->setIcon(icon6);
-        pushButton->setIconSize(QSize(30, 30));
+        uploadIconAndText->setIcon(icon6);
+        uploadIconAndText->setIconSize(QSize(30, 30));
 
-        verticalLayout_2->addWidget(pushButton, 0, Qt::AlignHCenter);
+        verticalLayout_2->addWidget(uploadIconAndText, 0, Qt::AlignHCenter);
 
-        label_3 = new QLabel(frame);
-        label_3->setObjectName("label_3");
+        uploadSpeedvalue = new QLabel(uploadFrame);
+        uploadSpeedvalue->setObjectName("uploadSpeedvalue");
         QFont font3;
         font3.setPointSize(14);
         font3.setWeight(QFont::DemiBold);
-        label_3->setFont(font3);
-        label_3->setStyleSheet(QString::fromUtf8("text-align: center;"));
+        uploadSpeedvalue->setFont(font3);
+        uploadSpeedvalue->setStyleSheet(QString::fromUtf8("text-align: center;"));
 
-        verticalLayout_2->addWidget(label_3, 0, Qt::AlignHCenter);
+        verticalLayout_2->addWidget(uploadSpeedvalue, 0, Qt::AlignHCenter);
 
 
-        connectionStatsLayout->addWidget(frame);
+        connectionStatsLayout->addWidget(uploadFrame);
 
-        frame_4 = new QFrame(dashboardPage);
-        frame_4->setObjectName("frame_4");
-        frame_4->setMaximumSize(QSize(16777215, 130));
-        frame_4->setStyleSheet(QString::fromUtf8("background-color: \"#545759\";\n"
+        downloadFrame = new QFrame(dashboardPage);
+        downloadFrame->setObjectName("downloadFrame");
+        downloadFrame->setMaximumSize(QSize(16777215, 130));
+        downloadFrame->setStyleSheet(QString::fromUtf8("background-color: \"#545759\";\n"
 "border-radius: \"12px\";\n"
 "text-align: center;"));
-        frame_4->setFrameShape(QFrame::StyledPanel);
-        frame_4->setFrameShadow(QFrame::Raised);
-        verticalLayout_3 = new QVBoxLayout(frame_4);
+        downloadFrame->setFrameShape(QFrame::StyledPanel);
+        downloadFrame->setFrameShadow(QFrame::Raised);
+        verticalLayout_3 = new QVBoxLayout(downloadFrame);
         verticalLayout_3->setObjectName("verticalLayout_3");
-        pushButton_2 = new QPushButton(frame_4);
-        pushButton_2->setObjectName("pushButton_2");
-        sizePolicy.setHeightForWidth(pushButton_2->sizePolicy().hasHeightForWidth());
-        pushButton_2->setSizePolicy(sizePolicy);
-        pushButton_2->setFont(font2);
-        pushButton_2->setIcon(icon6);
-        pushButton_2->setIconSize(QSize(30, 30));
+        downloadIconAndText = new QPushButton(downloadFrame);
+        downloadIconAndText->setObjectName("downloadIconAndText");
+        sizePolicy.setHeightForWidth(downloadIconAndText->sizePolicy().hasHeightForWidth());
+        downloadIconAndText->setSizePolicy(sizePolicy);
+        downloadIconAndText->setFont(font2);
+        downloadIconAndText->setIcon(icon6);
+        downloadIconAndText->setIconSize(QSize(30, 30));
 
-        verticalLayout_3->addWidget(pushButton_2, 0, Qt::AlignHCenter);
+        verticalLayout_3->addWidget(downloadIconAndText, 0, Qt::AlignHCenter);
 
-        label_4 = new QLabel(frame_4);
-        label_4->setObjectName("label_4");
-        label_4->setFont(font3);
-        label_4->setStyleSheet(QString::fromUtf8("text-align: center;"));
+        downloadSpeedvalue = new QLabel(downloadFrame);
+        downloadSpeedvalue->setObjectName("downloadSpeedvalue");
+        downloadSpeedvalue->setFont(font3);
+        downloadSpeedvalue->setStyleSheet(QString::fromUtf8("text-align: center;"));
 
-        verticalLayout_3->addWidget(label_4, 0, Qt::AlignHCenter);
+        verticalLayout_3->addWidget(downloadSpeedvalue, 0, Qt::AlignHCenter);
 
 
-        connectionStatsLayout->addWidget(frame_4);
+        connectionStatsLayout->addWidget(downloadFrame);
 
-        frame_3 = new QFrame(dashboardPage);
-        frame_3->setObjectName("frame_3");
-        frame_3->setMaximumSize(QSize(16777215, 130));
-        frame_3->setStyleSheet(QString::fromUtf8("background-color: \"#545759\";\n"
+        upTimeFrame = new QFrame(dashboardPage);
+        upTimeFrame->setObjectName("upTimeFrame");
+        upTimeFrame->setMaximumSize(QSize(16777215, 130));
+        upTimeFrame->setStyleSheet(QString::fromUtf8("background-color: \"#545759\";\n"
 "border-radius: \"12px\";\n"
 "text-align: center;"));
-        frame_3->setFrameShape(QFrame::StyledPanel);
-        frame_3->setFrameShadow(QFrame::Raised);
-        verticalLayout_4 = new QVBoxLayout(frame_3);
+        upTimeFrame->setFrameShape(QFrame::StyledPanel);
+        upTimeFrame->setFrameShadow(QFrame::Raised);
+        verticalLayout_4 = new QVBoxLayout(upTimeFrame);
         verticalLayout_4->setObjectName("verticalLayout_4");
-        pushButton_3 = new QPushButton(frame_3);
-        pushButton_3->setObjectName("pushButton_3");
-        sizePolicy.setHeightForWidth(pushButton_3->sizePolicy().hasHeightForWidth());
-        pushButton_3->setSizePolicy(sizePolicy);
-        pushButton_3->setFont(font2);
-        pushButton_3->setIcon(icon6);
-        pushButton_3->setIconSize(QSize(30, 30));
+        upTimeIconAndText = new QPushButton(upTimeFrame);
+        upTimeIconAndText->setObjectName("upTimeIconAndText");
+        sizePolicy.setHeightForWidth(upTimeIconAndText->sizePolicy().hasHeightForWidth());
+        upTimeIconAndText->setSizePolicy(sizePolicy);
+        upTimeIconAndText->setFont(font2);
+        upTimeIconAndText->setIcon(icon6);
+        upTimeIconAndText->setIconSize(QSize(30, 30));
 
-        verticalLayout_4->addWidget(pushButton_3, 0, Qt::AlignHCenter);
+        verticalLayout_4->addWidget(upTimeIconAndText, 0, Qt::AlignHCenter);
 
-        label_5 = new QLabel(frame_3);
-        label_5->setObjectName("label_5");
-        label_5->setFont(font3);
-        label_5->setStyleSheet(QString::fromUtf8("text-align: center;"));
+        upTimeValue = new QLabel(upTimeFrame);
+        upTimeValue->setObjectName("upTimeValue");
+        upTimeValue->setFont(font3);
+        upTimeValue->setStyleSheet(QString::fromUtf8("text-align: center;"));
 
-        verticalLayout_4->addWidget(label_5, 0, Qt::AlignHCenter);
+        verticalLayout_4->addWidget(upTimeValue, 0, Qt::AlignHCenter);
 
 
-        connectionStatsLayout->addWidget(frame_3);
+        connectionStatsLayout->addWidget(upTimeFrame);
 
-        frame_2 = new QFrame(dashboardPage);
-        frame_2->setObjectName("frame_2");
-        frame_2->setMaximumSize(QSize(16777215, 130));
-        frame_2->setStyleSheet(QString::fromUtf8("background-color: \"#545759\";\n"
+        ipAddressFrame = new QFrame(dashboardPage);
+        ipAddressFrame->setObjectName("ipAddressFrame");
+        ipAddressFrame->setMaximumSize(QSize(16777215, 130));
+        ipAddressFrame->setStyleSheet(QString::fromUtf8("background-color: \"#545759\";\n"
 "border-radius: \"12px\";\n"
 "text-align: center;"));
-        frame_2->setFrameShape(QFrame::StyledPanel);
-        frame_2->setFrameShadow(QFrame::Raised);
-        verticalLayout_5 = new QVBoxLayout(frame_2);
+        ipAddressFrame->setFrameShape(QFrame::StyledPanel);
+        ipAddressFrame->setFrameShadow(QFrame::Raised);
+        verticalLayout_5 = new QVBoxLayout(ipAddressFrame);
         verticalLayout_5->setObjectName("verticalLayout_5");
-        pushButton_4 = new QPushButton(frame_2);
-        pushButton_4->setObjectName("pushButton_4");
-        sizePolicy.setHeightForWidth(pushButton_4->sizePolicy().hasHeightForWidth());
-        pushButton_4->setSizePolicy(sizePolicy);
-        pushButton_4->setFont(font2);
-        pushButton_4->setIcon(icon6);
-        pushButton_4->setIconSize(QSize(30, 30));
+        ipAddressIconAndText = new QPushButton(ipAddressFrame);
+        ipAddressIconAndText->setObjectName("ipAddressIconAndText");
+        sizePolicy.setHeightForWidth(ipAddressIconAndText->sizePolicy().hasHeightForWidth());
+        ipAddressIconAndText->setSizePolicy(sizePolicy);
+        ipAddressIconAndText->setFont(font2);
+        ipAddressIconAndText->setIcon(icon6);
+        ipAddressIconAndText->setIconSize(QSize(30, 30));
 
-        verticalLayout_5->addWidget(pushButton_4, 0, Qt::AlignHCenter);
+        verticalLayout_5->addWidget(ipAddressIconAndText, 0, Qt::AlignHCenter);
 
-        label_2 = new QLabel(frame_2);
-        label_2->setObjectName("label_2");
+        ipAddressValue = new QLabel(ipAddressFrame);
+        ipAddressValue->setObjectName("ipAddressValue");
         QFont font4;
         font4.setPointSize(15);
         font4.setWeight(QFont::DemiBold);
-        label_2->setFont(font4);
-        label_2->setStyleSheet(QString::fromUtf8("text-align: center;"));
+        ipAddressValue->setFont(font4);
+        ipAddressValue->setStyleSheet(QString::fromUtf8("text-align: center;"));
 
-        verticalLayout_5->addWidget(label_2, 0, Qt::AlignHCenter);
+        verticalLayout_5->addWidget(ipAddressValue, 0, Qt::AlignHCenter);
 
 
-        connectionStatsLayout->addWidget(frame_2);
+        connectionStatsLayout->addWidget(ipAddressFrame);
 
 
         verticalLayout->addLayout(connectionStatsLayout);
@@ -613,12 +613,12 @@ public:
         gridLayout_6 = new QGridLayout(logsPage);
         gridLayout_6->setObjectName("gridLayout_6");
         gridLayout_6->setContentsMargins(9, 9, 9, 19);
-        horizontalLayout_4 = new QHBoxLayout();
-        horizontalLayout_4->setSpacing(6);
-        horizontalLayout_4->setObjectName("horizontalLayout_4");
-        horizontalSpacer_3 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+        logsBodyHorizontalLayout = new QHBoxLayout();
+        logsBodyHorizontalLayout->setSpacing(6);
+        logsBodyHorizontalLayout->setObjectName("logsBodyHorizontalLayout");
+        LogsHorizontalSpacerLeft = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
 
-        horizontalLayout_4->addItem(horizontalSpacer_3);
+        logsBodyHorizontalLayout->addItem(LogsHorizontalSpacerLeft);
 
         logsContainer = new QFrame(logsPage);
         logsContainer->setObjectName("logsContainer");
@@ -714,18 +714,18 @@ public:
         gridLayout_5->addWidget(logsTitle, 0, 0, 1, 1);
 
 
-        horizontalLayout_4->addWidget(logsContainer);
+        logsBodyHorizontalLayout->addWidget(logsContainer);
 
-        horizontalSpacer_4 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+        LogsHorizontalSpacerRight = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
 
-        horizontalLayout_4->addItem(horizontalSpacer_4);
+        logsBodyHorizontalLayout->addItem(LogsHorizontalSpacerRight);
 
 
-        gridLayout_6->addLayout(horizontalLayout_4, 2, 0, 1, 1);
+        gridLayout_6->addLayout(logsBodyHorizontalLayout, 2, 0, 1, 1);
 
-        horizontalLayout_2 = new QHBoxLayout();
-        horizontalLayout_2->setObjectName("horizontalLayout_2");
-        horizontalLayout_2->setContentsMargins(-1, 8, -1, 0);
+        logsLogoLayout = new QHBoxLayout();
+        logsLogoLayout->setObjectName("logsLogoLayout");
+        logsLogoLayout->setContentsMargins(-1, 8, -1, 0);
         label = new QLabel(logsPage);
         label->setObjectName("label");
         label->setMaximumSize(QSize(90, 90));
@@ -736,11 +736,11 @@ public:
         label->setPixmap(QPixmap(QString::fromUtf8(":/logos/images/qaig_logo.png")));
         label->setScaledContents(true);
 
-        horizontalLayout_2->addWidget(label);
+        logsLogoLayout->addWidget(label);
 
-        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Policy::MinimumExpanding, QSizePolicy::Policy::Minimum);
+        logsLogoLayoutHorizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Policy::MinimumExpanding, QSizePolicy::Policy::Minimum);
 
-        horizontalLayout_2->addItem(horizontalSpacer);
+        logsLogoLayout->addItem(logsLogoLayoutHorizontalSpacer);
 
         user = new QLabel(logsPage);
         user->setObjectName("user");
@@ -754,10 +754,10 @@ public:
         user->setScaledContents(true);
         user->setMargin(10);
 
-        horizontalLayout_2->addWidget(user);
+        logsLogoLayout->addWidget(user);
 
 
-        gridLayout_6->addLayout(horizontalLayout_2, 1, 0, 1, 1);
+        gridLayout_6->addLayout(logsLogoLayout, 1, 0, 1, 1);
 
         StackedMainView->addWidget(logsPage);
         settingsPage = new QWidget();
@@ -780,16 +780,16 @@ public:
         verticalLayout_9->setSpacing(0);
         verticalLayout_9->setObjectName("verticalLayout_9");
         verticalLayout_9->setContentsMargins(0, 10, 0, 0);
-        label_7 = new QLabel(selectSettingsFrame);
-        label_7->setObjectName("label_7");
+        settingsTitle = new QLabel(selectSettingsFrame);
+        settingsTitle->setObjectName("settingsTitle");
         QFont font6;
         font6.setPointSize(14);
         font6.setWeight(QFont::ExtraBold);
-        label_7->setFont(font6);
-        label_7->setStyleSheet(QString::fromUtf8("background-color: transparent;\n"
+        settingsTitle->setFont(font6);
+        settingsTitle->setStyleSheet(QString::fromUtf8("background-color: transparent;\n"
 "margin: \"10px\";"));
 
-        verticalLayout_9->addWidget(label_7, 0, Qt::AlignHCenter);
+        verticalLayout_9->addWidget(settingsTitle, 0, Qt::AlignHCenter);
 
         generalSettingsBtn = new QPushButton(selectSettingsFrame);
         generalSettingsBtn->setObjectName("generalSettingsBtn");
@@ -1307,9 +1307,9 @@ public:
 
         infoContainerLayout = new QHBoxLayout();
         infoContainerLayout->setObjectName("infoContainerLayout");
-        horizontalSpacer_5 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+        InfohorizontalSpacerLeft = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
 
-        infoContainerLayout->addItem(horizontalSpacer_5);
+        infoContainerLayout->addItem(InfohorizontalSpacerLeft);
 
         infoContainer = new QFrame(infoPage);
         infoContainer->setObjectName("infoContainer");
@@ -1324,15 +1324,15 @@ public:
         gridLayout_9->setSpacing(15);
         gridLayout_9->setObjectName("gridLayout_9");
         gridLayout_9->setContentsMargins(15, 15, 15, 15);
-        label_6 = new QLabel(infoContainer);
-        label_6->setObjectName("label_6");
+        infoDescription = new QLabel(infoContainer);
+        infoDescription->setObjectName("infoDescription");
         QFont font12;
         font12.setFamilies({QString::fromUtf8("Sans Serif")});
         font12.setWeight(QFont::Medium);
-        label_6->setFont(font12);
-        label_6->setWordWrap(true);
+        infoDescription->setFont(font12);
+        infoDescription->setWordWrap(true);
 
-        gridLayout_9->addWidget(label_6, 2, 0, 1, 1);
+        gridLayout_9->addWidget(infoDescription, 2, 0, 1, 1);
 
         infoTitle = new QLabel(infoContainer);
         infoTitle->setObjectName("infoTitle");
@@ -1360,9 +1360,9 @@ public:
 
         infoContainerLayout->addWidget(infoContainer);
 
-        horizontalSpacer_6 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+        InfohorizontalSpacerRight = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
 
-        infoContainerLayout->addItem(horizontalSpacer_6);
+        infoContainerLayout->addItem(InfohorizontalSpacerRight);
 
 
         gridLayout_10->addLayout(infoContainerLayout, 2, 0, 2, 1);
@@ -1402,14 +1402,14 @@ public:
         userLogoDashboard->setText(QString());
         connectIcon->setText(QString());
         connectText->setText(QCoreApplication::translate("MainWindow", "Connect", nullptr));
-        pushButton->setText(QCoreApplication::translate("MainWindow", "Upload", nullptr));
-        label_3->setText(QCoreApplication::translate("MainWindow", "0.00 mb/s", nullptr));
-        pushButton_2->setText(QCoreApplication::translate("MainWindow", "Download", nullptr));
-        label_4->setText(QCoreApplication::translate("MainWindow", "0.00 mb/s", nullptr));
-        pushButton_3->setText(QCoreApplication::translate("MainWindow", "Up Time", nullptr));
-        label_5->setText(QCoreApplication::translate("MainWindow", "00:00:00", nullptr));
-        pushButton_4->setText(QCoreApplication::translate("MainWindow", "IP Address", nullptr));
-        label_2->setText(QCoreApplication::translate("MainWindow", "0.0.0.0", nullptr));
+        uploadIconAndText->setText(QCoreApplication::translate("MainWindow", "Upload", nullptr));
+        uploadSpeedvalue->setText(QCoreApplication::translate("MainWindow", "0.00 mb/s", nullptr));
+        downloadIconAndText->setText(QCoreApplication::translate("MainWindow", "Download", nullptr));
+        downloadSpeedvalue->setText(QCoreApplication::translate("MainWindow", "0.00 mb/s", nullptr));
+        upTimeIconAndText->setText(QCoreApplication::translate("MainWindow", "Up Time", nullptr));
+        upTimeValue->setText(QCoreApplication::translate("MainWindow", "00:00:00", nullptr));
+        ipAddressIconAndText->setText(QCoreApplication::translate("MainWindow", "IP Address", nullptr));
+        ipAddressValue->setText(QCoreApplication::translate("MainWindow", "0.0.0.0", nullptr));
         logsBody->setText(QCoreApplication::translate("MainWindow", "Wed Jun 12 14:36:43 2024 us=610539 TUN READ [75]\n"
 "Wed Jun 12 14:36:43 2024 us=610539 UDP WRITE [99] to [AF_INET]100.25.183.23:1194: P_DATA_V2 kid=0 DATA len=98\n"
 "Wed Jun 12 14:36:43 2024 us=611813 TUN READ [75]\n"
@@ -1722,7 +1722,7 @@ public:
         logsTitle->setText(QCoreApplication::translate("MainWindow", "Logs", nullptr));
         label->setText(QString());
         user->setText(QString());
-        label_7->setText(QCoreApplication::translate("MainWindow", "Settings", nullptr));
+        settingsTitle->setText(QCoreApplication::translate("MainWindow", "Settings", nullptr));
         generalSettingsBtn->setText(QCoreApplication::translate("MainWindow", "General", nullptr));
         proxySettingsBtn->setText(QCoreApplication::translate("MainWindow", "Proxy", nullptr));
         advancedSettingsBtn->setText(QCoreApplication::translate("MainWindow", "Advanced", nullptr));
@@ -1759,7 +1759,7 @@ public:
         label_15->setText(QCoreApplication::translate("MainWindow", "Folder", nullptr));
         label_19->setText(QCoreApplication::translate("MainWindow", "Disconnect script timeout", nullptr));
         userLogoInfo->setText(QString());
-        label_6->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p>OpenVPN GUIv11.15\343\200\2010.0 -A Windows GUI for OpenVPN<br/>Copyright (C) 2004-2005 Mathias Sundman &lt;info@openvpn.se&gt; <br/>Copyright (C) 2008-2014 Heiko Hund &lt;heikoh@users.sf.net&gt;<br/>Copyright (C)2012-2018 OpenVPN GUI contributors <br/>https://github.com/OpenVPN/openvpn-gui/ <br/><br/>OpenVPN-An application to securely tunnel lP networks over a single CP/UDP port with support for SSL/TLS-based session authentic ation and key exchange. packet encryption, packet authentication. and packet compression.<br/>Copyright (C) 2002-2018 OpenVPN Technologies. Inc &lt;info@openvpn.net&gt; https://openvpn.net</p></body></html>", nullptr));
+        infoDescription->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p>OpenVPN GUIv11.15\343\200\2010.0 -A Windows GUI for OpenVPN<br/>Copyright (C) 2004-2005 Mathias Sundman &lt;info@openvpn.se&gt; <br/>Copyright (C) 2008-2014 Heiko Hund &lt;heikoh@users.sf.net&gt;<br/>Copyright (C)2012-2018 OpenVPN GUI contributors <br/>https://github.com/OpenVPN/openvpn-gui/ <br/><br/>OpenVPN-An application to securely tunnel lP networks over a single CP/UDP port with support for SSL/TLS-based session authentic ation and key exchange. packet encryption, packet authentication. and packet compression.<br/>Copyright (C) 2002-2018 OpenVPN Technologies. Inc &lt;info@openvpn.net&gt; https://openvpn.net</p></body></html>", nullptr));
         infoTitle->setText(QCoreApplication::translate("MainWindow", "About Us", nullptr));
         quantumLogoInfo->setText(QString());
     } // retranslateUi

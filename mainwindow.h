@@ -19,8 +19,11 @@ public:
     ~MainWindow();
 
 private slots:
-    void hideCompressed();
-    void hideExpandeded();
+    // control navbar menu
+    void showExpandedNavbar();
+    void showCompressedNavbar();
+
+    // connect to the server
     void connectServer();
     void setConnectedIcon(const QPixmap &pixmap, qreal opacity);
 
@@ -39,8 +42,10 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
-    QPushButton *previousButton;
+    QPushButton *previousPage;
     QPushButton *previousSettings;
+
+    // control opacity of the icon
     QPixmap setPixmapOpacity(const QPixmap &pixmap, qreal opacity);
 };
 #endif // MAINWINDOW_H
