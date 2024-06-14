@@ -17,5 +17,6 @@
         <file>images/Downloading.png</file>
         <file>images/upload.png</file>
         <file>images/location.png</file>
+        <file>images/tick.png</file>
     </qresource>
 </RCC>

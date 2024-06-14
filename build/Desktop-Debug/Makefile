@@ -1203,7 +1203,8 @@ qrc_resources.cpp: ../../resources.qrc \
 		../../images/connect_icon.png \
 		../../images/Group\ 11.png \
 		../../images/Align\ Text\ Left.png \
-		../../images/CMakeLists.txt.user
+		../../images/CMakeLists.txt.user \
+		../../images/tick.png
 	/home/ravi/Qt/6.8.0/gcc_64/libexec/rcc -name resources --no-zstd ../../resources.qrc -o qrc_resources.cpp
 
 compiler_moc_predefs_make_all: moc_predefs.h
@@ -1403,6 +1404,9 @@ moc_mainwindow.cpp: ../../mainwindow.h \
 		../../../Qt/6.8.0/gcc_64/include/QtCore/qlocale.h \
 		../../../Qt/6.8.0/gcc_64/include/QtGui/qguiapplication_platform.h \
 		../../../Qt/6.8.0/gcc_64/include/QtWidgets/qtabwidget.h \
+		../../../Qt/6.8.0/gcc_64/include/QtWidgets/QPushButton \
+		../../../Qt/6.8.0/gcc_64/include/QtWidgets/qpushbutton.h \
+		../../../Qt/6.8.0/gcc_64/include/QtWidgets/qabstractbutton.h \
 		moc_predefs.h \
 		../../../Qt/6.8.0/gcc_64/libexec/moc
 	/home/ravi/Qt/6.8.0/gcc_64/libexec/moc $(DEFINES) --include /home/ravi/Gui/build/Desktop-Debug/moc_predefs.h -I/home/ravi/Qt/6.8.0/gcc_64/mkspecs/linux-g++ -I/home/ravi/Gui -I/home/ravi/Qt/6.8.0/gcc_64/include -I/home/ravi/Qt/6.8.0/gcc_64/include/QtSvgWidgets -I/home/ravi/Qt/6.8.0/gcc_64/include/QtWidgets -I/home/ravi/Qt/6.8.0/gcc_64/include/QtSvg -I/home/ravi/Qt/6.8.0/gcc_64/include/QtGui -I/home/ravi/Qt/6.8.0/gcc_64/include/QtCore -I. -I/usr/include/c++/13 -I/usr/include/x86_64-linux-gnu/c++/13 -I/usr/include/c++/13/backward -I/usr/lib/gcc/x86_64-linux-gnu/13/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include ../../mainwindow.h -o moc_mainwindow.cpp
@@ -1616,6 +1620,9 @@ main.o: ../../main.cpp ../../mainwindow.h \
 		../../../Qt/6.8.0/gcc_64/include/QtCore/qlocale.h \
 		../../../Qt/6.8.0/gcc_64/include/QtGui/qguiapplication_platform.h \
 		../../../Qt/6.8.0/gcc_64/include/QtWidgets/qtabwidget.h \
+		../../../Qt/6.8.0/gcc_64/include/QtWidgets/QPushButton \
+		../../../Qt/6.8.0/gcc_64/include/QtWidgets/qpushbutton.h \
+		../../../Qt/6.8.0/gcc_64/include/QtWidgets/qabstractbutton.h \
 		../../../Qt/6.8.0/gcc_64/include/QtWidgets/QApplication \
 		../../../Qt/6.8.0/gcc_64/include/QtWidgets/qapplication.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o ../../main.cpp
@@ -1817,13 +1824,31 @@ mainwindow.o: ../../mainwindow.cpp ../../../Qt/6.8.0/gcc_64/include/QtCore/QTime
 		../../../Qt/6.8.0/gcc_64/include/QtCore/qlocale.h \
 		../../../Qt/6.8.0/gcc_64/include/QtGui/qguiapplication_platform.h \
 		../../../Qt/6.8.0/gcc_64/include/QtWidgets/qtabwidget.h \
+		../../../Qt/6.8.0/gcc_64/include/QtWidgets/QPushButton \
+		../../../Qt/6.8.0/gcc_64/include/QtWidgets/qpushbutton.h \
+		../../../Qt/6.8.0/gcc_64/include/QtWidgets/qabstractbutton.h \
 		ui_mainwindow.h \
 		../../../Qt/6.8.0/gcc_64/include/QtCore/QVariant \
 		../../../Qt/6.8.0/gcc_64/include/QtGui/QIcon \
 		../../../Qt/6.8.0/gcc_64/include/QtWidgets/QApplication \
 		../../../Qt/6.8.0/gcc_64/include/QtWidgets/qapplication.h \
-		../../../Qt/6.8.0/gcc_64/include/QtWidgets/QFrame \
+		../../../Qt/6.8.0/gcc_64/include/QtWidgets/QCheckBox \
+		../../../Qt/6.8.0/gcc_64/include/QtWidgets/qcheckbox.h \
+		../../../Qt/6.8.0/gcc_64/include/QtWidgets/QComboBox \
+		../../../Qt/6.8.0/gcc_64/include/QtWidgets/qcombobox.h \
+		../../../Qt/6.8.0/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
+		../../../Qt/6.8.0/gcc_64/include/QtWidgets/qstyleoption.h \
+		../../../Qt/6.8.0/gcc_64/include/QtWidgets/qabstractspinbox.h \
+		../../../Qt/6.8.0/gcc_64/include/QtGui/qvalidator.h \
+		../../../Qt/6.8.0/gcc_64/include/QtCore/qregularexpression.h \
+		../../../Qt/6.8.0/gcc_64/include/QtWidgets/qslider.h \
+		../../../Qt/6.8.0/gcc_64/include/QtWidgets/qabstractslider.h \
+		../../../Qt/6.8.0/gcc_64/include/QtWidgets/qstyle.h \
+		../../../Qt/6.8.0/gcc_64/include/QtWidgets/qtabbar.h \
+		../../../Qt/6.8.0/gcc_64/include/QtWidgets/qrubberband.h \
 		../../../Qt/6.8.0/gcc_64/include/QtWidgets/qframe.h \
+		../../../Qt/6.8.0/gcc_64/include/QtCore/qabstractitemmodel.h \
+		../../../Qt/6.8.0/gcc_64/include/QtWidgets/QFrame \
 		../../../Qt/6.8.0/gcc_64/include/QtWidgets/QGridLayout \
 		../../../Qt/6.8.0/gcc_64/include/QtWidgets/qgridlayout.h \
 		../../../Qt/6.8.0/gcc_64/include/QtWidgets/qlayout.h \
@@ -1834,14 +1859,16 @@ mainwindow.o: ../../mainwindow.cpp ../../../Qt/6.8.0/gcc_64/include/QtCore/QTime
 		../../../Qt/6.8.0/gcc_64/include/QtWidgets/qlabel.h \
 		../../../Qt/6.8.0/gcc_64/include/QtGui/qpicture.h \
 		../../../Qt/6.8.0/gcc_64/include/QtGui/qtextdocument.h \
-		../../../Qt/6.8.0/gcc_64/include/QtWidgets/QPushButton \
-		../../../Qt/6.8.0/gcc_64/include/QtWidgets/qpushbutton.h \
-		../../../Qt/6.8.0/gcc_64/include/QtWidgets/qabstractbutton.h \
+		../../../Qt/6.8.0/gcc_64/include/QtWidgets/QScrollArea \
+		../../../Qt/6.8.0/gcc_64/include/QtWidgets/qscrollarea.h \
+		../../../Qt/6.8.0/gcc_64/include/QtWidgets/qabstractscrollarea.h \
 		../../../Qt/6.8.0/gcc_64/include/QtWidgets/QSpacerItem \
 		../../../Qt/6.8.0/gcc_64/include/QtWidgets/QStackedWidget \
 		../../../Qt/6.8.0/gcc_64/include/QtWidgets/qstackedwidget.h \
 		../../../Qt/6.8.0/gcc_64/include/QtWidgets/QVBoxLayout \
-		../../../Qt/6.8.0/gcc_64/include/QtWidgets/QWidget
+		../../../Qt/6.8.0/gcc_64/include/QtWidgets/QWidget \
+		../../../Qt/6.8.0/gcc_64/include/QtWidgets/QGraphicsDropShadowEffect \
+		../../../Qt/6.8.0/gcc_64/include/QtWidgets/qgraphicseffect.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainwindow.o ../../mainwindow.cpp
 
 qrc_resources.o: qrc_resources.cpp 
