@@ -156,7 +156,6 @@ public:
     QLabel *label_12;
     QLabel *label_15;
     QLabel *label_19;
-    QSpacerItem *verticalSpacer_6;
     QWidget *infoPage;
     QGridLayout *gridLayout_10;
     QLabel *userLogoInfo;
@@ -572,7 +571,7 @@ public:
         ipAddressFrame = new QFrame(dashboardPage);
         ipAddressFrame->setObjectName("ipAddressFrame");
         ipAddressFrame->setMaximumSize(QSize(16777215, 130));
-        ipAddressFrame->setStyleSheet(QString::fromUtf8("background-color: \"#545759\";\n"
+        ipAddressFrame->setStyleSheet(QString::fromUtf8("background-color: \"rgba(255, 255, 255, 0.17);\";\n"
 "border-radius: \"12px\";\n"
 "text-align: center;"));
         ipAddressFrame->setFrameShape(QFrame::StyledPanel);
@@ -1277,10 +1276,6 @@ public:
 
         gridLayout_14->addLayout(gridLayout_13, 0, 0, 1, 1);
 
-        verticalSpacer_6 = new QSpacerItem(20, 247, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Expanding);
-
-        gridLayout_14->addItem(verticalSpacer_6, 1, 0, 1, 1);
-
         stackedSettingsView->addWidget(advancedSettingsPage);
 
         gridLayout_8->addWidget(stackedSettingsView, 0, 2, 1, 1);
@@ -1378,7 +1373,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        StackedMainView->setCurrentIndex(2);
+        StackedMainView->setCurrentIndex(0);
         stackedSettingsView->setCurrentIndex(2);
 
 

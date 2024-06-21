@@ -920,7 +920,7 @@ text-align: center;</string>
                 </size>
                </property>
                <property name="styleSheet">
-                <string notr="true">background-color: &quot;rgba(255, 255, 255, 0.17);&quot;;
+                <string notr="true">background-color: &quot;#545759&quot;;
 border-radius: &quot;12px&quot;;
 text-align: center;</string>
                </property>
