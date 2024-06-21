@@ -92,7 +92,8 @@
        <property name="styleSheet">
         <string notr="true">background-color: rgb(23, 28, 31);
 border: 2px solid transparent;
-outline: none;</string>
+outline: none;
+QPushButton::focus { background-color:rgb(217, 217, 217); }</string>
        </property>
        <property name="text">
         <string/>
@@ -131,6 +132,7 @@ outline: none;</string>
        </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(23, 28, 31);
+selection-background-color: rgb(217, 217, 217);
 border: 2px solid transparent;
 outline: none;</string>
        </property>
@@ -619,7 +621,7 @@ QWidget[hidden=&quot;true&quot;] {
 </string>
          </property>
          <property name="currentIndex">
-          <number>1</number>
+          <number>2</number>
          </property>
          <widget class="QWidget" name="dashboardPage">
           <property name="minimumSize">
@@ -1862,7 +1864,7 @@ QWidget[hidden=&quot;true&quot;] {
 </string>
              </property>
              <property name="currentIndex">
-              <number>2</number>
+              <number>1</number>
              </property>
              <widget class="QWidget" name="generalSettingsPage">
               <property name="styleSheet">
@@ -2593,8 +2595,8 @@ QRadioButton::indicator:checked {
                   </property>
                   <property name="geometry">
                    <rect>
-                    <x>40</x>
-                    <y>125</y>
+                    <x>30</x>
+                    <y>150</y>
                     <width>121</width>
                     <height>31</height>
                    </rect>
@@ -2629,8 +2631,8 @@ QRadioButton::indicator:checked {
                   </property>
                   <property name="geometry">
                    <rect>
-                    <x>250</x>
-                    <y>125</y>
+                    <x>200</x>
+                    <y>150</y>
                     <width>131</width>
                     <height>31</height>
                    </rect>
@@ -2666,7 +2668,7 @@ QRadioButton::indicator:checked {
                   <property name="geometry">
                    <rect>
                     <x>30</x>
-                    <y>170</y>
+                    <y>190</y>
                     <width>66</width>
                     <height>18</height>
                    </rect>
@@ -2682,7 +2684,7 @@ QRadioButton::indicator:checked {
                   <property name="geometry">
                    <rect>
                     <x>100</x>
-                    <y>170</y>
+                    <y>190</y>
                     <width>151</width>
                     <height>20</height>
                    </rect>
@@ -2698,7 +2700,7 @@ QRadioButton::indicator:checked {
                   <property name="geometry">
                    <rect>
                     <x>270</x>
-                    <y>170</y>
+                    <y>190</y>
                     <width>41</width>
                     <height>18</height>
                    </rect>
@@ -2714,7 +2716,7 @@ QRadioButton::indicator:checked {
                   <property name="geometry">
                    <rect>
                     <x>320</x>
-                    <y>170</y>
+                    <y>190</y>
                     <width>81</width>
                     <height>20</height>
                    </rect>
@@ -2723,6 +2725,32 @@ QRadioButton::indicator:checked {
                    <string notr="true">background-color: rgba(255, 255, 255,50);</string>
                   </property>
                  </widget>
+                 <widget class="QGroupBox" name="groupBox">
+                  <property name="geometry">
+                   <rect>
+                    <x>10</x>
+                    <y>130</y>
+                    <width>441</width>
+                    <height>131</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">border: 3px solid &quot;#474748&quot;</string>
+                  </property>
+                  <property name="title">
+                   <string/>
+                  </property>
+                 </widget>
+                 <zorder>groupBox</zorder>
+                 <zorder>option1</zorder>
+                 <zorder>option2</zorder>
+                 <zorder>man</zorder>
+                 <zorder>op1</zorder>
+                 <zorder>op2</zorder>
+                 <zorder>add</zorder>
+                 <zorder>add_inp</zorder>
+                 <zorder>port</zorder>
+                 <zorder>port_inp</zorder>
                 </widget>
                </item>
               </layout>
@@ -2747,7 +2775,7 @@ QWidget[hidden=&quot;true&quot;] {
                 <rect>
                  <x>102</x>
                  <y>50</y>
-                 <width>350</width>
+                 <width>300</width>
                  <height>20</height>
                 </rect>
                </property>
@@ -2758,11 +2786,14 @@ QWidget[hidden=&quot;true&quot;] {
               <widget class="QPushButton" name="browse">
                <property name="geometry">
                 <rect>
-                 <x>365</x>
+                 <x>420</x>
                  <y>50</y>
                  <width>92</width>
                  <height>20</height>
                 </rect>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background-color: rgb(121, 121, 121);</string>
                </property>
                <property name="text">
                 <string>Browse</string>
@@ -2773,7 +2804,7 @@ QWidget[hidden=&quot;true&quot;] {
                 <rect>
                  <x>102</x>
                  <y>170</y>
-                 <width>350</width>
+                 <width>300</width>
                  <height>20</height>
                 </rect>
                </property>
@@ -2784,11 +2815,14 @@ QWidget[hidden=&quot;true&quot;] {
               <widget class="QPushButton" name="browse_2">
                <property name="geometry">
                 <rect>
-                 <x>365</x>
+                 <x>420</x>
                  <y>170</y>
                  <width>92</width>
                  <height>20</height>
                 </rect>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background-color: rgb(121, 121, 121);</string>
                </property>
                <property name="text">
                 <string>Browse</string>

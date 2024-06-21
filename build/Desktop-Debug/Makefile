@@ -1187,6 +1187,7 @@ compiler_rcc_clean:
 	-$(DEL_FILE) qrc_resources.cpp
 qrc_resources.cpp: ../../resources.qrc \
 		../../../Qt/6.8.0/gcc_64/libexec/rcc \
+		../../images/new.png \
 		../../images/Downloading.png \
 		../../images/Group\ 9.png \
 		../../images/Menu.png \
@@ -1403,6 +1404,37 @@ moc_mainwindow.cpp: ../../mainwindow.h \
 		../../../Qt/6.8.0/gcc_64/include/QtCore/qlocale.h \
 		../../../Qt/6.8.0/gcc_64/include/QtGui/qguiapplication_platform.h \
 		../../../Qt/6.8.0/gcc_64/include/QtWidgets/qtabwidget.h \
+		../../../Qt/6.8.0/gcc_64/include/QtWidgets/QLineEdit \
+		../../../Qt/6.8.0/gcc_64/include/QtWidgets/qlineedit.h \
+		../../../Qt/6.8.0/gcc_64/include/QtWidgets/qframe.h \
+		../../../Qt/6.8.0/gcc_64/include/QtGui/qtextcursor.h \
+		../../../Qt/6.8.0/gcc_64/include/QtGui/qtextdocument.h \
+		../../../Qt/6.8.0/gcc_64/include/QtGui/qtextformat.h \
+		../../../Qt/6.8.0/gcc_64/include/QtGui/qpen.h \
+		../../../Qt/6.8.0/gcc_64/include/QtGui/qtextoption.h \
+		../../../Qt/6.8.0/gcc_64/include/QtWidgets/QPushButton \
+		../../../Qt/6.8.0/gcc_64/include/QtWidgets/qpushbutton.h \
+		../../../Qt/6.8.0/gcc_64/include/QtWidgets/qabstractbutton.h \
+		../../../Qt/6.8.0/gcc_64/include/QtWidgets/QFileDialog \
+		../../../Qt/6.8.0/gcc_64/include/QtWidgets/qfiledialog.h \
+		../../../Qt/6.8.0/gcc_64/include/QtCore/qdir.h \
+		../../../Qt/6.8.0/gcc_64/include/QtCore/qfile.h \
+		../../../Qt/6.8.0/gcc_64/include/QtCore/qfiledevice.h \
+		../../../Qt/6.8.0/gcc_64/include/QtCore/qfileinfo.h \
+		../../../Qt/6.8.0/gcc_64/include/QtCore/qdatetime.h \
+		../../../Qt/6.8.0/gcc_64/include/QtCore/qcalendar.h \
+		../../../Qt/6.8.0/gcc_64/include/QtCore/qtimezone.h \
+		../../../Qt/6.8.0/gcc_64/include/QtWidgets/qdialog.h \
+		../../../Qt/6.8.0/gcc_64/include/QtWidgets/QGraphicsBlurEffect \
+		../../../Qt/6.8.0/gcc_64/include/QtWidgets/qgraphicseffect.h \
+		../../../Qt/6.8.0/gcc_64/include/QtCore/QPropertyAnimation \
+		../../../Qt/6.8.0/gcc_64/include/QtCore/qpropertyanimation.h \
+		../../../Qt/6.8.0/gcc_64/include/QtCore/qvariantanimation.h \
+		../../../Qt/6.8.0/gcc_64/include/QtCore/qabstractanimation.h \
+		../../../Qt/6.8.0/gcc_64/include/QtCore/qeasingcurve.h \
+		../../../Qt/6.8.0/gcc_64/include/QtCore/QParallelAnimationGroup \
+		../../../Qt/6.8.0/gcc_64/include/QtCore/qparallelanimationgroup.h \
+		../../../Qt/6.8.0/gcc_64/include/QtCore/qanimationgroup.h \
 		moc_predefs.h \
 		../../../Qt/6.8.0/gcc_64/libexec/moc
 	/home/ravi/Qt/6.8.0/gcc_64/libexec/moc $(DEFINES) --include /home/ravi/Gui/build/Desktop-Debug/moc_predefs.h -I/home/ravi/Qt/6.8.0/gcc_64/mkspecs/linux-g++ -I/home/ravi/Gui -I/home/ravi/Qt/6.8.0/gcc_64/include -I/home/ravi/Qt/6.8.0/gcc_64/include/QtSvgWidgets -I/home/ravi/Qt/6.8.0/gcc_64/include/QtWidgets -I/home/ravi/Qt/6.8.0/gcc_64/include/QtSvg -I/home/ravi/Qt/6.8.0/gcc_64/include/QtGui -I/home/ravi/Qt/6.8.0/gcc_64/include/QtCore -I. -I/usr/include/c++/13 -I/usr/include/x86_64-linux-gnu/c++/13 -I/usr/include/c++/13/backward -I/usr/lib/gcc/x86_64-linux-gnu/13/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include ../../mainwindow.h -o moc_mainwindow.cpp
@@ -1616,6 +1648,37 @@ main.o: ../../main.cpp ../../mainwindow.h \
 		../../../Qt/6.8.0/gcc_64/include/QtCore/qlocale.h \
 		../../../Qt/6.8.0/gcc_64/include/QtGui/qguiapplication_platform.h \
 		../../../Qt/6.8.0/gcc_64/include/QtWidgets/qtabwidget.h \
+		../../../Qt/6.8.0/gcc_64/include/QtWidgets/QLineEdit \
+		../../../Qt/6.8.0/gcc_64/include/QtWidgets/qlineedit.h \
+		../../../Qt/6.8.0/gcc_64/include/QtWidgets/qframe.h \
+		../../../Qt/6.8.0/gcc_64/include/QtGui/qtextcursor.h \
+		../../../Qt/6.8.0/gcc_64/include/QtGui/qtextdocument.h \
+		../../../Qt/6.8.0/gcc_64/include/QtGui/qtextformat.h \
+		../../../Qt/6.8.0/gcc_64/include/QtGui/qpen.h \
+		../../../Qt/6.8.0/gcc_64/include/QtGui/qtextoption.h \
+		../../../Qt/6.8.0/gcc_64/include/QtWidgets/QPushButton \
+		../../../Qt/6.8.0/gcc_64/include/QtWidgets/qpushbutton.h \
+		../../../Qt/6.8.0/gcc_64/include/QtWidgets/qabstractbutton.h \
+		../../../Qt/6.8.0/gcc_64/include/QtWidgets/QFileDialog \
+		../../../Qt/6.8.0/gcc_64/include/QtWidgets/qfiledialog.h \
+		../../../Qt/6.8.0/gcc_64/include/QtCore/qdir.h \
+		../../../Qt/6.8.0/gcc_64/include/QtCore/qfile.h \
+		../../../Qt/6.8.0/gcc_64/include/QtCore/qfiledevice.h \
+		../../../Qt/6.8.0/gcc_64/include/QtCore/qfileinfo.h \
+		../../../Qt/6.8.0/gcc_64/include/QtCore/qdatetime.h \
+		../../../Qt/6.8.0/gcc_64/include/QtCore/qcalendar.h \
+		../../../Qt/6.8.0/gcc_64/include/QtCore/qtimezone.h \
+		../../../Qt/6.8.0/gcc_64/include/QtWidgets/qdialog.h \
+		../../../Qt/6.8.0/gcc_64/include/QtWidgets/QGraphicsBlurEffect \
+		../../../Qt/6.8.0/gcc_64/include/QtWidgets/qgraphicseffect.h \
+		../../../Qt/6.8.0/gcc_64/include/QtCore/QPropertyAnimation \
+		../../../Qt/6.8.0/gcc_64/include/QtCore/qpropertyanimation.h \
+		../../../Qt/6.8.0/gcc_64/include/QtCore/qvariantanimation.h \
+		../../../Qt/6.8.0/gcc_64/include/QtCore/qabstractanimation.h \
+		../../../Qt/6.8.0/gcc_64/include/QtCore/qeasingcurve.h \
+		../../../Qt/6.8.0/gcc_64/include/QtCore/QParallelAnimationGroup \
+		../../../Qt/6.8.0/gcc_64/include/QtCore/qparallelanimationgroup.h \
+		../../../Qt/6.8.0/gcc_64/include/QtCore/qanimationgroup.h \
 		../../../Qt/6.8.0/gcc_64/include/QtWidgets/QApplication \
 		../../../Qt/6.8.0/gcc_64/include/QtWidgets/qapplication.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o ../../main.cpp
@@ -1817,13 +1880,57 @@ mainwindow.o: ../../mainwindow.cpp ../../../Qt/6.8.0/gcc_64/include/QtCore/QTime
 		../../../Qt/6.8.0/gcc_64/include/QtCore/qlocale.h \
 		../../../Qt/6.8.0/gcc_64/include/QtGui/qguiapplication_platform.h \
 		../../../Qt/6.8.0/gcc_64/include/QtWidgets/qtabwidget.h \
+		../../../Qt/6.8.0/gcc_64/include/QtWidgets/QLineEdit \
+		../../../Qt/6.8.0/gcc_64/include/QtWidgets/qlineedit.h \
+		../../../Qt/6.8.0/gcc_64/include/QtWidgets/qframe.h \
+		../../../Qt/6.8.0/gcc_64/include/QtGui/qtextcursor.h \
+		../../../Qt/6.8.0/gcc_64/include/QtGui/qtextdocument.h \
+		../../../Qt/6.8.0/gcc_64/include/QtGui/qtextformat.h \
+		../../../Qt/6.8.0/gcc_64/include/QtWidgets/QPushButton \
+		../../../Qt/6.8.0/gcc_64/include/QtWidgets/qpushbutton.h \
+		../../../Qt/6.8.0/gcc_64/include/QtWidgets/qabstractbutton.h \
+		../../../Qt/6.8.0/gcc_64/include/QtWidgets/QFileDialog \
+		../../../Qt/6.8.0/gcc_64/include/QtWidgets/qfiledialog.h \
+		../../../Qt/6.8.0/gcc_64/include/QtCore/qdir.h \
+		../../../Qt/6.8.0/gcc_64/include/QtCore/qfile.h \
+		../../../Qt/6.8.0/gcc_64/include/QtCore/qfiledevice.h \
+		../../../Qt/6.8.0/gcc_64/include/QtCore/qfileinfo.h \
+		../../../Qt/6.8.0/gcc_64/include/QtCore/qdatetime.h \
+		../../../Qt/6.8.0/gcc_64/include/QtCore/qcalendar.h \
+		../../../Qt/6.8.0/gcc_64/include/QtCore/qtimezone.h \
+		../../../Qt/6.8.0/gcc_64/include/QtWidgets/qdialog.h \
+		../../../Qt/6.8.0/gcc_64/include/QtWidgets/QGraphicsBlurEffect \
+		../../../Qt/6.8.0/gcc_64/include/QtWidgets/qgraphicseffect.h \
+		../../../Qt/6.8.0/gcc_64/include/QtCore/QPropertyAnimation \
+		../../../Qt/6.8.0/gcc_64/include/QtCore/qpropertyanimation.h \
+		../../../Qt/6.8.0/gcc_64/include/QtCore/qvariantanimation.h \
+		../../../Qt/6.8.0/gcc_64/include/QtCore/qabstractanimation.h \
+		../../../Qt/6.8.0/gcc_64/include/QtCore/qeasingcurve.h \
+		../../../Qt/6.8.0/gcc_64/include/QtCore/QParallelAnimationGroup \
+		../../../Qt/6.8.0/gcc_64/include/QtCore/qparallelanimationgroup.h \
+		../../../Qt/6.8.0/gcc_64/include/QtCore/qanimationgroup.h \
 		ui_mainwindow.h \
+		../../../Qt/6.8.0/gcc_64/include/QtCore/QLocale \
 		../../../Qt/6.8.0/gcc_64/include/QtCore/QVariant \
 		../../../Qt/6.8.0/gcc_64/include/QtGui/QIcon \
 		../../../Qt/6.8.0/gcc_64/include/QtWidgets/QApplication \
 		../../../Qt/6.8.0/gcc_64/include/QtWidgets/qapplication.h \
+		../../../Qt/6.8.0/gcc_64/include/QtWidgets/QCheckBox \
+		../../../Qt/6.8.0/gcc_64/include/QtWidgets/qcheckbox.h \
+		../../../Qt/6.8.0/gcc_64/include/QtWidgets/QComboBox \
+		../../../Qt/6.8.0/gcc_64/include/QtWidgets/qcombobox.h \
+		../../../Qt/6.8.0/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
+		../../../Qt/6.8.0/gcc_64/include/QtWidgets/qstyleoption.h \
+		../../../Qt/6.8.0/gcc_64/include/QtWidgets/qabstractspinbox.h \
+		../../../Qt/6.8.0/gcc_64/include/QtGui/qvalidator.h \
+		../../../Qt/6.8.0/gcc_64/include/QtCore/qregularexpression.h \
+		../../../Qt/6.8.0/gcc_64/include/QtWidgets/qslider.h \
+		../../../Qt/6.8.0/gcc_64/include/QtWidgets/qabstractslider.h \
+		../../../Qt/6.8.0/gcc_64/include/QtWidgets/qstyle.h \
+		../../../Qt/6.8.0/gcc_64/include/QtWidgets/qtabbar.h \
+		../../../Qt/6.8.0/gcc_64/include/QtWidgets/qrubberband.h \
+		../../../Qt/6.8.0/gcc_64/include/QtCore/qabstractitemmodel.h \
 		../../../Qt/6.8.0/gcc_64/include/QtWidgets/QFrame \
-		../../../Qt/6.8.0/gcc_64/include/QtWidgets/qframe.h \
 		../../../Qt/6.8.0/gcc_64/include/QtWidgets/QGridLayout \
 		../../../Qt/6.8.0/gcc_64/include/QtWidgets/qgridlayout.h \
 		../../../Qt/6.8.0/gcc_64/include/QtWidgets/qlayout.h \
@@ -1833,15 +1940,19 @@ mainwindow.o: ../../mainwindow.cpp ../../../Qt/6.8.0/gcc_64/include/QtCore/QTime
 		../../../Qt/6.8.0/gcc_64/include/QtWidgets/QLabel \
 		../../../Qt/6.8.0/gcc_64/include/QtWidgets/qlabel.h \
 		../../../Qt/6.8.0/gcc_64/include/QtGui/qpicture.h \
-		../../../Qt/6.8.0/gcc_64/include/QtGui/qtextdocument.h \
-		../../../Qt/6.8.0/gcc_64/include/QtWidgets/QPushButton \
-		../../../Qt/6.8.0/gcc_64/include/QtWidgets/qpushbutton.h \
-		../../../Qt/6.8.0/gcc_64/include/QtWidgets/qabstractbutton.h \
+		../../../Qt/6.8.0/gcc_64/include/QtWidgets/QRadioButton \
+		../../../Qt/6.8.0/gcc_64/include/QtWidgets/qradiobutton.h \
+		../../../Qt/6.8.0/gcc_64/include/QtWidgets/QScrollArea \
+		../../../Qt/6.8.0/gcc_64/include/QtWidgets/qscrollarea.h \
+		../../../Qt/6.8.0/gcc_64/include/QtWidgets/qabstractscrollarea.h \
 		../../../Qt/6.8.0/gcc_64/include/QtWidgets/QSpacerItem \
 		../../../Qt/6.8.0/gcc_64/include/QtWidgets/QStackedWidget \
 		../../../Qt/6.8.0/gcc_64/include/QtWidgets/qstackedwidget.h \
 		../../../Qt/6.8.0/gcc_64/include/QtWidgets/QVBoxLayout \
-		../../../Qt/6.8.0/gcc_64/include/QtWidgets/QWidget
+		../../../Qt/6.8.0/gcc_64/include/QtWidgets/QWidget \
+		../../../Qt/6.8.0/gcc_64/include/QtWidgets/QGraphicsDropShadowEffect \
+		../../../Qt/6.8.0/gcc_64/include/QtWidgets/QButtonGroup \
+		../../../Qt/6.8.0/gcc_64/include/QtWidgets/qbuttongroup.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainwindow.o ../../mainwindow.cpp
 
 qrc_resources.o: qrc_resources.cpp 

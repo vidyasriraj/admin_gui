@@ -34,7 +34,7 @@ private slots:
     void setConnectedIcon(const QPixmap &pixmap, qreal opacity);
 
     // changing navigations function
-    void setViewPage(int index, QPushButton *clickedButton);
+    void setViewPage(int index, QPushButton *clickedButton,QPushButton *clickedButton1);
     void setDashBoardPage();
     void setLogsPage();
     void setSettingsPage();
@@ -52,7 +52,7 @@ private slots:
     void applyBlurEffect(QWidget* widget, bool apply) {
         if (apply) {
             QGraphicsBlurEffect* blurEffect = new QGraphicsBlurEffect(this);
-            blurEffect->setBlurRadius(2);
+            blurEffect->setBlurRadius(1.6);
             widget->setGraphicsEffect(blurEffect);
         } else {
             widget->setGraphicsEffect(nullptr);
@@ -63,10 +63,11 @@ private slots:
 private:
     Ui::MainWindow *ui;
     QPushButton *previousPage;
+    QPushButton *previousPage1;
     QPushButton *previousSettings;
-    QLineEdit *directoryLineEdit;
+
     QPushButton *browseButton;
-    QLineEdit *directoryLineEdit2;
+
     QPushButton *browseButton2;
     // control opacity of the icon
     QPixmap setPixmapOpacity(const QPixmap &pixmap, qreal opacity);

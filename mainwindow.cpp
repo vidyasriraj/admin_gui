@@ -17,6 +17,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     // initiate null pointers for active tabs
     previousPage = nullptr;
+    previousPage1 = nullptr;
     previousSettings = nullptr;
 
 
@@ -49,11 +50,11 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->advancedSettingsBtn, SIGNAL(clicked()), this, SLOT(setAdvancedSettings()));
 
 
-    directoryLineEdit = ui->path;  // Replace with actual name from your UI form
+     // Replace with actual name from your UI form
     browseButton= ui->browse;
     connect(ui->browse, SIGNAL(clicked()), this, SLOT(on_browse_clicked()));
 
-    directoryLineEdit2 = ui->path_2;  // Replace with actual name from your UI form
+    // Replace with actual name from your UI form
     browseButton2= ui->browse_2;
     connect(ui->browse_2, SIGNAL(clicked()), this, SLOT(on_browse_2_clicked()));
 
@@ -170,28 +171,32 @@ void MainWindow::connectServer() {
  */
 
 // method to apply common stylings and set selected page for navigation between the pages
-void MainWindow::setViewPage(int index, QPushButton *clickedButton) {
+void MainWindow::setViewPage(int index, QPushButton *clickedButton,QPushButton *clickedButton1) {
     ui->StackedMainView->setCurrentIndex(index);
 
-    if (clickedButton != nullptr) {
+    if (clickedButton != nullptr && clickedButton1 != nullptr) {
         clickedButton->setStyleSheet("background-color: #2D3233; border: 2px solid transparent; outline: none; padding-left: 17px; padding-right: 17px;");
+        clickedButton1->setStyleSheet("background-color: #2D3233; border: 2px solid transparent; outline: none; padding-left: 17px; padding-right: 17px;");
     }
 
-    if (previousPage != nullptr && previousPage != clickedButton) {
+    if (previousPage != nullptr && previousPage != clickedButton && previousPage != clickedButton1 ) {
         previousPage->setStyleSheet("background-color: rgb(23, 28, 31); border: 2px solid transparent; outline: none; padding-left: 17px; padding-right: 17px;");
+        previousPage1->setStyleSheet("background-color: rgb(23, 28, 31); border: 2px solid transparent; outline: none; padding-left: 17px; padding-right: 17px;");
     }
 
     previousPage = clickedButton;
+    previousPage1 = clickedButton1;
+
 }
 
 // method to display dashboard page
 void MainWindow::setDashBoardPage() {
-    setViewPage(0, ui->expandedDashboardBtn);
+    setViewPage(0, ui->expandedDashboardBtn,ui->compressedDashboardBtn);
 }
 
 // method to display logs page
 void MainWindow::setLogsPage() {
-   setViewPage(1, ui->expandedLogsBtn);
+    setViewPage(1, ui->expandedLogsBtn,ui->compressedLogsBtn);
     // apply drop shadow effects to the logs container
     QGraphicsDropShadowEffect *shadowEffect = new QGraphicsDropShadowEffect(this);
     shadowEffect->setBlurRadius(10);
@@ -203,12 +208,12 @@ void MainWindow::setLogsPage() {
 
 // method to display settings page
 void MainWindow::setSettingsPage() {
-    setViewPage(2, ui->expandedSettingsBtn);
+    setViewPage(2, ui->expandedSettingsBtn,ui->compressedSettingsBtn);
 }
 
 // method to display info page
 void MainWindow::setInfoPage() {
-    setViewPage(3, ui->expandedInfoBtn);
+    setViewPage(3, ui->expandedInfoBtn,ui->compressedInfoBtn);
 
     // apply drop shadow effects to the info container
     QGraphicsDropShadowEffect *shadowEffect = new QGraphicsDropShadowEffect(this);
@@ -263,7 +268,7 @@ void MainWindow::on_browse_clicked()
     QString directory = QFileDialog::getExistingDirectory(this, "Select Directory");
 
     if (!directory.isEmpty()) {
-        directoryLineEdit->setText(directory);
+        ui->path->setText(directory);
     }
 }
 
@@ -273,7 +278,7 @@ void MainWindow::on_browse_2_clicked()
 
     QString directory1 = QFileDialog::getExistingDirectory(this, "Select Directory");
     if (!directory1.isEmpty()) {
-        directoryLineEdit2->setText(directory1);
+        ui->path_2->setText(directory1);
     }
 }
 
