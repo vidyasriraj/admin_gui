@@ -25,6 +25,10 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0, stop:0 #404040, stop:1 #1F363D);
+color: rgb(255, 255, 255);</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <property name="minimumSize">
     <size>
@@ -82,7 +86,7 @@
         <rect>
          <x>0</x>
          <y>64</y>
-         <width>68</width>
+         <width>70</width>
          <height>64</height>
         </rect>
        </property>
@@ -123,7 +127,7 @@ QPushButton::focus { background-color:rgb(217, 217, 217); }</string>
         <rect>
          <x>0</x>
          <y>128</y>
-         <width>68</width>
+         <width>70</width>
          <height>64</height>
         </rect>
        </property>
@@ -158,7 +162,7 @@ outline: none;</string>
         <rect>
          <x>0</x>
          <y>472</y>
-         <width>68</width>
+         <width>70</width>
          <height>64</height>
         </rect>
        </property>
@@ -192,7 +196,7 @@ outline: none;</string>
         <rect>
          <x>0</x>
          <y>536</y>
-         <width>68</width>
+         <width>70</width>
          <height>64</height>
         </rect>
        </property>
@@ -257,326 +261,6 @@ outline: none;</string>
         </size>
        </property>
       </widget>
-      <widget class="QPushButton" name="compressedLogsBtn_2">
-       <property name="geometry">
-        <rect>
-         <x>0</x>
-         <y>190</y>
-         <width>68</width>
-         <height>64</height>
-        </rect>
-       </property>
-       <property name="cursor">
-        <cursorShape>PointingHandCursor</cursorShape>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background-color: rgb(23, 28, 31);
-border: 2px solid transparent;
-outline: none;</string>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-       <property name="icon">
-        <iconset>
-         <normaloff>../../Downloads/Users.png</normaloff>../../Downloads/Users.png</iconset>
-       </property>
-       <property name="iconSize">
-        <size>
-         <width>60</width>
-         <height>60</height>
-        </size>
-       </property>
-       <property name="checkable">
-        <bool>true</bool>
-       </property>
-      </widget>
-      <widget class="QPushButton" name="compressedLogsBtn_3">
-       <property name="geometry">
-        <rect>
-         <x>0</x>
-         <y>260</y>
-         <width>68</width>
-         <height>64</height>
-        </rect>
-       </property>
-       <property name="cursor">
-        <cursorShape>PointingHandCursor</cursorShape>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background-color: rgb(23, 28, 31);
-border: 2px solid transparent;
-outline: none;</string>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-       <property name="icon">
-        <iconset>
-         <normaloff>../../Downloads/Computer Support.png</normaloff>../../Downloads/Computer Support.png</iconset>
-       </property>
-       <property name="iconSize">
-        <size>
-         <width>60</width>
-         <height>60</height>
-        </size>
-       </property>
-       <property name="checkable">
-        <bool>true</bool>
-       </property>
-      </widget>
-     </widget>
-    </item>
-    <item row="0" column="1">
-     <widget class="QWidget" name="expandedNav" native="true">
-      <property name="enabled">
-       <bool>true</bool>
-      </property>
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="minimumSize">
-       <size>
-        <width>165</width>
-        <height>600</height>
-       </size>
-      </property>
-      <property name="maximumSize">
-       <size>
-        <width>16777215</width>
-        <height>16777215</height>
-       </size>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(23, 28, 31);
-color: rgb(255, 255, 255);
-text-align: left;
-font-family: &quot;Roboto&quot;;
-margin: 0px;</string>
-      </property>
-      <layout class="QGridLayout" name="gridLayout_3">
-       <property name="leftMargin">
-        <number>0</number>
-       </property>
-       <property name="topMargin">
-        <number>0</number>
-       </property>
-       <property name="rightMargin">
-        <number>0</number>
-       </property>
-       <property name="bottomMargin">
-        <number>0</number>
-       </property>
-       <property name="spacing">
-        <number>0</number>
-       </property>
-       <item row="0" column="0">
-        <widget class="QPushButton" name="expandedNavBtn">
-         <property name="cursor">
-          <cursorShape>PointingHandCursor</cursorShape>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">background-color: rgb(23, 28, 31);
-border: 2px solid transparent;
-outline: none;
-padding-left: &quot;17px&quot;;
-padding-right: &quot;17px&quot;;</string>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-         <property name="icon">
-          <iconset resource="resources.qrc">
-           <normaloff>:/logos/images/Menu.png</normaloff>:/logos/images/Menu.png</iconset>
-         </property>
-         <property name="iconSize">
-          <size>
-           <width>60</width>
-           <height>60</height>
-          </size>
-         </property>
-        </widget>
-       </item>
-       <item row="5" column="0">
-        <widget class="QPushButton" name="expandedInfoBtn">
-         <property name="maximumSize">
-          <size>
-           <width>165</width>
-           <height>16777215</height>
-          </size>
-         </property>
-         <property name="cursor">
-          <cursorShape>PointingHandCursor</cursorShape>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">background-color: rgb(23, 28, 31);
-border: 2px solid transparent;
-outline: none;
-padding-left: &quot;17px&quot;;
-padding-right: &quot;17px&quot;;</string>
-         </property>
-         <property name="text">
-          <string>Info</string>
-         </property>
-         <property name="icon">
-          <iconset resource="resources.qrc">
-           <normaloff>:/logos/images/Info.png</normaloff>:/logos/images/Info.png</iconset>
-         </property>
-         <property name="iconSize">
-          <size>
-           <width>60</width>
-           <height>60</height>
-          </size>
-         </property>
-         <property name="checkable">
-          <bool>true</bool>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="0">
-        <widget class="QPushButton" name="expandedLogsBtn">
-         <property name="maximumSize">
-          <size>
-           <width>165</width>
-           <height>16777215</height>
-          </size>
-         </property>
-         <property name="cursor">
-          <cursorShape>PointingHandCursor</cursorShape>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">background-color: rgb(23, 28, 31);
-border: 2px solid transparent;
-outline: none;
-padding-left: &quot;17px&quot;;
-padding-right: &quot;17px&quot;;</string>
-         </property>
-         <property name="text">
-          <string>Logs</string>
-         </property>
-         <property name="icon">
-          <iconset resource="resources.qrc">
-           <normaloff>:/logos/images/Align Text Left.png</normaloff>:/logos/images/Align Text Left.png</iconset>
-         </property>
-         <property name="iconSize">
-          <size>
-           <width>60</width>
-           <height>60</height>
-          </size>
-         </property>
-         <property name="checkable">
-          <bool>true</bool>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="0">
-        <widget class="QPushButton" name="expandedDashboardBtn">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>165</width>
-           <height>16777215</height>
-          </size>
-         </property>
-         <property name="cursor">
-          <cursorShape>PointingHandCursor</cursorShape>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">background-color: rgb(23, 28, 31);
-border: 2px solid transparent;
-outline: none;
-padding-left: &quot;17px&quot;;
-padding-right: &quot;17px&quot;;</string>
-         </property>
-         <property name="text">
-          <string>Dashboard</string>
-         </property>
-         <property name="icon">
-          <iconset resource="resources.qrc">
-           <normaloff>:/logos/images/Dashboard Layout.png</normaloff>:/logos/images/Dashboard Layout.png</iconset>
-         </property>
-         <property name="iconSize">
-          <size>
-           <width>60</width>
-           <height>60</height>
-          </size>
-         </property>
-         <property name="checkable">
-          <bool>true</bool>
-         </property>
-         <property name="autoExclusive">
-          <bool>true</bool>
-         </property>
-        </widget>
-       </item>
-       <item row="4" column="0">
-        <widget class="QPushButton" name="expandedSettingsBtn">
-         <property name="maximumSize">
-          <size>
-           <width>165</width>
-           <height>16777215</height>
-          </size>
-         </property>
-         <property name="cursor">
-          <cursorShape>PointingHandCursor</cursorShape>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">background-color: rgb(23, 28, 31);
-border: 2px solid transparent;
-outline: none;
-padding-left: &quot;17px&quot;;
-padding-right: &quot;17px&quot;;</string>
-         </property>
-         <property name="text">
-          <string>Settings</string>
-         </property>
-         <property name="icon">
-          <iconset resource="resources.qrc">
-           <normaloff>:/logos/images/CMakeLists.txt.user</normaloff>:/logos/images/CMakeLists.txt.user</iconset>
-         </property>
-         <property name="iconSize">
-          <size>
-           <width>60</width>
-           <height>60</height>
-          </size>
-         </property>
-         <property name="checkable">
-          <bool>true</bool>
-         </property>
-        </widget>
-       </item>
-       <item row="3" column="0">
-        <spacer name="verticalSpacer_2">
-         <property name="orientation">
-          <enum>Qt::Vertical</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>20</width>
-           <height>277</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
-       <item row="2" column="1">
-        <widget class="QFrame" name="frame_5">
-         <property name="frameShape">
-          <enum>QFrame::StyledPanel</enum>
-         </property>
-         <property name="frameShadow">
-          <enum>QFrame::Raised</enum>
-         </property>
-        </widget>
-       </item>
-      </layout>
      </widget>
     </item>
     <item row="0" column="2">
@@ -819,7 +503,6 @@ text-align: center;</string>
                   <property name="font">
                    <font>
                     <pointsize>16</pointsize>
-                    <fontweight>Black</fontweight>
                    </font>
                   </property>
                   <property name="text">
@@ -842,7 +525,6 @@ text-align: center;</string>
                   <property name="font">
                    <font>
                     <pointsize>14</pointsize>
-                    <fontweight>DemiBold</fontweight>
                    </font>
                   </property>
                   <property name="styleSheet">
@@ -887,7 +569,6 @@ text-align: center;</string>
                   <property name="font">
                    <font>
                     <pointsize>16</pointsize>
-                    <fontweight>Black</fontweight>
                    </font>
                   </property>
                   <property name="text">
@@ -910,7 +591,6 @@ text-align: center;</string>
                   <property name="font">
                    <font>
                     <pointsize>14</pointsize>
-                    <fontweight>DemiBold</fontweight>
                    </font>
                   </property>
                   <property name="styleSheet">
@@ -955,7 +635,6 @@ text-align: center;</string>
                   <property name="font">
                    <font>
                     <pointsize>16</pointsize>
-                    <fontweight>Black</fontweight>
                    </font>
                   </property>
                   <property name="text">
@@ -978,7 +657,6 @@ text-align: center;</string>
                   <property name="font">
                    <font>
                     <pointsize>14</pointsize>
-                    <fontweight>DemiBold</fontweight>
                    </font>
                   </property>
                   <property name="styleSheet">
@@ -1023,7 +701,6 @@ text-align: center;</string>
                   <property name="font">
                    <font>
                     <pointsize>16</pointsize>
-                    <fontweight>Black</fontweight>
                    </font>
                   </property>
                   <property name="text">
@@ -1046,7 +723,6 @@ text-align: center;</string>
                   <property name="font">
                    <font>
                     <pointsize>15</pointsize>
-                    <fontweight>DemiBold</fontweight>
                    </font>
                   </property>
                   <property name="styleSheet">
@@ -1531,7 +1207,6 @@ Wed Jun 12 14:36:55 2024 us=634721 UDP WRITE [76] to [AF_INET]100.25.183.23:1194
                   <property name="font">
                    <font>
                     <pointsize>20</pointsize>
-                    <fontweight>ExtraBold</fontweight>
                    </font>
                   </property>
                   <property name="text">
@@ -1719,7 +1394,6 @@ text-align: left;
                 <property name="font">
                  <font>
                   <pointsize>14</pointsize>
-                  <fontweight>ExtraBold</fontweight>
                  </font>
                 </property>
                 <property name="styleSheet">
@@ -1742,7 +1416,6 @@ margin: &quot;10px&quot;;</string>
                 <property name="font">
                  <font>
                   <pointsize>13</pointsize>
-                  <fontweight>DemiBold</fontweight>
                  </font>
                 </property>
                 <property name="cursor">
@@ -1772,7 +1445,6 @@ padding-left: &quot;8px&quot;;
                 <property name="font">
                  <font>
                   <pointsize>13</pointsize>
-                  <fontweight>DemiBold</fontweight>
                  </font>
                 </property>
                 <property name="cursor">
@@ -1801,7 +1473,6 @@ padding-left: &quot;8px&quot;;</string>
                 <property name="font">
                  <font>
                   <pointsize>13</pointsize>
-                  <fontweight>DemiBold</fontweight>
                  </font>
                 </property>
                 <property name="cursor">
@@ -2089,7 +1760,6 @@ margin-bottom: &quot;10px&quot;;</string>
                <property name="font">
                 <font>
                  <pointsize>14</pointsize>
-                 <fontweight>DemiBold</fontweight>
                 </font>
                </property>
                <property name="styleSheet">
@@ -3214,7 +2884,6 @@ border-radius: &quot;20px&quot;;
                   <property name="font">
                    <font>
                     <family>Sans Serif</family>
-                    <fontweight>Medium</fontweight>
                    </font>
                   </property>
                   <property name="text">
@@ -3237,7 +2906,6 @@ border-radius: &quot;20px&quot;;
                    <font>
                     <family>Sans Serif</family>
                     <pointsize>15</pointsize>
-                    <fontweight>ExtraBold</fontweight>
                    </font>
                   </property>
                   <property name="text">
@@ -3293,6 +2961,223 @@ outline: none;
         </widget>
        </item>
       </layout>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QWidget" name="expandedNav" native="true">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>140</width>
+        <height>600</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(23, 28, 31);
+color: rgb(255, 255, 255);
+text-align: left;
+font-family: &quot;Roboto&quot;;
+margin: 0px;</string>
+      </property>
+      <widget class="QPushButton" name="expandedLogsBtn">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>128</y>
+         <width>140</width>
+         <height>64</height>
+        </rect>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>165</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>Roboto</family>
+         <pointsize>13</pointsize>
+        </font>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(23, 28, 31);
+border: 2px solid transparent;
+outline: none;
+padding-left: &quot;17px&quot;;
+padding-right: &quot;17px&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Logs</string>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="expandedDashboardBtn">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>64</y>
+         <width>140</width>
+         <height>64</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>165</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>Roboto</family>
+         <pointsize>13</pointsize>
+        </font>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(23, 28, 31);
+border: 2px solid transparent;
+outline: none;
+padding-left: &quot;17px&quot;;
+padding-right: &quot;17px&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Dashboard</string>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="autoExclusive">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="expandedSettingsBtn">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>472</y>
+         <width>140</width>
+         <height>64</height>
+        </rect>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>165</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>Roboto</family>
+         <pointsize>13</pointsize>
+        </font>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(23, 28, 31);
+border: 2px solid transparent;
+outline: none;
+padding-left: &quot;17px&quot;;
+padding-right: &quot;17px&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Settings</string>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="expandedInfoBtn">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>536</y>
+         <width>140</width>
+         <height>64</height>
+        </rect>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>165</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>Roboto</family>
+         <pointsize>13</pointsize>
+        </font>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(23, 28, 31);
+border: 2px solid transparent;
+outline: none;
+padding-left: &quot;17px&quot;;
+padding-right: &quot;17px&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Info</string>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>60</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+      </widget>
      </widget>
     </item>
    </layout>

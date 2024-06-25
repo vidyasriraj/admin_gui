@@ -27,7 +27,7 @@ public:
 private slots:
     // control navbar menu
     void showExpandedNavbar();
-    void showCompressedNavbar();
+
 
     // connect to the server
     void connectServer();
@@ -71,5 +71,6 @@ private:
     QPushButton *browseButton2;
     // control opacity of the icon
     QPixmap setPixmapOpacity(const QPixmap &pixmap, qreal opacity);
+    bool toggleFlag;
 };
 #endif // MAINWINDOW_H

@@ -7,10 +7,11 @@
 #include <QGraphicsDropShadowEffect>
 #include <QButtonGroup>
 #include <QPropertyAnimation>
+#include <QWidget>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
-    , ui(new Ui::MainWindow)
+    , ui(new Ui::MainWindow),toggleFlag(true)
 {
     ui->setupUi(this);
     this->resize(900, 600);
@@ -30,7 +31,6 @@ MainWindow::MainWindow(QWidget *parent)
 
     // signals to control navbar transitions
     connect(ui->compressedNavBtn, SIGNAL(clicked(bool)), this, SLOT(showExpandedNavbar()));
-    connect(ui->expandedNavBtn, SIGNAL(clicked(bool)), this, SLOT(showCompressedNavbar()));
     connect(ui->connectIcon, SIGNAL(clicked(bool)), this, SLOT(connectServer()));
 
     // signals to control page navigation
@@ -100,15 +100,39 @@ MainWindow::~MainWindow()
 
 // method to show expanded navbar
 void MainWindow::showExpandedNavbar() {
-    ui->compressedNav->hide();
-    ui->expandedNav->show();
-}
-
-// method to show compressed navbar
-void MainWindow::showCompressedNavbar() {
     ui->compressedNav->show();
-    ui->expandedNav->hide();
-}
+    QPropertyAnimation *moveAnimation = new QPropertyAnimation(ui->expandedNav, "geometry");
+    int startX = ui->compressedNav->width();
+    int endX = ui->expandedNav->width();     // Start position off-screen to the left
+    moveAnimation->setDuration(5000);
+
+    // Alternative easing curve
+      // Smooth easing curve
+    // Hide compressedNav immediately
+     if (toggleFlag) {
+         moveAnimation->setEasingCurve(QEasingCurve::InOutCubic);
+         moveAnimation->setStartValue(startX);
+         moveAnimation->setEndValue(endX);
+         ui->expandedNav->show();
+          // Duration of animation in milliseconds
+
+
+
+        toggleFlag=false;
+     }
+     else{
+         moveAnimation->setEasingCurve(QEasingCurve::InOutCubic);
+         moveAnimation->setStartValue(endX);
+         moveAnimation->setEndValue(startX);
+
+         ui->expandedNav->hide();
+
+
+         toggleFlag=true;
+     }
+     }
+
+
 
 
 
@@ -301,7 +325,6 @@ void MainWindow::on_man_toggled(bool checked)
     ui->port_inp->setEnabled(checked);
 
 }
-
 
 
 
