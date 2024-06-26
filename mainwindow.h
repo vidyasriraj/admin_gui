@@ -39,6 +39,7 @@ private slots:
     void setLogsPage();
     void setSettingsPage();
     void setInfoPage();
+    void setConfPage();
 
     // changing settings
     void setSettings(int index, QPushButton *selectedSettingsBtn);
@@ -58,6 +59,7 @@ private slots:
             widget->setGraphicsEffect(nullptr);
         }
     }
+
 
 
 private:

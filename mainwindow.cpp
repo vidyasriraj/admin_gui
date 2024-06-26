@@ -42,6 +42,9 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->expandedSettingsBtn, SIGNAL(clicked()), this, SLOT(setSettingsPage()));
     connect(ui->compressedInfoBtn, SIGNAL(clicked()), this, SLOT(setInfoPage()));
     connect(ui->expandedInfoBtn, SIGNAL(clicked()), this, SLOT(setInfoPage()));
+    connect(ui->confBtn, SIGNAL(clicked()), this, SLOT(setConfPage()));
+    connect(ui->expandedConfBtn, SIGNAL(clicked()), this, SLOT(setConfPage()));
+
 
     // signals to control settings navigation
     setGeneralSettings();
@@ -199,13 +202,13 @@ void MainWindow::setViewPage(int index, QPushButton *clickedButton,QPushButton *
     ui->StackedMainView->setCurrentIndex(index);
 
     if (clickedButton != nullptr && clickedButton1 != nullptr) {
-        clickedButton->setStyleSheet("background-color: #2D3233; border: 2px solid transparent; outline: none; padding-left: 17px; padding-right: 17px;");
-        clickedButton1->setStyleSheet("background-color: #2D3233; border: 2px solid transparent; outline: none; padding-left: 17px; padding-right: 17px;");
+        clickedButton->setStyleSheet("background-color: #2D3233; border: 2px solid transparent; outline: none;");
+        clickedButton1->setStyleSheet("background-color: #2D3233; border: 2px solid transparent; outline: none;");
     }
 
     if (previousPage != nullptr && previousPage != clickedButton && previousPage != clickedButton1 ) {
-        previousPage->setStyleSheet("background-color: rgb(23, 28, 31); border: 2px solid transparent; outline: none; padding-left: 17px; padding-right: 17px;");
-        previousPage1->setStyleSheet("background-color: rgb(23, 28, 31); border: 2px solid transparent; outline: none; padding-left: 17px; padding-right: 17px;");
+        previousPage->setStyleSheet("background-color: rgb(23, 28, 31); border: 2px solid transparent; outline: none;");
+        previousPage1->setStyleSheet("background-color: rgb(23, 28, 31); border: 2px solid transparent; outline: none;");
     }
 
     previousPage = clickedButton;
@@ -247,7 +250,9 @@ void MainWindow::setInfoPage() {
     shadowEffect->setColor(QColor(0, 0, 0, 100));
     ui->infoContainer->setGraphicsEffect(shadowEffect);
 }
-
+void MainWindow::setConfPage() {
+    setViewPage(4, ui->expandedConfBtn ,ui->confBtn);
+}
 
 
 
@@ -325,6 +330,8 @@ void MainWindow::on_man_toggled(bool checked)
     ui->port_inp->setEnabled(checked);
 
 }
+
+
 
 
 

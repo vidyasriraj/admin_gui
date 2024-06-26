@@ -36,13 +36,17 @@ class Ui_MainWindow
 {
 public:
     QWidget *centralwidget;
-    QGridLayout *gridLayout_4;
+    QGridLayout *gridLayout_2;
     QWidget *compressedNav;
+    QVBoxLayout *verticalLayout_7;
+    QPushButton *compressedNavBtn;
     QPushButton *compressedDashboardBtn;
     QPushButton *compressedLogsBtn;
+    QPushButton *compressedLogsBtn_2;
+    QPushButton *confBtn;
+    QSpacerItem *verticalSpacer;
     QPushButton *compressedSettingsBtn;
     QPushButton *compressedInfoBtn;
-    QPushButton *compressedNavBtn;
     QWidget *main;
     QGridLayout *gridLayout;
     QStackedWidget *StackedMainView;
@@ -89,13 +93,6 @@ public:
     QLabel *user;
     QWidget *settingsPage;
     QGridLayout *gridLayout_8;
-    QFrame *selectSettingsFrame;
-    QVBoxLayout *verticalLayout_9;
-    QLabel *settingsTitle;
-    QPushButton *generalSettingsBtn;
-    QPushButton *proxySettingsBtn;
-    QPushButton *advancedSettingsBtn;
-    QSpacerItem *verticalSpacer_3;
     QStackedWidget *stackedSettingsView;
     QWidget *generalSettingsPage;
     QLabel *userInterfaceTitle;
@@ -146,6 +143,13 @@ public:
     QLabel *label_12;
     QLabel *label_18;
     QLabel *label_17;
+    QFrame *selectSettingsFrame;
+    QVBoxLayout *verticalLayout_9;
+    QLabel *settingsTitle;
+    QPushButton *generalSettingsBtn;
+    QPushButton *proxySettingsBtn;
+    QPushButton *advancedSettingsBtn;
+    QSpacerItem *verticalSpacer_3;
     QWidget *infoPage;
     QGridLayout *gridLayout_10;
     QLabel *userLogoInfo;
@@ -157,9 +161,41 @@ public:
     QLabel *infoTitle;
     QLabel *quantumLogoInfo;
     QSpacerItem *InfohorizontalSpacerRight;
+    QWidget *configuration;
+    QFrame *frame;
+    QLabel *label_2;
+    QFrame *frame_2;
+    QFrame *line_5;
+    QFrame *line_6;
+    QFrame *line_7;
+    QFrame *line_8;
+    QFrame *line_9;
+    QFrame *line_10;
+    QFrame *line_11;
+    QLabel *label_3;
+    QLabel *label_4;
+    QLabel *label_5;
+    QLabel *label_6;
+    QLabel *label_7;
+    QLabel *label_9;
+    QLabel *label_10;
+    QLabel *label_20;
+    QLabel *label_21;
+    QLabel *label_22;
+    QLabel *label_23;
+    QLabel *label_24;
+    QLabel *label_25;
+    QLabel *label_26;
+    QLabel *label_27;
+    QLabel *label_28;
     QWidget *expandedNav;
-    QPushButton *expandedLogsBtn;
+    QVBoxLayout *verticalLayout_8;
+    QFrame *frame_3;
     QPushButton *expandedDashboardBtn;
+    QPushButton *expandedLogsBtn;
+    QPushButton *expandedLogsBtn_2;
+    QPushButton *expandedConfBtn;
+    QSpacerItem *verticalSpacer_2;
     QPushButton *expandedSettingsBtn;
     QPushButton *expandedInfoBtn;
 
@@ -176,10 +212,10 @@ public:
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         centralwidget->setMinimumSize(QSize(900, 600));
         centralwidget->setMaximumSize(QSize(900, 600));
-        gridLayout_4 = new QGridLayout(centralwidget);
-        gridLayout_4->setSpacing(0);
-        gridLayout_4->setObjectName(QString::fromUtf8("gridLayout_4"));
-        gridLayout_4->setContentsMargins(0, 0, 0, 0);
+        gridLayout_2 = new QGridLayout(centralwidget);
+        gridLayout_2->setSpacing(0);
+        gridLayout_2->setObjectName(QString::fromUtf8("gridLayout_2"));
+        gridLayout_2->setContentsMargins(0, 0, 0, 0);
         compressedNav = new QWidget(centralwidget);
         compressedNav->setObjectName(QString::fromUtf8("compressedNav"));
         QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
@@ -188,63 +224,14 @@ public:
         sizePolicy.setHeightForWidth(compressedNav->sizePolicy().hasHeightForWidth());
         compressedNav->setSizePolicy(sizePolicy);
         compressedNav->setMinimumSize(QSize(70, 600));
-        compressedNav->setMaximumSize(QSize(16777215, 600));
+        compressedNav->setMaximumSize(QSize(70, 600));
         compressedNav->setStyleSheet(QString::fromUtf8("background-color: rgb(23, 28, 31);"));
-        compressedDashboardBtn = new QPushButton(compressedNav);
-        compressedDashboardBtn->setObjectName(QString::fromUtf8("compressedDashboardBtn"));
-        compressedDashboardBtn->setGeometry(QRect(0, 64, 70, 64));
-        compressedDashboardBtn->setCursor(QCursor(Qt::PointingHandCursor));
-        compressedDashboardBtn->setStyleSheet(QString::fromUtf8("background-color: rgb(23, 28, 31);\n"
-"border: 2px solid transparent;\n"
-"outline: none;\n"
-"QPushButton::focus { background-color:rgb(217, 217, 217); }"));
-        QIcon icon;
-        icon.addFile(QString::fromUtf8(":/logos/images/Dashboard Layout.png"), QSize(), QIcon::Normal, QIcon::Off);
-        compressedDashboardBtn->setIcon(icon);
-        compressedDashboardBtn->setIconSize(QSize(60, 60));
-        compressedDashboardBtn->setCheckable(true);
-        compressedDashboardBtn->setChecked(true);
-        compressedDashboardBtn->setAutoExclusive(true);
-        compressedLogsBtn = new QPushButton(compressedNav);
-        compressedLogsBtn->setObjectName(QString::fromUtf8("compressedLogsBtn"));
-        compressedLogsBtn->setGeometry(QRect(0, 128, 70, 64));
-        compressedLogsBtn->setCursor(QCursor(Qt::PointingHandCursor));
-        compressedLogsBtn->setStyleSheet(QString::fromUtf8("background-color: rgb(23, 28, 31);\n"
-"selection-background-color: rgb(217, 217, 217);\n"
-"border: 2px solid transparent;\n"
-"outline: none;"));
-        QIcon icon1;
-        icon1.addFile(QString::fromUtf8(":/logos/images/Align Text Left.png"), QSize(), QIcon::Normal, QIcon::Off);
-        compressedLogsBtn->setIcon(icon1);
-        compressedLogsBtn->setIconSize(QSize(60, 60));
-        compressedLogsBtn->setCheckable(true);
-        compressedSettingsBtn = new QPushButton(compressedNav);
-        compressedSettingsBtn->setObjectName(QString::fromUtf8("compressedSettingsBtn"));
-        compressedSettingsBtn->setGeometry(QRect(0, 472, 70, 64));
-        compressedSettingsBtn->setCursor(QCursor(Qt::PointingHandCursor));
-        compressedSettingsBtn->setStyleSheet(QString::fromUtf8("background-color: rgb(23, 28, 31);\n"
-"border: 2px solid transparent;\n"
-"outline: none;"));
-        QIcon icon2;
-        icon2.addFile(QString::fromUtf8(":/logos/images/CMakeLists.txt.user"), QSize(), QIcon::Normal, QIcon::Off);
-        compressedSettingsBtn->setIcon(icon2);
-        compressedSettingsBtn->setIconSize(QSize(60, 60));
-        compressedSettingsBtn->setCheckable(true);
-        compressedInfoBtn = new QPushButton(compressedNav);
-        compressedInfoBtn->setObjectName(QString::fromUtf8("compressedInfoBtn"));
-        compressedInfoBtn->setGeometry(QRect(0, 536, 70, 64));
-        compressedInfoBtn->setCursor(QCursor(Qt::PointingHandCursor));
-        compressedInfoBtn->setStyleSheet(QString::fromUtf8("background-color: rgb(23, 28, 31);\n"
-"border: 2px solid transparent;\n"
-"outline: none;"));
-        QIcon icon3;
-        icon3.addFile(QString::fromUtf8(":/logos/images/Info.png"), QSize(), QIcon::Normal, QIcon::Off);
-        compressedInfoBtn->setIcon(icon3);
-        compressedInfoBtn->setIconSize(QSize(60, 60));
-        compressedInfoBtn->setCheckable(true);
+        verticalLayout_7 = new QVBoxLayout(compressedNav);
+        verticalLayout_7->setSpacing(0);
+        verticalLayout_7->setObjectName(QString::fromUtf8("verticalLayout_7"));
+        verticalLayout_7->setContentsMargins(0, 0, 0, 0);
         compressedNavBtn = new QPushButton(compressedNav);
         compressedNavBtn->setObjectName(QString::fromUtf8("compressedNavBtn"));
-        compressedNavBtn->setGeometry(QRect(0, 0, 68, 64));
         QFont font;
         font.setBold(false);
         compressedNavBtn->setFont(font);
@@ -252,12 +239,111 @@ public:
         compressedNavBtn->setStyleSheet(QString::fromUtf8("background-color: rgb(23, 28, 31);\n"
 "border: 2px solid transparent;\n"
 "outline: none;"));
-        QIcon icon4;
-        icon4.addFile(QString::fromUtf8(":/logos/images/Menu.png"), QSize(), QIcon::Normal, QIcon::Off);
-        compressedNavBtn->setIcon(icon4);
+        QIcon icon;
+        icon.addFile(QString::fromUtf8(":/logos/images/Menu.png"), QSize(), QIcon::Normal, QIcon::Off);
+        compressedNavBtn->setIcon(icon);
         compressedNavBtn->setIconSize(QSize(60, 60));
 
-        gridLayout_4->addWidget(compressedNav, 0, 0, 1, 1);
+        verticalLayout_7->addWidget(compressedNavBtn);
+
+        compressedDashboardBtn = new QPushButton(compressedNav);
+        compressedDashboardBtn->setObjectName(QString::fromUtf8("compressedDashboardBtn"));
+        compressedDashboardBtn->setCursor(QCursor(Qt::PointingHandCursor));
+        compressedDashboardBtn->setStyleSheet(QString::fromUtf8("background-color: rgb(23, 28, 31);\n"
+"border: 2px solid transparent;\n"
+"outline: none;\n"
+"QPushButton::focus { background-color:rgb(217, 217, 217); }"));
+        QIcon icon1;
+        icon1.addFile(QString::fromUtf8(":/logos/images/Dashboard Layout.png"), QSize(), QIcon::Normal, QIcon::Off);
+        compressedDashboardBtn->setIcon(icon1);
+        compressedDashboardBtn->setIconSize(QSize(60, 60));
+        compressedDashboardBtn->setCheckable(true);
+        compressedDashboardBtn->setChecked(true);
+        compressedDashboardBtn->setAutoExclusive(true);
+
+        verticalLayout_7->addWidget(compressedDashboardBtn);
+
+        compressedLogsBtn = new QPushButton(compressedNav);
+        compressedLogsBtn->setObjectName(QString::fromUtf8("compressedLogsBtn"));
+        compressedLogsBtn->setCursor(QCursor(Qt::PointingHandCursor));
+        compressedLogsBtn->setStyleSheet(QString::fromUtf8("background-color: rgb(23, 28, 31);\n"
+"selection-background-color: rgb(217, 217, 217);\n"
+"border: 2px solid transparent;\n"
+"outline: none;"));
+        QIcon icon2;
+        icon2.addFile(QString::fromUtf8(":/logos/images/Align Text Left.png"), QSize(), QIcon::Normal, QIcon::Off);
+        compressedLogsBtn->setIcon(icon2);
+        compressedLogsBtn->setIconSize(QSize(60, 60));
+        compressedLogsBtn->setCheckable(true);
+
+        verticalLayout_7->addWidget(compressedLogsBtn);
+
+        compressedLogsBtn_2 = new QPushButton(compressedNav);
+        compressedLogsBtn_2->setObjectName(QString::fromUtf8("compressedLogsBtn_2"));
+        compressedLogsBtn_2->setMaximumSize(QSize(16777215, 70));
+        compressedLogsBtn_2->setCursor(QCursor(Qt::PointingHandCursor));
+        compressedLogsBtn_2->setStyleSheet(QString::fromUtf8("background-color: rgb(23, 28, 31);\n"
+"selection-background-color: rgb(217, 217, 217);\n"
+"border: 2px solid transparent;\n"
+"outline: none;"));
+        QIcon icon3;
+        icon3.addFile(QString::fromUtf8("../../../Downloads/Users.png"), QSize(), QIcon::Normal, QIcon::Off);
+        compressedLogsBtn_2->setIcon(icon3);
+        compressedLogsBtn_2->setIconSize(QSize(35, 60));
+        compressedLogsBtn_2->setCheckable(true);
+
+        verticalLayout_7->addWidget(compressedLogsBtn_2);
+
+        confBtn = new QPushButton(compressedNav);
+        confBtn->setObjectName(QString::fromUtf8("confBtn"));
+        confBtn->setMaximumSize(QSize(16777215, 70));
+        confBtn->setCursor(QCursor(Qt::PointingHandCursor));
+        confBtn->setStyleSheet(QString::fromUtf8("background-color: rgb(23, 28, 31);\n"
+"selection-background-color: rgb(217, 217, 217);\n"
+"border: 2px solid transparent;\n"
+"outline: none;"));
+        QIcon icon4;
+        icon4.addFile(QString::fromUtf8("../../../Downloads/Computer Support.png"), QSize(), QIcon::Normal, QIcon::Off);
+        confBtn->setIcon(icon4);
+        confBtn->setIconSize(QSize(30, 60));
+        confBtn->setCheckable(true);
+
+        verticalLayout_7->addWidget(confBtn);
+
+        verticalSpacer = new QSpacerItem(20, 149, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        verticalLayout_7->addItem(verticalSpacer);
+
+        compressedSettingsBtn = new QPushButton(compressedNav);
+        compressedSettingsBtn->setObjectName(QString::fromUtf8("compressedSettingsBtn"));
+        compressedSettingsBtn->setCursor(QCursor(Qt::PointingHandCursor));
+        compressedSettingsBtn->setStyleSheet(QString::fromUtf8("background-color: rgb(23, 28, 31);\n"
+"border: 2px solid transparent;\n"
+"outline: none;"));
+        QIcon icon5;
+        icon5.addFile(QString::fromUtf8(":/logos/images/CMakeLists.txt.user"), QSize(), QIcon::Normal, QIcon::Off);
+        compressedSettingsBtn->setIcon(icon5);
+        compressedSettingsBtn->setIconSize(QSize(60, 60));
+        compressedSettingsBtn->setCheckable(true);
+
+        verticalLayout_7->addWidget(compressedSettingsBtn);
+
+        compressedInfoBtn = new QPushButton(compressedNav);
+        compressedInfoBtn->setObjectName(QString::fromUtf8("compressedInfoBtn"));
+        compressedInfoBtn->setCursor(QCursor(Qt::PointingHandCursor));
+        compressedInfoBtn->setStyleSheet(QString::fromUtf8("background-color: rgb(23, 28, 31);\n"
+"border: 2px solid transparent;\n"
+"outline: none;"));
+        QIcon icon6;
+        icon6.addFile(QString::fromUtf8(":/logos/images/Info.png"), QSize(), QIcon::Normal, QIcon::Off);
+        compressedInfoBtn->setIcon(icon6);
+        compressedInfoBtn->setIconSize(QSize(60, 60));
+        compressedInfoBtn->setCheckable(true);
+
+        verticalLayout_7->addWidget(compressedInfoBtn);
+
+
+        gridLayout_2->addWidget(compressedNav, 0, 0, 1, 1);
 
         main = new QWidget(centralwidget);
         main->setObjectName(QString::fromUtf8("main"));
@@ -333,9 +419,9 @@ public:
         connectIcon->setMaximumSize(QSize(220, 220));
         connectIcon->setCursor(QCursor(Qt::PointingHandCursor));
         connectIcon->setStyleSheet(QString::fromUtf8("image: url(:/logos/images/connect.png);"));
-        QIcon icon5;
-        icon5.addFile(QString::fromUtf8(":/logos/images/Frame 13.png"), QSize(), QIcon::Normal, QIcon::Off);
-        connectIcon->setIcon(icon5);
+        QIcon icon7;
+        icon7.addFile(QString::fromUtf8(":/logos/images/Frame 13.png"), QSize(), QIcon::Normal, QIcon::Off);
+        connectIcon->setIcon(icon7);
         connectIcon->setIconSize(QSize(220, 220));
         connectIcon->setCheckable(true);
 
@@ -373,9 +459,9 @@ public:
         QFont font2;
         font2.setPointSize(16);
         uploadIconAndText->setFont(font2);
-        QIcon icon6;
-        icon6.addFile(QString::fromUtf8(":/logos/images/upload.png"), QSize(), QIcon::Normal, QIcon::Off);
-        uploadIconAndText->setIcon(icon6);
+        QIcon icon8;
+        icon8.addFile(QString::fromUtf8(":/logos/images/upload.png"), QSize(), QIcon::Normal, QIcon::Off);
+        uploadIconAndText->setIcon(icon8);
         uploadIconAndText->setIconSize(QSize(30, 30));
 
         verticalLayout_2->addWidget(uploadIconAndText, 0, Qt::AlignHCenter);
@@ -407,7 +493,7 @@ public:
         sizePolicy.setHeightForWidth(downloadIconAndText->sizePolicy().hasHeightForWidth());
         downloadIconAndText->setSizePolicy(sizePolicy);
         downloadIconAndText->setFont(font2);
-        downloadIconAndText->setIcon(icon6);
+        downloadIconAndText->setIcon(icon8);
         downloadIconAndText->setIconSize(QSize(30, 30));
 
         verticalLayout_3->addWidget(downloadIconAndText, 0, Qt::AlignHCenter);
@@ -437,7 +523,7 @@ public:
         sizePolicy.setHeightForWidth(upTimeIconAndText->sizePolicy().hasHeightForWidth());
         upTimeIconAndText->setSizePolicy(sizePolicy);
         upTimeIconAndText->setFont(font2);
-        upTimeIconAndText->setIcon(icon6);
+        upTimeIconAndText->setIcon(icon8);
         upTimeIconAndText->setIconSize(QSize(30, 30));
 
         verticalLayout_4->addWidget(upTimeIconAndText, 0, Qt::AlignHCenter);
@@ -467,7 +553,7 @@ public:
         sizePolicy.setHeightForWidth(ipAddressIconAndText->sizePolicy().hasHeightForWidth());
         ipAddressIconAndText->setSizePolicy(sizePolicy);
         ipAddressIconAndText->setFont(font2);
-        ipAddressIconAndText->setIcon(icon6);
+        ipAddressIconAndText->setIcon(icon8);
         ipAddressIconAndText->setIconSize(QSize(30, 30));
 
         verticalLayout_5->addWidget(ipAddressIconAndText, 0, Qt::AlignHCenter);
@@ -670,77 +756,12 @@ public:
         gridLayout_8->setSpacing(0);
         gridLayout_8->setObjectName(QString::fromUtf8("gridLayout_8"));
         gridLayout_8->setContentsMargins(0, 0, 0, 0);
-        selectSettingsFrame = new QFrame(settingsPage);
-        selectSettingsFrame->setObjectName(QString::fromUtf8("selectSettingsFrame"));
-        selectSettingsFrame->setMinimumSize(QSize(200, 0));
-        selectSettingsFrame->setMaximumSize(QSize(16777215, 16777215));
-        selectSettingsFrame->setStyleSheet(QString::fromUtf8("background-color: rgba(23, 28, 31, 0.56);\n"
-"color: rgb(255, 255, 255);\n"
-"text-align: left;\n"
-""));
-        selectSettingsFrame->setFrameShape(QFrame::StyledPanel);
-        selectSettingsFrame->setFrameShadow(QFrame::Raised);
-        verticalLayout_9 = new QVBoxLayout(selectSettingsFrame);
-        verticalLayout_9->setSpacing(0);
-        verticalLayout_9->setObjectName(QString::fromUtf8("verticalLayout_9"));
-        verticalLayout_9->setContentsMargins(0, 10, 0, 0);
-        settingsTitle = new QLabel(selectSettingsFrame);
-        settingsTitle->setObjectName(QString::fromUtf8("settingsTitle"));
-        settingsTitle->setFont(font3);
-        settingsTitle->setStyleSheet(QString::fromUtf8("background-color: transparent;\n"
-"margin: \"10px\";"));
-
-        verticalLayout_9->addWidget(settingsTitle, 0, Qt::AlignHCenter);
-
-        generalSettingsBtn = new QPushButton(selectSettingsFrame);
-        generalSettingsBtn->setObjectName(QString::fromUtf8("generalSettingsBtn"));
-        generalSettingsBtn->setMinimumSize(QSize(0, 40));
-        QFont font6;
-        font6.setPointSize(13);
-        generalSettingsBtn->setFont(font6);
-        generalSettingsBtn->setCursor(QCursor(Qt::PointingHandCursor));
-        generalSettingsBtn->setStyleSheet(QString::fromUtf8("background-color: rgba(45, 50, 51, 1);\n"
-"padding-left: \"8px\";\n"
-""));
-        generalSettingsBtn->setCheckable(true);
-
-        verticalLayout_9->addWidget(generalSettingsBtn);
-
-        proxySettingsBtn = new QPushButton(selectSettingsFrame);
-        proxySettingsBtn->setObjectName(QString::fromUtf8("proxySettingsBtn"));
-        proxySettingsBtn->setMinimumSize(QSize(0, 40));
-        proxySettingsBtn->setFont(font6);
-        proxySettingsBtn->setCursor(QCursor(Qt::PointingHandCursor));
-        proxySettingsBtn->setStyleSheet(QString::fromUtf8("background-color: transparent;\n"
-"padding-left: \"8px\";"));
-        proxySettingsBtn->setCheckable(true);
-
-        verticalLayout_9->addWidget(proxySettingsBtn);
-
-        advancedSettingsBtn = new QPushButton(selectSettingsFrame);
-        advancedSettingsBtn->setObjectName(QString::fromUtf8("advancedSettingsBtn"));
-        advancedSettingsBtn->setMinimumSize(QSize(0, 40));
-        advancedSettingsBtn->setFont(font6);
-        advancedSettingsBtn->setCursor(QCursor(Qt::PointingHandCursor));
-        advancedSettingsBtn->setStyleSheet(QString::fromUtf8("background-color: transparent;\n"
-"padding-left: \"8px\";"));
-        advancedSettingsBtn->setCheckable(true);
-
-        verticalLayout_9->addWidget(advancedSettingsBtn);
-
-        verticalSpacer_3 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
-
-        verticalLayout_9->addItem(verticalSpacer_3);
-
-
-        gridLayout_8->addWidget(selectSettingsFrame, 0, 1, 1, 1);
-
         stackedSettingsView = new QStackedWidget(settingsPage);
         stackedSettingsView->setObjectName(QString::fromUtf8("stackedSettingsView"));
-        QFont font7;
-        font7.setFamily(QString::fromUtf8("Sans Serif"));
-        font7.setPointSize(15);
-        stackedSettingsView->setFont(font7);
+        QFont font6;
+        font6.setFamily(QString::fromUtf8("Sans Serif"));
+        font6.setPointSize(15);
+        stackedSettingsView->setFont(font6);
         stackedSettingsView->setCursor(QCursor(Qt::PointingHandCursor));
         stackedSettingsView->setStyleSheet(QString::fromUtf8("background: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0, stop:0 #404040, stop:1 #1F363D);\n"
 "color: rgb(255, 255, 255);\n"
@@ -774,18 +795,18 @@ public:
         userInterfaceTitle = new QLabel(generalSettingsPage);
         userInterfaceTitle->setObjectName(QString::fromUtf8("userInterfaceTitle"));
         userInterfaceTitle->setGeometry(QRect(15, 15, 167, 33));
-        QFont font8;
-        font8.setFamily(QString::fromUtf8("Sans Serif"));
-        font8.setPointSize(16);
-        font8.setBold(true);
-        userInterfaceTitle->setFont(font8);
+        QFont font7;
+        font7.setFamily(QString::fromUtf8("Sans Serif"));
+        font7.setPointSize(16);
+        font7.setBold(true);
+        userInterfaceTitle->setFont(font7);
         userInterfaceTitle->setStyleSheet(QString::fromUtf8("background-color: transparent;"));
         languageLabel = new QLabel(generalSettingsPage);
         languageLabel->setObjectName(QString::fromUtf8("languageLabel"));
         languageLabel->setGeometry(QRect(15, 66, 123, 25));
-        QFont font9;
-        font9.setFamily(QString::fromUtf8("Sans Serif"));
-        languageLabel->setFont(font9);
+        QFont font8;
+        font8.setFamily(QString::fromUtf8("Sans Serif"));
+        languageLabel->setFont(font8);
         languageLabel->setStyleSheet(QString::fromUtf8("background-color: transparent;\n"
 "margin-left: \"40px\";"));
         selectLanguageInput = new QComboBox(generalSettingsPage);
@@ -800,7 +821,7 @@ public:
         selectLanguageInput->setSizePolicy(sizePolicy);
         selectLanguageInput->setMinimumSize(QSize(131, 0));
         selectLanguageInput->setMaximumSize(QSize(16777215, 30));
-        selectLanguageInput->setFont(font9);
+        selectLanguageInput->setFont(font8);
         selectLanguageInput->setContextMenuPolicy(Qt::NoContextMenu);
         selectLanguageInput->setStyleSheet(QString::fromUtf8("QComboBox {\n"
 "    border: 1px solid gray;\n"
@@ -834,9 +855,9 @@ public:
         line = new QFrame(generalSettingsPage);
         line->setObjectName(QString::fromUtf8("line"));
         line->setGeometry(QRect(15, 117, 427, 3));
-        QFont font10;
-        font10.setStyleStrategy(QFont::PreferDefault);
-        line->setFont(font10);
+        QFont font9;
+        font9.setStyleStrategy(QFont::PreferDefault);
+        line->setFont(font9);
         line->setAutoFillBackground(false);
         line->setStyleSheet(QString::fromUtf8("background-color: \"#474748\";\n"
 "\n"
@@ -846,7 +867,7 @@ public:
         userInterfaceTitle_3 = new QLabel(generalSettingsPage);
         userInterfaceTitle_3->setObjectName(QString::fromUtf8("userInterfaceTitle_3"));
         userInterfaceTitle_3->setGeometry(QRect(15, 261, 141, 43));
-        userInterfaceTitle_3->setFont(font8);
+        userInterfaceTitle_3->setFont(font7);
         userInterfaceTitle_3->setStyleSheet(QString::fromUtf8("background-color: transparent;\n"
 "margin-bottom: \"10px\";"));
         label_8 = new QLabel(generalSettingsPage);
@@ -922,7 +943,7 @@ public:
         userInterfaceTitle_2 = new QLabel(generalSettingsPage);
         userInterfaceTitle_2->setObjectName(QString::fromUtf8("userInterfaceTitle_2"));
         userInterfaceTitle_2->setGeometry(QRect(15, 126, 96, 43));
-        userInterfaceTitle_2->setFont(font8);
+        userInterfaceTitle_2->setFont(font7);
         userInterfaceTitle_2->setStyleSheet(QString::fromUtf8("background-color: transparent;\n"
 "margin-top: \"10px\";"));
         checkBox_2 = new QCheckBox(generalSettingsPage);
@@ -1275,7 +1296,7 @@ public:
         line_3 = new QFrame(advancedSettingsPage);
         line_3->setObjectName(QString::fromUtf8("line_3"));
         line_3->setGeometry(QRect(14, 120, 527, 3));
-        line_3->setFont(font10);
+        line_3->setFont(font9);
         line_3->setAutoFillBackground(false);
         line_3->setStyleSheet(QString::fromUtf8("background-color: \"#474748\";\n"
 "\n"
@@ -1285,7 +1306,7 @@ public:
         line_4 = new QFrame(advancedSettingsPage);
         line_4->setObjectName(QString::fromUtf8("line_4"));
         line_4->setGeometry(QRect(14, 220, 527, 3));
-        line_4->setFont(font10);
+        line_4->setFont(font9);
         line_4->setAutoFillBackground(false);
         line_4->setStyleSheet(QString::fromUtf8("background-color: \"#474748\";\n"
 "\n"
@@ -1295,16 +1316,16 @@ public:
         label_11 = new QLabel(advancedSettingsPage);
         label_11->setObjectName(QString::fromUtf8("label_11"));
         label_11->setGeometry(QRect(16, 16, 231, 31));
-        QFont font11;
-        font11.setPointSize(16);
-        font11.setBold(true);
-        label_11->setFont(font11);
+        QFont font10;
+        font10.setPointSize(16);
+        font10.setBold(true);
+        label_11->setFont(font10);
         label_11->setStyleSheet(QString::fromUtf8("background: transparent;\n"
 "color: rgb(255, 255, 255);"));
         label_14 = new QLabel(advancedSettingsPage);
         label_14->setObjectName(QString::fromUtf8("label_14"));
         label_14->setGeometry(QRect(16, 130, 121, 31));
-        label_14->setFont(font11);
+        label_14->setFont(font10);
         label_14->setStyleSheet(QString::fromUtf8("background: transparent;\n"
 "color: rgb(255, 255, 255);"));
         label_15 = new QLabel(advancedSettingsPage);
@@ -1315,7 +1336,7 @@ public:
         label_16 = new QLabel(advancedSettingsPage);
         label_16->setObjectName(QString::fromUtf8("label_16"));
         label_16->setGeometry(QRect(16, 230, 201, 31));
-        label_16->setFont(font11);
+        label_16->setFont(font10);
         label_16->setStyleSheet(QString::fromUtf8("background: transparent;\n"
 "color: rgb(255, 255, 255);"));
         label_19 = new QLabel(advancedSettingsPage);
@@ -1346,6 +1367,71 @@ public:
         stackedSettingsView->addWidget(advancedSettingsPage);
 
         gridLayout_8->addWidget(stackedSettingsView, 0, 2, 1, 1);
+
+        selectSettingsFrame = new QFrame(settingsPage);
+        selectSettingsFrame->setObjectName(QString::fromUtf8("selectSettingsFrame"));
+        selectSettingsFrame->setMinimumSize(QSize(200, 0));
+        selectSettingsFrame->setMaximumSize(QSize(16777215, 16777215));
+        selectSettingsFrame->setStyleSheet(QString::fromUtf8("background-color: rgba(23, 28, 31, 0.56);\n"
+"color: rgb(255, 255, 255);\n"
+"text-align: left;\n"
+""));
+        selectSettingsFrame->setFrameShape(QFrame::StyledPanel);
+        selectSettingsFrame->setFrameShadow(QFrame::Raised);
+        verticalLayout_9 = new QVBoxLayout(selectSettingsFrame);
+        verticalLayout_9->setSpacing(0);
+        verticalLayout_9->setObjectName(QString::fromUtf8("verticalLayout_9"));
+        verticalLayout_9->setContentsMargins(0, 10, 0, 0);
+        settingsTitle = new QLabel(selectSettingsFrame);
+        settingsTitle->setObjectName(QString::fromUtf8("settingsTitle"));
+        settingsTitle->setFont(font3);
+        settingsTitle->setStyleSheet(QString::fromUtf8("background-color: transparent;\n"
+"margin: \"10px\";"));
+
+        verticalLayout_9->addWidget(settingsTitle, 0, Qt::AlignHCenter);
+
+        generalSettingsBtn = new QPushButton(selectSettingsFrame);
+        generalSettingsBtn->setObjectName(QString::fromUtf8("generalSettingsBtn"));
+        generalSettingsBtn->setMinimumSize(QSize(0, 40));
+        QFont font11;
+        font11.setPointSize(13);
+        generalSettingsBtn->setFont(font11);
+        generalSettingsBtn->setCursor(QCursor(Qt::PointingHandCursor));
+        generalSettingsBtn->setStyleSheet(QString::fromUtf8("background-color: rgba(45, 50, 51, 1);\n"
+"padding-left: \"8px\";\n"
+""));
+        generalSettingsBtn->setCheckable(true);
+
+        verticalLayout_9->addWidget(generalSettingsBtn);
+
+        proxySettingsBtn = new QPushButton(selectSettingsFrame);
+        proxySettingsBtn->setObjectName(QString::fromUtf8("proxySettingsBtn"));
+        proxySettingsBtn->setMinimumSize(QSize(0, 40));
+        proxySettingsBtn->setFont(font11);
+        proxySettingsBtn->setCursor(QCursor(Qt::PointingHandCursor));
+        proxySettingsBtn->setStyleSheet(QString::fromUtf8("background-color: transparent;\n"
+"padding-left: \"8px\";"));
+        proxySettingsBtn->setCheckable(true);
+
+        verticalLayout_9->addWidget(proxySettingsBtn);
+
+        advancedSettingsBtn = new QPushButton(selectSettingsFrame);
+        advancedSettingsBtn->setObjectName(QString::fromUtf8("advancedSettingsBtn"));
+        advancedSettingsBtn->setMinimumSize(QSize(0, 40));
+        advancedSettingsBtn->setFont(font11);
+        advancedSettingsBtn->setCursor(QCursor(Qt::PointingHandCursor));
+        advancedSettingsBtn->setStyleSheet(QString::fromUtf8("background-color: transparent;\n"
+"padding-left: \"8px\";"));
+        advancedSettingsBtn->setCheckable(true);
+
+        verticalLayout_9->addWidget(advancedSettingsBtn);
+
+        verticalSpacer_3 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        verticalLayout_9->addItem(verticalSpacer_3);
+
+
+        gridLayout_8->addWidget(selectSettingsFrame, 0, 1, 1, 1);
 
         StackedMainView->addWidget(settingsPage);
         infoPage = new QWidget();
@@ -1400,7 +1486,7 @@ public:
         gridLayout_9->setContentsMargins(15, 15, 15, 15);
         infoDescription = new QLabel(infoContainer);
         infoDescription->setObjectName(QString::fromUtf8("infoDescription"));
-        infoDescription->setFont(font9);
+        infoDescription->setFont(font8);
         infoDescription->setWordWrap(true);
 
         gridLayout_9->addWidget(infoDescription, 2, 0, 1, 1);
@@ -1408,7 +1494,7 @@ public:
         infoTitle = new QLabel(infoContainer);
         infoTitle->setObjectName(QString::fromUtf8("infoTitle"));
         infoTitle->setMaximumSize(QSize(16777215, 50));
-        infoTitle->setFont(font7);
+        infoTitle->setFont(font6);
 
         gridLayout_9->addWidget(infoTitle, 0, 0, 1, 1);
 
@@ -1435,11 +1521,153 @@ public:
         gridLayout_10->addLayout(infoContainerLayout, 2, 0, 2, 1);
 
         StackedMainView->addWidget(infoPage);
+        configuration = new QWidget();
+        configuration->setObjectName(QString::fromUtf8("configuration"));
+        frame = new QFrame(configuration);
+        frame->setObjectName(QString::fromUtf8("frame"));
+        frame->setGeometry(QRect(0, 0, 686, 596));
+        frame->setFrameShape(QFrame::StyledPanel);
+        frame->setFrameShadow(QFrame::Raised);
+        label_2 = new QLabel(frame);
+        label_2->setObjectName(QString::fromUtf8("label_2"));
+        label_2->setGeometry(QRect(20, 25, 231, 41));
+        label_2->setFont(font10);
+        frame_2 = new QFrame(frame);
+        frame_2->setObjectName(QString::fromUtf8("frame_2"));
+        frame_2->setGeometry(QRect(30, 60, 650, 521));
+        frame_2->setFrameShape(QFrame::StyledPanel);
+        frame_2->setFrameShadow(QFrame::Raised);
+        line_5 = new QFrame(frame_2);
+        line_5->setObjectName(QString::fromUtf8("line_5"));
+        line_5->setGeometry(QRect(11, 66, 628, 2));
+        line_5->setStyleSheet(QString::fromUtf8("background-color: \"#474748\";\n"
+"\n"
+""));
+        line_5->setFrameShape(QFrame::HLine);
+        line_5->setFrameShadow(QFrame::Sunken);
+        line_6 = new QFrame(frame_2);
+        line_6->setObjectName(QString::fromUtf8("line_6"));
+        line_6->setGeometry(QRect(11, 130, 628, 2));
+        line_6->setStyleSheet(QString::fromUtf8("background-color: \"#474748\";\n"
+"\n"
+""));
+        line_6->setFrameShape(QFrame::HLine);
+        line_6->setFrameShadow(QFrame::Sunken);
+        line_7 = new QFrame(frame_2);
+        line_7->setObjectName(QString::fromUtf8("line_7"));
+        line_7->setGeometry(QRect(11, 194, 628, 2));
+        line_7->setStyleSheet(QString::fromUtf8("background-color: \"#474748\";\n"
+"\n"
+""));
+        line_7->setFrameShape(QFrame::HLine);
+        line_7->setFrameShadow(QFrame::Sunken);
+        line_8 = new QFrame(frame_2);
+        line_8->setObjectName(QString::fromUtf8("line_8"));
+        line_8->setGeometry(QRect(11, 258, 628, 2));
+        line_8->setStyleSheet(QString::fromUtf8("background-color: \"#474748\";\n"
+"\n"
+""));
+        line_8->setFrameShape(QFrame::HLine);
+        line_8->setFrameShadow(QFrame::Sunken);
+        line_9 = new QFrame(frame_2);
+        line_9->setObjectName(QString::fromUtf8("line_9"));
+        line_9->setGeometry(QRect(11, 322, 628, 2));
+        line_9->setStyleSheet(QString::fromUtf8("background-color: \"#474748\";\n"
+"\n"
+""));
+        line_9->setFrameShape(QFrame::HLine);
+        line_9->setFrameShadow(QFrame::Sunken);
+        line_10 = new QFrame(frame_2);
+        line_10->setObjectName(QString::fromUtf8("line_10"));
+        line_10->setGeometry(QRect(11, 386, 628, 2));
+        line_10->setStyleSheet(QString::fromUtf8("background-color: \"#474748\";\n"
+"\n"
+""));
+        line_10->setFrameShape(QFrame::HLine);
+        line_10->setFrameShadow(QFrame::Sunken);
+        line_11 = new QFrame(frame_2);
+        line_11->setObjectName(QString::fromUtf8("line_11"));
+        line_11->setGeometry(QRect(11, 450, 628, 2));
+        line_11->setStyleSheet(QString::fromUtf8("background-color: \"#474748\";\n"
+"\n"
+""));
+        line_11->setFrameShape(QFrame::HLine);
+        line_11->setFrameShadow(QFrame::Sunken);
+        label_3 = new QLabel(frame_2);
+        label_3->setObjectName(QString::fromUtf8("label_3"));
+        label_3->setGeometry(QRect(10, 30, 201, 20));
+        QFont font12;
+        font12.setPointSize(12);
+        label_3->setFont(font12);
+        label_4 = new QLabel(frame_2);
+        label_4->setObjectName(QString::fromUtf8("label_4"));
+        label_4->setGeometry(QRect(10, 90, 201, 20));
+        label_4->setFont(font12);
+        label_5 = new QLabel(frame_2);
+        label_5->setObjectName(QString::fromUtf8("label_5"));
+        label_5->setGeometry(QRect(10, 155, 201, 20));
+        label_5->setFont(font12);
+        label_6 = new QLabel(frame_2);
+        label_6->setObjectName(QString::fromUtf8("label_6"));
+        label_6->setGeometry(QRect(10, 220, 201, 20));
+        label_6->setFont(font12);
+        label_7 = new QLabel(frame_2);
+        label_7->setObjectName(QString::fromUtf8("label_7"));
+        label_7->setGeometry(QRect(10, 280, 201, 20));
+        label_7->setFont(font12);
+        label_9 = new QLabel(frame_2);
+        label_9->setObjectName(QString::fromUtf8("label_9"));
+        label_9->setGeometry(QRect(10, 350, 331, 20));
+        label_9->setFont(font12);
+        label_10 = new QLabel(frame_2);
+        label_10->setObjectName(QString::fromUtf8("label_10"));
+        label_10->setGeometry(QRect(10, 410, 271, 20));
+        label_10->setFont(font12);
+        label_20 = new QLabel(frame_2);
+        label_20->setObjectName(QString::fromUtf8("label_20"));
+        label_20->setGeometry(QRect(10, 480, 201, 20));
+        label_20->setFont(font12);
+        label_21 = new QLabel(frame_2);
+        label_21->setObjectName(QString::fromUtf8("label_21"));
+        label_21->setGeometry(QRect(410, 30, 201, 20));
+        label_21->setFont(font12);
+        label_22 = new QLabel(frame_2);
+        label_22->setObjectName(QString::fromUtf8("label_22"));
+        label_22->setGeometry(QRect(410, 90, 201, 20));
+        label_22->setFont(font12);
+        label_23 = new QLabel(frame_2);
+        label_23->setObjectName(QString::fromUtf8("label_23"));
+        label_23->setGeometry(QRect(410, 155, 201, 20));
+        label_23->setFont(font12);
+        label_24 = new QLabel(frame_2);
+        label_24->setObjectName(QString::fromUtf8("label_24"));
+        label_24->setGeometry(QRect(410, 220, 201, 20));
+        label_24->setFont(font12);
+        label_25 = new QLabel(frame_2);
+        label_25->setObjectName(QString::fromUtf8("label_25"));
+        label_25->setGeometry(QRect(410, 280, 201, 20));
+        label_25->setFont(font12);
+        label_26 = new QLabel(frame_2);
+        label_26->setObjectName(QString::fromUtf8("label_26"));
+        label_26->setGeometry(QRect(410, 350, 201, 20));
+        label_26->setFont(font12);
+        label_27 = new QLabel(frame_2);
+        label_27->setObjectName(QString::fromUtf8("label_27"));
+        label_27->setGeometry(QRect(410, 410, 201, 20));
+        label_27->setFont(font12);
+        label_28 = new QLabel(frame_2);
+        label_28->setObjectName(QString::fromUtf8("label_28"));
+        label_28->setGeometry(QRect(410, 480, 201, 20));
+        QFont font13;
+        font13.setFamily(QString::fromUtf8("Sans Serif"));
+        font13.setPointSize(12);
+        label_28->setFont(font13);
+        StackedMainView->addWidget(configuration);
 
         gridLayout->addWidget(StackedMainView, 0, 0, 1, 1);
 
 
-        gridLayout_4->addWidget(main, 0, 2, 1, 1);
+        gridLayout_2->addWidget(main, 0, 2, 1, 1);
 
         expandedNav = new QWidget(centralwidget);
         expandedNav->setObjectName(QString::fromUtf8("expandedNav"));
@@ -1451,75 +1679,132 @@ public:
         expandedNav->setStyleSheet(QString::fromUtf8("background-color: rgb(23, 28, 31);\n"
 "color: rgb(255, 255, 255);\n"
 "text-align: left;\n"
-"font-family: \"Roboto\";\n"
-"margin: 0px;"));
-        expandedLogsBtn = new QPushButton(expandedNav);
-        expandedLogsBtn->setObjectName(QString::fromUtf8("expandedLogsBtn"));
-        expandedLogsBtn->setGeometry(QRect(0, 128, 140, 64));
-        expandedLogsBtn->setMaximumSize(QSize(165, 16777215));
-        QFont font12;
-        font12.setFamily(QString::fromUtf8("Roboto"));
-        font12.setPointSize(13);
-        expandedLogsBtn->setFont(font12);
-        expandedLogsBtn->setCursor(QCursor(Qt::PointingHandCursor));
-        expandedLogsBtn->setStyleSheet(QString::fromUtf8("background-color: rgb(23, 28, 31);\n"
+"font-family: \"Roboto\";"));
+        verticalLayout_8 = new QVBoxLayout(expandedNav);
+        verticalLayout_8->setSpacing(0);
+        verticalLayout_8->setObjectName(QString::fromUtf8("verticalLayout_8"));
+        verticalLayout_8->setContentsMargins(0, 0, 0, 0);
+        frame_3 = new QFrame(expandedNav);
+        frame_3->setObjectName(QString::fromUtf8("frame_3"));
+        frame_3->setMinimumSize(QSize(0, 64));
+        frame_3->setStyleSheet(QString::fromUtf8("background-color: rgb(23, 28, 31);\n"
 "border: 2px solid transparent;\n"
 "outline: none;\n"
-"padding-left: \"17px\";\n"
-"padding-right: \"17px\";"));
-        expandedLogsBtn->setIconSize(QSize(60, 60));
-        expandedLogsBtn->setCheckable(true);
+""));
+        frame_3->setFrameShape(QFrame::StyledPanel);
+        frame_3->setFrameShadow(QFrame::Raised);
+
+        verticalLayout_8->addWidget(frame_3);
+
         expandedDashboardBtn = new QPushButton(expandedNav);
         expandedDashboardBtn->setObjectName(QString::fromUtf8("expandedDashboardBtn"));
-        expandedDashboardBtn->setGeometry(QRect(0, 64, 140, 64));
         sizePolicy.setHeightForWidth(expandedDashboardBtn->sizePolicy().hasHeightForWidth());
         expandedDashboardBtn->setSizePolicy(sizePolicy);
+        expandedDashboardBtn->setMinimumSize(QSize(0, 64));
         expandedDashboardBtn->setMaximumSize(QSize(165, 16777215));
-        expandedDashboardBtn->setFont(font12);
+        QFont font14;
+        font14.setFamily(QString::fromUtf8("Roboto"));
+        font14.setPointSize(13);
+        expandedDashboardBtn->setFont(font14);
         expandedDashboardBtn->setCursor(QCursor(Qt::PointingHandCursor));
         expandedDashboardBtn->setStyleSheet(QString::fromUtf8("background-color: rgb(23, 28, 31);\n"
 "border: 2px solid transparent;\n"
 "outline: none;\n"
-"padding-left: \"17px\";\n"
-"padding-right: \"17px\";"));
+""));
         expandedDashboardBtn->setIconSize(QSize(60, 60));
         expandedDashboardBtn->setCheckable(true);
         expandedDashboardBtn->setAutoExclusive(true);
+
+        verticalLayout_8->addWidget(expandedDashboardBtn);
+
+        expandedLogsBtn = new QPushButton(expandedNav);
+        expandedLogsBtn->setObjectName(QString::fromUtf8("expandedLogsBtn"));
+        expandedLogsBtn->setMinimumSize(QSize(0, 64));
+        expandedLogsBtn->setMaximumSize(QSize(165, 16777215));
+        expandedLogsBtn->setFont(font14);
+        expandedLogsBtn->setCursor(QCursor(Qt::PointingHandCursor));
+        expandedLogsBtn->setStyleSheet(QString::fromUtf8("background-color: rgb(23, 28, 31);\n"
+"border: 2px solid transparent;\n"
+"outline: none;\n"
+""));
+        expandedLogsBtn->setIconSize(QSize(60, 60));
+        expandedLogsBtn->setCheckable(true);
+
+        verticalLayout_8->addWidget(expandedLogsBtn);
+
+        expandedLogsBtn_2 = new QPushButton(expandedNav);
+        expandedLogsBtn_2->setObjectName(QString::fromUtf8("expandedLogsBtn_2"));
+        expandedLogsBtn_2->setMinimumSize(QSize(0, 64));
+        expandedLogsBtn_2->setMaximumSize(QSize(165, 16777215));
+        expandedLogsBtn_2->setFont(font14);
+        expandedLogsBtn_2->setCursor(QCursor(Qt::PointingHandCursor));
+        expandedLogsBtn_2->setStyleSheet(QString::fromUtf8("background-color: rgb(23, 28, 31);\n"
+"border: 2px solid transparent;\n"
+"outline: none;\n"
+""));
+        expandedLogsBtn_2->setIconSize(QSize(60, 60));
+        expandedLogsBtn_2->setCheckable(true);
+
+        verticalLayout_8->addWidget(expandedLogsBtn_2);
+
+        expandedConfBtn = new QPushButton(expandedNav);
+        expandedConfBtn->setObjectName(QString::fromUtf8("expandedConfBtn"));
+        expandedConfBtn->setMinimumSize(QSize(0, 64));
+        expandedConfBtn->setMaximumSize(QSize(165, 16777215));
+        expandedConfBtn->setFont(font14);
+        expandedConfBtn->setCursor(QCursor(Qt::PointingHandCursor));
+        expandedConfBtn->setStyleSheet(QString::fromUtf8("background-color: rgb(23, 28, 31);\n"
+"border: 2px solid transparent;\n"
+"outline: none;\n"
+""));
+        expandedConfBtn->setIconSize(QSize(60, 60));
+        expandedConfBtn->setCheckable(true);
+
+        verticalLayout_8->addWidget(expandedConfBtn);
+
+        verticalSpacer_2 = new QSpacerItem(17, 149, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        verticalLayout_8->addItem(verticalSpacer_2);
+
         expandedSettingsBtn = new QPushButton(expandedNav);
         expandedSettingsBtn->setObjectName(QString::fromUtf8("expandedSettingsBtn"));
-        expandedSettingsBtn->setGeometry(QRect(0, 472, 140, 64));
+        expandedSettingsBtn->setMinimumSize(QSize(0, 64));
         expandedSettingsBtn->setMaximumSize(QSize(165, 16777215));
-        expandedSettingsBtn->setFont(font12);
+        expandedSettingsBtn->setFont(font14);
         expandedSettingsBtn->setCursor(QCursor(Qt::PointingHandCursor));
         expandedSettingsBtn->setStyleSheet(QString::fromUtf8("background-color: rgb(23, 28, 31);\n"
 "border: 2px solid transparent;\n"
 "outline: none;\n"
-"padding-left: \"17px\";\n"
-"padding-right: \"17px\";"));
+""));
         expandedSettingsBtn->setIconSize(QSize(60, 60));
         expandedSettingsBtn->setCheckable(true);
+
+        verticalLayout_8->addWidget(expandedSettingsBtn);
+
         expandedInfoBtn = new QPushButton(expandedNav);
         expandedInfoBtn->setObjectName(QString::fromUtf8("expandedInfoBtn"));
-        expandedInfoBtn->setGeometry(QRect(0, 536, 140, 64));
+        expandedInfoBtn->setMinimumSize(QSize(0, 64));
         expandedInfoBtn->setMaximumSize(QSize(165, 16777215));
-        expandedInfoBtn->setFont(font12);
+        expandedInfoBtn->setFont(font14);
         expandedInfoBtn->setCursor(QCursor(Qt::PointingHandCursor));
         expandedInfoBtn->setStyleSheet(QString::fromUtf8("background-color: rgb(23, 28, 31);\n"
 "border: 2px solid transparent;\n"
 "outline: none;\n"
-"padding-left: \"17px\";\n"
-"padding-right: \"17px\";"));
+""));
         expandedInfoBtn->setIconSize(QSize(60, 60));
         expandedInfoBtn->setCheckable(true);
 
-        gridLayout_4->addWidget(expandedNav, 0, 1, 1, 1);
+        verticalLayout_8->addWidget(expandedInfoBtn);
+
+
+        gridLayout_2->addWidget(expandedNav, 0, 1, 1, 1);
 
         MainWindow->setCentralWidget(centralwidget);
 
         retranslateUi(MainWindow);
 
-        StackedMainView->setCurrentIndex(2);
-        stackedSettingsView->setCurrentIndex(1);
+        StackedMainView->setCurrentIndex(4);
+        stackedSettingsView->setCurrentIndex(2);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -1528,11 +1813,13 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
+        compressedNavBtn->setText(QString());
         compressedDashboardBtn->setText(QString());
         compressedLogsBtn->setText(QString());
+        compressedLogsBtn_2->setText(QString());
+        confBtn->setText(QString());
         compressedSettingsBtn->setText(QString());
         compressedInfoBtn->setText(QString());
-        compressedNavBtn->setText(QString());
         quantumLogoDashboard->setText(QString());
         userLogoDashboard->setText(QString());
         connectIcon->setText(QString());
@@ -1857,10 +2144,6 @@ public:
         logsTitle->setText(QCoreApplication::translate("MainWindow", "Logs", nullptr));
         label->setText(QString());
         user->setText(QString());
-        settingsTitle->setText(QCoreApplication::translate("MainWindow", "Settings", nullptr));
-        generalSettingsBtn->setText(QCoreApplication::translate("MainWindow", "General", nullptr));
-        proxySettingsBtn->setText(QCoreApplication::translate("MainWindow", "Proxy", nullptr));
-        advancedSettingsBtn->setText(QCoreApplication::translate("MainWindow", "Advanced", nullptr));
         userInterfaceTitle->setText(QCoreApplication::translate("MainWindow", "User Interface", nullptr));
         languageLabel->setText(QCoreApplication::translate("MainWindow", "Language", nullptr));
         selectLanguageInput->setItemText(0, QCoreApplication::translate("MainWindow", "English", nullptr));
@@ -1899,12 +2182,35 @@ public:
         label_12->setText(QCoreApplication::translate("MainWindow", "Folder", nullptr));
         label_18->setText(QCoreApplication::translate("MainWindow", "Connect script timeout", nullptr));
         label_17->setText(QCoreApplication::translate("MainWindow", "Preconnect Script Timeout", nullptr));
+        settingsTitle->setText(QCoreApplication::translate("MainWindow", "Settings", nullptr));
+        generalSettingsBtn->setText(QCoreApplication::translate("MainWindow", "General", nullptr));
+        proxySettingsBtn->setText(QCoreApplication::translate("MainWindow", "Proxy", nullptr));
+        advancedSettingsBtn->setText(QCoreApplication::translate("MainWindow", "Advanced", nullptr));
         userLogoInfo->setText(QString());
         infoDescription->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p>OpenVPN GUIv11.15\343\200\2010.0 -A Windows GUI for OpenVPN<br/>Copyright (C) 2004-2005 Mathias Sundman &lt;info@openvpn.se&gt; <br/>Copyright (C) 2008-2014 Heiko Hund &lt;heikoh@users.sf.net&gt;<br/>Copyright (C)2012-2018 OpenVPN GUI contributors <br/>https://github.com/OpenVPN/openvpn-gui/ <br/><br/>OpenVPN-An application to securely tunnel lP networks over a single CP/UDP port with support for SSL/TLS-based session authentic ation and key exchange. packet encryption, packet authentication. and packet compression.<br/>Copyright (C) 2002-2018 OpenVPN Technologies. Inc &lt;info@openvpn.net&gt; https://openvpn.net</p></body></html>", nullptr));
         infoTitle->setText(QCoreApplication::translate("MainWindow", "About Us", nullptr));
         quantumLogoInfo->setText(QString());
-        expandedLogsBtn->setText(QCoreApplication::translate("MainWindow", "Logs", nullptr));
+        label_2->setText(QCoreApplication::translate("MainWindow", "Server Configuration", nullptr));
+        label_3->setText(QCoreApplication::translate("MainWindow", "Qsleeve Server version", nullptr));
+        label_4->setText(QCoreApplication::translate("MainWindow", "Server Name", nullptr));
+        label_5->setText(QCoreApplication::translate("MainWindow", "Allowed Users", nullptr));
+        label_6->setText(QCoreApplication::translate("MainWindow", "Current Active Users", nullptr));
+        label_7->setText(QCoreApplication::translate("MainWindow", "Authenticate users with", nullptr));
+        label_9->setText(QCoreApplication::translate("MainWindow", "Accepting VPN connections on IP Address", nullptr));
+        label_10->setText(QCoreApplication::translate("MainWindow", "Port for VPN Client Connections", nullptr));
+        label_20->setText(QCoreApplication::translate("MainWindow", "OSI Layer", nullptr));
+        label_21->setText(QCoreApplication::translate("MainWindow", "3.0.0", nullptr));
+        label_22->setText(QCoreApplication::translate("MainWindow", "vpn.qsleeve.com", nullptr));
+        label_23->setText(QCoreApplication::translate("MainWindow", "20 vpn connections", nullptr));
+        label_24->setText(QCoreApplication::translate("MainWindow", "0", nullptr));
+        label_25->setText(QCoreApplication::translate("MainWindow", "local", nullptr));
+        label_26->setText(QCoreApplication::translate("MainWindow", "all interfaces", nullptr));
+        label_27->setText(QCoreApplication::translate("MainWindow", "tcp/443, udp/1194", nullptr));
+        label_28->setText(QCoreApplication::translate("MainWindow", "3 (routing/NAT)", nullptr));
         expandedDashboardBtn->setText(QCoreApplication::translate("MainWindow", "Dashboard", nullptr));
+        expandedLogsBtn->setText(QCoreApplication::translate("MainWindow", "Logs", nullptr));
+        expandedLogsBtn_2->setText(QCoreApplication::translate("MainWindow", "Current Users", nullptr));
+        expandedConfBtn->setText(QCoreApplication::translate("MainWindow", "Configuration", nullptr));
         expandedSettingsBtn->setText(QCoreApplication::translate("MainWindow", "Settings", nullptr));
         expandedInfoBtn->setText(QCoreApplication::translate("MainWindow", "Info", nullptr));
     } // retranslateUi

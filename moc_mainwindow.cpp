@@ -22,8 +22,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_MainWindow_t {
-    QByteArrayData data[29];
-    char stringdata0[381];
+    QByteArrayData data[30];
+    char stringdata0[393];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -48,19 +48,20 @@ QT_MOC_LITERAL(12, 137, 16), // "setDashBoardPage"
 QT_MOC_LITERAL(13, 154, 11), // "setLogsPage"
 QT_MOC_LITERAL(14, 166, 15), // "setSettingsPage"
 QT_MOC_LITERAL(15, 182, 11), // "setInfoPage"
-QT_MOC_LITERAL(16, 194, 11), // "setSettings"
-QT_MOC_LITERAL(17, 206, 19), // "selectedSettingsBtn"
-QT_MOC_LITERAL(18, 226, 18), // "setGeneralSettings"
-QT_MOC_LITERAL(19, 245, 16), // "setProxySettings"
-QT_MOC_LITERAL(20, 262, 19), // "setAdvancedSettings"
-QT_MOC_LITERAL(21, 282, 17), // "on_browse_clicked"
-QT_MOC_LITERAL(22, 300, 19), // "on_browse_2_clicked"
-QT_MOC_LITERAL(23, 320, 14), // "on_man_toggled"
-QT_MOC_LITERAL(24, 335, 7), // "checked"
-QT_MOC_LITERAL(25, 343, 15), // "applyBlurEffect"
-QT_MOC_LITERAL(26, 359, 8), // "QWidget*"
-QT_MOC_LITERAL(27, 368, 6), // "widget"
-QT_MOC_LITERAL(28, 375, 5) // "apply"
+QT_MOC_LITERAL(16, 194, 11), // "setConfPage"
+QT_MOC_LITERAL(17, 206, 11), // "setSettings"
+QT_MOC_LITERAL(18, 218, 19), // "selectedSettingsBtn"
+QT_MOC_LITERAL(19, 238, 18), // "setGeneralSettings"
+QT_MOC_LITERAL(20, 257, 16), // "setProxySettings"
+QT_MOC_LITERAL(21, 274, 19), // "setAdvancedSettings"
+QT_MOC_LITERAL(22, 294, 17), // "on_browse_clicked"
+QT_MOC_LITERAL(23, 312, 19), // "on_browse_2_clicked"
+QT_MOC_LITERAL(24, 332, 14), // "on_man_toggled"
+QT_MOC_LITERAL(25, 347, 7), // "checked"
+QT_MOC_LITERAL(26, 355, 15), // "applyBlurEffect"
+QT_MOC_LITERAL(27, 371, 8), // "QWidget*"
+QT_MOC_LITERAL(28, 380, 6), // "widget"
+QT_MOC_LITERAL(29, 387, 5) // "apply"
 
     },
     "MainWindow\0showExpandedNavbar\0\0"
@@ -68,12 +69,13 @@ QT_MOC_LITERAL(28, 375, 5) // "apply"
     "opacity\0setViewPage\0index\0QPushButton*\0"
     "clickedButton\0clickedButton1\0"
     "setDashBoardPage\0setLogsPage\0"
-    "setSettingsPage\0setInfoPage\0setSettings\0"
-    "selectedSettingsBtn\0setGeneralSettings\0"
-    "setProxySettings\0setAdvancedSettings\0"
-    "on_browse_clicked\0on_browse_2_clicked\0"
-    "on_man_toggled\0checked\0applyBlurEffect\0"
-    "QWidget*\0widget\0apply"
+    "setSettingsPage\0setInfoPage\0setConfPage\0"
+    "setSettings\0selectedSettingsBtn\0"
+    "setGeneralSettings\0setProxySettings\0"
+    "setAdvancedSettings\0on_browse_clicked\0"
+    "on_browse_2_clicked\0on_man_toggled\0"
+    "checked\0applyBlurEffect\0QWidget*\0"
+    "widget\0apply"
 };
 #undef QT_MOC_LITERAL
 
@@ -83,7 +85,7 @@ static const uint qt_meta_data_MainWindow[] = {
        8,       // revision
        0,       // classname
        0,    0, // classinfo
-      16,   14, // methods
+      17,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -91,22 +93,23 @@ static const uint qt_meta_data_MainWindow[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    0,   94,    2, 0x08 /* Private */,
-       3,    0,   95,    2, 0x08 /* Private */,
-       4,    2,   96,    2, 0x08 /* Private */,
-       7,    3,  101,    2, 0x08 /* Private */,
-      12,    0,  108,    2, 0x08 /* Private */,
-      13,    0,  109,    2, 0x08 /* Private */,
-      14,    0,  110,    2, 0x08 /* Private */,
-      15,    0,  111,    2, 0x08 /* Private */,
-      16,    2,  112,    2, 0x08 /* Private */,
-      18,    0,  117,    2, 0x08 /* Private */,
-      19,    0,  118,    2, 0x08 /* Private */,
-      20,    0,  119,    2, 0x08 /* Private */,
-      21,    0,  120,    2, 0x08 /* Private */,
-      22,    0,  121,    2, 0x08 /* Private */,
-      23,    1,  122,    2, 0x08 /* Private */,
-      25,    2,  125,    2, 0x08 /* Private */,
+       1,    0,   99,    2, 0x08 /* Private */,
+       3,    0,  100,    2, 0x08 /* Private */,
+       4,    2,  101,    2, 0x08 /* Private */,
+       7,    3,  106,    2, 0x08 /* Private */,
+      12,    0,  113,    2, 0x08 /* Private */,
+      13,    0,  114,    2, 0x08 /* Private */,
+      14,    0,  115,    2, 0x08 /* Private */,
+      15,    0,  116,    2, 0x08 /* Private */,
+      16,    0,  117,    2, 0x08 /* Private */,
+      17,    2,  118,    2, 0x08 /* Private */,
+      19,    0,  123,    2, 0x08 /* Private */,
+      20,    0,  124,    2, 0x08 /* Private */,
+      21,    0,  125,    2, 0x08 /* Private */,
+      22,    0,  126,    2, 0x08 /* Private */,
+      23,    0,  127,    2, 0x08 /* Private */,
+      24,    1,  128,    2, 0x08 /* Private */,
+      26,    2,  131,    2, 0x08 /* Private */,
 
  // slots: parameters
     QMetaType::Void,
@@ -117,14 +120,15 @@ static const uint qt_meta_data_MainWindow[] = {
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
-    QMetaType::Void, QMetaType::Int, 0x80000000 | 9,    8,   17,
+    QMetaType::Void,
+    QMetaType::Void, QMetaType::Int, 0x80000000 | 9,    8,   18,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
-    QMetaType::Void, QMetaType::Bool,   24,
-    QMetaType::Void, 0x80000000 | 26, QMetaType::Bool,   27,   28,
+    QMetaType::Void, QMetaType::Bool,   25,
+    QMetaType::Void, 0x80000000 | 27, QMetaType::Bool,   28,   29,
 
        0        // eod
 };
@@ -143,14 +147,15 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 5: _t->setLogsPage(); break;
         case 6: _t->setSettingsPage(); break;
         case 7: _t->setInfoPage(); break;
-        case 8: _t->setSettings((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< QPushButton*(*)>(_a[2]))); break;
-        case 9: _t->setGeneralSettings(); break;
-        case 10: _t->setProxySettings(); break;
-        case 11: _t->setAdvancedSettings(); break;
-        case 12: _t->on_browse_clicked(); break;
-        case 13: _t->on_browse_2_clicked(); break;
-        case 14: _t->on_man_toggled((*reinterpret_cast< bool(*)>(_a[1]))); break;
-        case 15: _t->applyBlurEffect((*reinterpret_cast< QWidget*(*)>(_a[1])),(*reinterpret_cast< bool(*)>(_a[2]))); break;
+        case 8: _t->setConfPage(); break;
+        case 9: _t->setSettings((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< QPushButton*(*)>(_a[2]))); break;
+        case 10: _t->setGeneralSettings(); break;
+        case 11: _t->setProxySettings(); break;
+        case 12: _t->setAdvancedSettings(); break;
+        case 13: _t->on_browse_clicked(); break;
+        case 14: _t->on_browse_2_clicked(); break;
+        case 15: _t->on_man_toggled((*reinterpret_cast< bool(*)>(_a[1]))); break;
+        case 16: _t->applyBlurEffect((*reinterpret_cast< QWidget*(*)>(_a[1])),(*reinterpret_cast< bool(*)>(_a[2]))); break;
         default: ;
         }
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
@@ -164,14 +169,14 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
                 *reinterpret_cast<int*>(_a[0]) = qRegisterMetaType< QPushButton* >(); break;
             }
             break;
-        case 8:
+        case 9:
             switch (*reinterpret_cast<int*>(_a[1])) {
             default: *reinterpret_cast<int*>(_a[0]) = -1; break;
             case 1:
                 *reinterpret_cast<int*>(_a[0]) = qRegisterMetaType< QPushButton* >(); break;
             }
             break;
-        case 15:
+        case 16:
             switch (*reinterpret_cast<int*>(_a[1])) {
             default: *reinterpret_cast<int*>(_a[0]) = -1; break;
             case 0:
@@ -211,13 +216,13 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 16)
+        if (_id < 17)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 16;
+        _id -= 17;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 16)
+        if (_id < 17)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 16;
+        _id -= 17;
     }
     return _id;
 }
