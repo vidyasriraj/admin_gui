@@ -8,6 +8,13 @@
 #include <QGraphicsBlurEffect>
 #include <QPropertyAnimation>
 #include <QParallelAnimationGroup>
+#include <QFile>
+#include <QTextStream>
+#include <QString>
+#include <QLabel>
+#include <QMessageBox>
+#include <QMap>
+#include <QVBoxLayout>
 
 
 QT_BEGIN_NAMESPACE
@@ -40,6 +47,7 @@ private slots:
     void setSettingsPage();
     void setInfoPage();
     void setConfPage();
+    void setUserPage();
 
     // changing settings
     void setSettings(int index, QPushButton *selectedSettingsBtn);

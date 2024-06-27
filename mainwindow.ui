@@ -58,283 +58,14 @@ color: rgb(255, 255, 255);</string>
     <property name="spacing">
      <number>0</number>
     </property>
-    <item row="0" column="0">
-     <widget class="QWidget" name="compressedNav" native="true">
+    <item row="0" column="2">
+     <widget class="QWidget" name="main" native="true">
       <property name="sizePolicy">
-       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
         <horstretch>0</horstretch>
         <verstretch>0</verstretch>
        </sizepolicy>
       </property>
-      <property name="minimumSize">
-       <size>
-        <width>70</width>
-        <height>600</height>
-       </size>
-      </property>
-      <property name="maximumSize">
-       <size>
-        <width>70</width>
-        <height>600</height>
-       </size>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(23, 28, 31);</string>
-      </property>
-      <layout class="QVBoxLayout" name="verticalLayout_7">
-       <property name="spacing">
-        <number>0</number>
-       </property>
-       <property name="leftMargin">
-        <number>0</number>
-       </property>
-       <property name="topMargin">
-        <number>0</number>
-       </property>
-       <property name="rightMargin">
-        <number>0</number>
-       </property>
-       <property name="bottomMargin">
-        <number>0</number>
-       </property>
-       <item>
-        <widget class="QPushButton" name="compressedNavBtn">
-         <property name="font">
-          <font>
-           <bold>false</bold>
-          </font>
-         </property>
-         <property name="cursor">
-          <cursorShape>PointingHandCursor</cursorShape>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">background-color: rgb(23, 28, 31);
-border: 2px solid transparent;
-outline: none;</string>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-         <property name="icon">
-          <iconset resource="resources.qrc">
-           <normaloff>:/logos/images/Menu.png</normaloff>:/logos/images/Menu.png</iconset>
-         </property>
-         <property name="iconSize">
-          <size>
-           <width>60</width>
-           <height>60</height>
-          </size>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="compressedDashboardBtn">
-         <property name="cursor">
-          <cursorShape>PointingHandCursor</cursorShape>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">background-color: rgb(23, 28, 31);
-border: 2px solid transparent;
-outline: none;
-QPushButton::focus { background-color:rgb(217, 217, 217); }</string>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-         <property name="icon">
-          <iconset resource="resources.qrc">
-           <normaloff>:/logos/images/Dashboard Layout.png</normaloff>:/logos/images/Dashboard Layout.png</iconset>
-         </property>
-         <property name="iconSize">
-          <size>
-           <width>60</width>
-           <height>60</height>
-          </size>
-         </property>
-         <property name="checkable">
-          <bool>true</bool>
-         </property>
-         <property name="checked">
-          <bool>true</bool>
-         </property>
-         <property name="autoExclusive">
-          <bool>true</bool>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="compressedLogsBtn">
-         <property name="cursor">
-          <cursorShape>PointingHandCursor</cursorShape>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">background-color: rgb(23, 28, 31);
-selection-background-color: rgb(217, 217, 217);
-border: 2px solid transparent;
-outline: none;</string>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-         <property name="icon">
-          <iconset resource="resources.qrc">
-           <normaloff>:/logos/images/Align Text Left.png</normaloff>:/logos/images/Align Text Left.png</iconset>
-         </property>
-         <property name="iconSize">
-          <size>
-           <width>60</width>
-           <height>60</height>
-          </size>
-         </property>
-         <property name="checkable">
-          <bool>true</bool>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="compressedLogsBtn_2">
-         <property name="maximumSize">
-          <size>
-           <width>16777215</width>
-           <height>70</height>
-          </size>
-         </property>
-         <property name="cursor">
-          <cursorShape>PointingHandCursor</cursorShape>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">background-color: rgb(23, 28, 31);
-selection-background-color: rgb(217, 217, 217);
-border: 2px solid transparent;
-outline: none;</string>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-         <property name="icon">
-          <iconset>
-           <normaloff>../../../Downloads/Users.png</normaloff>../../../Downloads/Users.png</iconset>
-         </property>
-         <property name="iconSize">
-          <size>
-           <width>35</width>
-           <height>60</height>
-          </size>
-         </property>
-         <property name="checkable">
-          <bool>true</bool>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="confBtn">
-         <property name="maximumSize">
-          <size>
-           <width>16777215</width>
-           <height>70</height>
-          </size>
-         </property>
-         <property name="cursor">
-          <cursorShape>PointingHandCursor</cursorShape>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">background-color: rgb(23, 28, 31);
-selection-background-color: rgb(217, 217, 217);
-border: 2px solid transparent;
-outline: none;</string>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-         <property name="icon">
-          <iconset>
-           <normaloff>../../../Downloads/Computer Support.png</normaloff>../../../Downloads/Computer Support.png</iconset>
-         </property>
-         <property name="iconSize">
-          <size>
-           <width>30</width>
-           <height>60</height>
-          </size>
-         </property>
-         <property name="checkable">
-          <bool>true</bool>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <spacer name="verticalSpacer">
-         <property name="orientation">
-          <enum>Qt::Vertical</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>20</width>
-           <height>149</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
-       <item>
-        <widget class="QPushButton" name="compressedSettingsBtn">
-         <property name="cursor">
-          <cursorShape>PointingHandCursor</cursorShape>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">background-color: rgb(23, 28, 31);
-border: 2px solid transparent;
-outline: none;</string>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-         <property name="icon">
-          <iconset resource="resources.qrc">
-           <normaloff>:/logos/images/CMakeLists.txt.user</normaloff>:/logos/images/CMakeLists.txt.user</iconset>
-         </property>
-         <property name="iconSize">
-          <size>
-           <width>60</width>
-           <height>60</height>
-          </size>
-         </property>
-         <property name="checkable">
-          <bool>true</bool>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="compressedInfoBtn">
-         <property name="cursor">
-          <cursorShape>PointingHandCursor</cursorShape>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">background-color: rgb(23, 28, 31);
-border: 2px solid transparent;
-outline: none;</string>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-         <property name="icon">
-          <iconset resource="resources.qrc">
-           <normaloff>:/logos/images/Info.png</normaloff>:/logos/images/Info.png</iconset>
-         </property>
-         <property name="iconSize">
-          <size>
-           <width>60</width>
-           <height>60</height>
-          </size>
-         </property>
-         <property name="checkable">
-          <bool>true</bool>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-    </item>
-    <item row="0" column="2">
-     <widget class="QWidget" name="main" native="true">
       <property name="styleSheet">
        <string notr="true">background: qlineargradient(spread:pad, x1:0, y1:1, x2:1, y2:0, stop:0 #3E3F40, stop:0.95 #1F363D);
 </string>
@@ -1446,7 +1177,7 @@ QWidget[hidden=&quot;true&quot;] {
 </string>
              </property>
              <property name="currentIndex">
-              <number>2</number>
+              <number>1</number>
              </property>
              <widget class="QWidget" name="generalSettingsPage">
               <property name="styleSheet">
@@ -3028,15 +2759,21 @@ outline: none;
            </item>
           </layout>
          </widget>
-         <widget class="QWidget" name="configuration">
+         <widget class="QWidget" name="users">
           <widget class="QFrame" name="frame">
            <property name="geometry">
             <rect>
-             <x>0</x>
-             <y>0</y>
-             <width>686</width>
-             <height>596</height>
+             <x>10</x>
+             <y>140</y>
+             <width>681</width>
+             <height>251</height>
             </rect>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
            </property>
            <property name="frameShape">
             <enum>QFrame::StyledPanel</enum>
@@ -3044,29 +2781,328 @@ outline: none;
            <property name="frameShadow">
             <enum>QFrame::Raised</enum>
            </property>
+           <widget class="QCheckBox" name="checkBox">
+            <property name="geometry">
+             <rect>
+              <x>2</x>
+              <y>23</y>
+              <width>70</width>
+              <height>21</height>
+             </rect>
+            </property>
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>70</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>70</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="layoutDirection">
+             <enum>Qt::LeftToRight</enum>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QCheckBox {
+    background-color: transparent; 
+    color: white;
+	margin-left: &quot;40px&quot;;
+   
+}
+
+QCheckBox::indicator {
+    border: 1px solid white; 
+border-radius: 3px;
+    width: 15px; 
+    height: 15px;
+    background-color: transparent;
+}
+
+QCheckBox::indicator:checked {
+    image: url(:/logos/images/new.png); 
+    background-color: transparent; 
+    border: 1px solid white;
+}
+
+QCheckBox::indicator:unchecked {
+    background-color: transparent;
+    border: 1px solid white;
+}
+</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+           <widget class="QCheckBox" name="checkBox_6">
+            <property name="geometry">
+             <rect>
+              <x>2</x>
+              <y>101</y>
+              <width>70</width>
+              <height>21</height>
+             </rect>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>70</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>70</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QCheckBox {
+    background-color: transparent; 
+    color: white;
+	margin-left: &quot;40px&quot;;
+   
+}
+
+QCheckBox::indicator {
+    border: 1px solid white; 
+border-radius: 3px;
+    width: 15px; 
+    height: 15px;
+    background-color: transparent;
+}
+
+QCheckBox::indicator:checked {
+    image: url(:/logos/images/new.png); 
+    background-color: transparent; 
+    border: 1px solid white;
+}
+
+QCheckBox::indicator:unchecked {
+    background-color: transparent;
+    border: 1px solid white;
+}
+</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+           <widget class="QCheckBox" name="checkBox_7">
+            <property name="geometry">
+             <rect>
+              <x>2</x>
+              <y>149</y>
+              <width>70</width>
+              <height>21</height>
+             </rect>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>70</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>70</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QCheckBox {
+    background-color: transparent; 
+    color: white;
+	margin-left: &quot;40px&quot;;
+   
+}
+
+QCheckBox::indicator {
+    border: 1px solid white; 
+border-radius: 3px;
+    width: 15px; 
+    height: 15px;
+    background-color: transparent;
+}
+
+QCheckBox::indicator:checked {
+    image: url(:/logos/images/new.png); 
+    background-color: transparent; 
+    border: 1px solid white;
+}
+
+QCheckBox::indicator:unchecked {
+    background-color: transparent;
+    border: 1px solid white;
+}
+</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+           <widget class="QCheckBox" name="checkBox_8">
+            <property name="geometry">
+             <rect>
+              <x>2</x>
+              <y>197</y>
+              <width>70</width>
+              <height>21</height>
+             </rect>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>70</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>70</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QCheckBox {
+    background-color: transparent; 
+    color: white;
+	margin-left: &quot;40px&quot;;
+   
+}
+
+QCheckBox::indicator {
+    border: 1px solid white; 
+border-radius: 3px;
+    width: 15px; 
+    height: 15px;
+    background-color: transparent;
+}
+
+QCheckBox::indicator:checked {
+    image: url(:/logos/images/new.png); 
+    background-color: transparent; 
+    border: 1px solid white;
+}
+
+QCheckBox::indicator:unchecked {
+    background-color: transparent;
+    border: 1px solid white;
+}
+</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+           <widget class="Line" name="line_12">
+            <property name="geometry">
+             <rect>
+              <x>2</x>
+              <y>58</y>
+              <width>668</width>
+              <height>3</height>
+             </rect>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>3</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>3</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: &quot;#474748&quot;;</string>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
            <widget class="QLabel" name="label_2">
             <property name="geometry">
              <rect>
-              <x>20</x>
-              <y>25</y>
-              <width>231</width>
-              <height>41</height>
+              <x>110</x>
+              <y>23</y>
+              <width>66</width>
+              <height>18</height>
              </rect>
             </property>
             <property name="font">
              <font>
-              <pointsize>16</pointsize>
-              <bold>true</bold>
+              <pointsize>15</pointsize>
+              <fontweight>DemiBold</fontweight>
              </font>
             </property>
             <property name="text">
-             <string>Server Configuration</string>
+             <string>Name</string>
             </property>
            </widget>
+           <widget class="QLabel" name="label_29">
+            <property name="geometry">
+             <rect>
+              <x>260</x>
+              <y>23</y>
+              <width>66</width>
+              <height>18</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>15</pointsize>
+              <fontweight>DemiBold</fontweight>
+             </font>
+            </property>
+            <property name="text">
+             <string>Name</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_30">
+            <property name="geometry">
+             <rect>
+              <x>460</x>
+              <y>23</y>
+              <width>66</width>
+              <height>18</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>15</pointsize>
+              <fontweight>DemiBold</fontweight>
+             </font>
+            </property>
+            <property name="text">
+             <string>Name</string>
+            </property>
+           </widget>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="configuration">
+          <widget class="QWidget" name="widget" native="true">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>691</width>
+             <height>591</height>
+            </rect>
+           </property>
            <widget class="QFrame" name="frame_2">
             <property name="geometry">
              <rect>
-              <x>30</x>
+              <x>10</x>
               <y>60</y>
               <width>650</width>
               <height>521</height>
@@ -3664,7 +3700,7 @@ outline: none;
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="expandedLogsBtn_2">
+        <widget class="QPushButton" name="expandedUserBtn">
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -3836,6 +3872,281 @@ outline: none;
          </property>
          <property name="text">
           <string>Info</string>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>60</width>
+           <height>60</height>
+          </size>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QWidget" name="compressedNav" native="true">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>70</width>
+        <height>600</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>70</width>
+        <height>600</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(23, 28, 31);</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_7">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QPushButton" name="compressedNavBtn">
+         <property name="font">
+          <font>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(23, 28, 31);
+border: 2px solid transparent;
+outline: none;</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset resource="resources.qrc">
+           <normaloff>:/logos/images/Menu.png</normaloff>:/logos/images/Menu.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>60</width>
+           <height>60</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="compressedDashboardBtn">
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(23, 28, 31);
+border: 2px solid transparent;
+outline: none;
+QPushButton::focus { background-color:rgb(217, 217, 217); }</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset resource="resources.qrc">
+           <normaloff>:/logos/images/Dashboard Layout.png</normaloff>:/logos/images/Dashboard Layout.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>60</width>
+           <height>60</height>
+          </size>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+         <property name="autoExclusive">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="compressedLogsBtn">
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(23, 28, 31);
+selection-background-color: rgb(217, 217, 217);
+border: 2px solid transparent;
+outline: none;</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset resource="resources.qrc">
+           <normaloff>:/logos/images/Align Text Left.png</normaloff>:/logos/images/Align Text Left.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>60</width>
+           <height>60</height>
+          </size>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="UserBtn">
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>70</height>
+          </size>
+         </property>
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(23, 28, 31);
+selection-background-color: rgb(217, 217, 217);
+border: 2px solid transparent;
+outline: none;</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>../../../Downloads/Users.png</normaloff>../../../Downloads/Users.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>35</width>
+           <height>60</height>
+          </size>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="confBtn">
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>70</height>
+          </size>
+         </property>
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(23, 28, 31);
+selection-background-color: rgb(217, 217, 217);
+border: 2px solid transparent;
+outline: none;</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>../../../Downloads/Computer Support.png</normaloff>../../../Downloads/Computer Support.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>30</width>
+           <height>60</height>
+          </size>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>149</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="compressedSettingsBtn">
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(23, 28, 31);
+border: 2px solid transparent;
+outline: none;</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset resource="resources.qrc">
+           <normaloff>:/logos/images/CMakeLists.txt.user</normaloff>:/logos/images/CMakeLists.txt.user</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>60</width>
+           <height>60</height>
+          </size>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="compressedInfoBtn">
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(23, 28, 31);
+border: 2px solid transparent;
+outline: none;</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset resource="resources.qrc">
+           <normaloff>:/logos/images/Info.png</normaloff>:/logos/images/Info.png</iconset>
          </property>
          <property name="iconSize">
           <size>
