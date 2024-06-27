@@ -100,37 +100,43 @@ MainWindow::~MainWindow()
 
 // method to show expanded navbar
 void MainWindow::showExpandedNavbar() {
-    ui->compressedNav->show();
+    int startX =-ui->compressedNav->width();  // Start from the 0 x-coordinate (left edge of the window)
+    int endX = ui->compressedNav->width();  // End at the right edge of the compressedNav
+    int startY = ui->expandedNav->y();  // Y-coordinate remains unchanged
+    int height = ui->expandedNav->height();  // Height remains unchanged
+
     QPropertyAnimation *moveAnimation = new QPropertyAnimation(ui->expandedNav, "geometry");
-    int startX = ui->compressedNav->width();
-    int endX = ui->expandedNav->width();     // Start position off-screen to the left
-    moveAnimation->setDuration(5000);
+    moveAnimation->setDuration(500);  // Duration of animation in milliseconds
+    moveAnimation->setEasingCurve(QEasingCurve::InOutSine);  // Smooth easing curve
 
-    // Alternative easing curve
-      // Smooth easing curve
-    // Hide compressedNav immediately
-     if (toggleFlag) {
-         moveAnimation->setEasingCurve(QEasingCurve::InOutCubic);
-         moveAnimation->setStartValue(startX);
-         moveAnimation->setEndValue(endX);
-         ui->expandedNav->show();
-          // Duration of animation in milliseconds
+    if (toggleFlag) {
+        // Expand the navigation bar from 0 x-coordinate
+        ui->expandedNav->setGeometry(startX, startY, 0, height);  // Initial geometry with width 0
+        // Make sure expandedNav is visible
+
+        // Set start and end values for expanding animation
+        moveAnimation->setStartValue(QRect(startX, startY, 0, height));
+        moveAnimation->setEndValue(QRect(endX, startY, 0, height));
+        ui->expandedNav->show();
+        toggleFlag = false;
+    } else {
+        // Collapse the navigation bar back to 0 x-coordinate
+        // Set start and end values for collapsing animation
+        ui->expandedNav->setGeometry(startX, startY, 0, height);
+        moveAnimation->setStartValue(QRect(endX, startY, 0, height));
+        moveAnimation->setEndValue(QRect(startX, startY, 0, height));
+
+        connect(moveAnimation, &QPropertyAnimation::finished, [this]() {
+            ui->expandedNav->hide();  // Hide expandedNav after animation
+        });
+
+        toggleFlag = true;
+    }
+
+    moveAnimation->start(QAbstractAnimation::DeleteWhenStopped);
+}
 
 
-
-        toggleFlag=false;
-     }
-     else{
-         moveAnimation->setEasingCurve(QEasingCurve::InOutCubic);
-         moveAnimation->setStartValue(endX);
-         moveAnimation->setEndValue(startX);
-
-         ui->expandedNav->hide();
-
-
-         toggleFlag=true;
-     }
-     }
 
 
 
