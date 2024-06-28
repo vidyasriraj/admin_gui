@@ -15,7 +15,7 @@
 #include <QMessageBox>
 #include <QMap>
 #include <QVBoxLayout>
-
+#include "currentusers.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -67,8 +67,11 @@ private slots:
             widget->setGraphicsEffect(nullptr);
         }
     }
-
-
+    void addUser();
+    void handleDeletedUser(const QString &name, const QString &ip, const QString &status, const QString &connectedTime);
+    void processCheckBoxes();
+    void onMainCheckBoxToggled(bool checked);
+    void updateMainCheckBox();
 
 private:
     Ui::MainWindow *ui;
@@ -82,5 +85,6 @@ private:
     // control opacity of the icon
     QPixmap setPixmapOpacity(const QPixmap &pixmap, qreal opacity);
     bool toggleFlag;
+    CurrentUsers *currentUsers;
 };
 #endif // MAINWINDOW_H

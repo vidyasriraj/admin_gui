@@ -1177,7 +1177,7 @@ QWidget[hidden=&quot;true&quot;] {
 </string>
              </property>
              <property name="currentIndex">
-              <number>1</number>
+              <number>0</number>
              </property>
              <widget class="QWidget" name="generalSettingsPage">
               <property name="styleSheet">
@@ -2760,69 +2760,84 @@ outline: none;
           </layout>
          </widget>
          <widget class="QWidget" name="users">
-          <widget class="QFrame" name="frame">
+          <widget class="QWidget" name="widget_2" native="true">
            <property name="geometry">
             <rect>
-             <x>10</x>
-             <y>140</y>
-             <width>681</width>
-             <height>251</height>
+             <x>0</x>
+             <y>0</y>
+             <width>690</width>
+             <height>600</height>
             </rect>
            </property>
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
-             <horstretch>0</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
-           </property>
-           <property name="frameShape">
-            <enum>QFrame::StyledPanel</enum>
-           </property>
-           <property name="frameShadow">
-            <enum>QFrame::Raised</enum>
-           </property>
-           <widget class="QCheckBox" name="checkBox">
-            <property name="geometry">
-             <rect>
-              <x>2</x>
-              <y>23</y>
-              <width>70</width>
-              <height>21</height>
-             </rect>
+           <layout class="QGridLayout" name="gridLayout_3">
+            <property name="leftMargin">
+             <number>0</number>
             </property>
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
+            <property name="topMargin">
+             <number>0</number>
             </property>
-            <property name="minimumSize">
-             <size>
-              <width>70</width>
-              <height>0</height>
-             </size>
+            <property name="rightMargin">
+             <number>0</number>
             </property>
-            <property name="maximumSize">
-             <size>
-              <width>70</width>
-              <height>16777215</height>
-             </size>
+            <property name="bottomMargin">
+             <number>0</number>
             </property>
-            <property name="layoutDirection">
-             <enum>Qt::LeftToRight</enum>
+            <property name="spacing">
+             <number>0</number>
             </property>
-            <property name="styleSheet">
-             <string notr="true">QCheckBox {
+            <item row="0" column="0">
+             <widget class="QPushButton" name="addbutton">
+              <property name="minimumSize">
+               <size>
+                <width>150</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>150</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>add</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0" colspan="2">
+             <widget class="QGroupBox" name="groupBox_2">
+              <property name="title">
+               <string/>
+              </property>
+              <layout class="QHBoxLayout" name="horizontalLayout">
+               <property name="spacing">
+                <number>0</number>
+               </property>
+               <property name="leftMargin">
+                <number>0</number>
+               </property>
+               <property name="topMargin">
+                <number>0</number>
+               </property>
+               <property name="rightMargin">
+                <number>0</number>
+               </property>
+               <property name="bottomMargin">
+                <number>0</number>
+               </property>
+               <item>
+                <widget class="QCheckBox" name="mainCheckBox">
+                 <property name="styleSheet">
+                  <string notr="true">QCheckBox {
     background-color: transparent; 
     color: white;
 	margin-left: &quot;40px&quot;;
-   
 }
 
 QCheckBox::indicator {
     border: 1px solid white; 
-border-radius: 3px;
     width: 15px; 
+border-radius: 3px;
     height: 15px;
     background-color: transparent;
 }
@@ -2838,255 +2853,51 @@ QCheckBox::indicator:unchecked {
     border: 1px solid white;
 }
 </string>
-            </property>
-            <property name="text">
-             <string/>
-            </property>
-           </widget>
-           <widget class="QCheckBox" name="checkBox_6">
-            <property name="geometry">
-             <rect>
-              <x>2</x>
-              <y>101</y>
-              <width>70</width>
-              <height>21</height>
-             </rect>
-            </property>
-            <property name="minimumSize">
-             <size>
-              <width>70</width>
-              <height>0</height>
-             </size>
-            </property>
-            <property name="maximumSize">
-             <size>
-              <width>70</width>
-              <height>16777215</height>
-             </size>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">QCheckBox {
-    background-color: transparent; 
-    color: white;
-	margin-left: &quot;40px&quot;;
-   
-}
-
-QCheckBox::indicator {
-    border: 1px solid white; 
-border-radius: 3px;
-    width: 15px; 
-    height: 15px;
-    background-color: transparent;
-}
-
-QCheckBox::indicator:checked {
-    image: url(:/logos/images/new.png); 
-    background-color: transparent; 
-    border: 1px solid white;
-}
-
-QCheckBox::indicator:unchecked {
-    background-color: transparent;
-    border: 1px solid white;
-}
-</string>
-            </property>
-            <property name="text">
-             <string/>
-            </property>
-           </widget>
-           <widget class="QCheckBox" name="checkBox_7">
-            <property name="geometry">
-             <rect>
-              <x>2</x>
-              <y>149</y>
-              <width>70</width>
-              <height>21</height>
-             </rect>
-            </property>
-            <property name="minimumSize">
-             <size>
-              <width>70</width>
-              <height>0</height>
-             </size>
-            </property>
-            <property name="maximumSize">
-             <size>
-              <width>70</width>
-              <height>16777215</height>
-             </size>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">QCheckBox {
-    background-color: transparent; 
-    color: white;
-	margin-left: &quot;40px&quot;;
-   
-}
-
-QCheckBox::indicator {
-    border: 1px solid white; 
-border-radius: 3px;
-    width: 15px; 
-    height: 15px;
-    background-color: transparent;
-}
-
-QCheckBox::indicator:checked {
-    image: url(:/logos/images/new.png); 
-    background-color: transparent; 
-    border: 1px solid white;
-}
-
-QCheckBox::indicator:unchecked {
-    background-color: transparent;
-    border: 1px solid white;
-}
-</string>
-            </property>
-            <property name="text">
-             <string/>
-            </property>
-           </widget>
-           <widget class="QCheckBox" name="checkBox_8">
-            <property name="geometry">
-             <rect>
-              <x>2</x>
-              <y>197</y>
-              <width>70</width>
-              <height>21</height>
-             </rect>
-            </property>
-            <property name="minimumSize">
-             <size>
-              <width>70</width>
-              <height>0</height>
-             </size>
-            </property>
-            <property name="maximumSize">
-             <size>
-              <width>70</width>
-              <height>16777215</height>
-             </size>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">QCheckBox {
-    background-color: transparent; 
-    color: white;
-	margin-left: &quot;40px&quot;;
-   
-}
-
-QCheckBox::indicator {
-    border: 1px solid white; 
-border-radius: 3px;
-    width: 15px; 
-    height: 15px;
-    background-color: transparent;
-}
-
-QCheckBox::indicator:checked {
-    image: url(:/logos/images/new.png); 
-    background-color: transparent; 
-    border: 1px solid white;
-}
-
-QCheckBox::indicator:unchecked {
-    background-color: transparent;
-    border: 1px solid white;
-}
-</string>
-            </property>
-            <property name="text">
-             <string/>
-            </property>
-           </widget>
-           <widget class="Line" name="line_12">
-            <property name="geometry">
-             <rect>
-              <x>2</x>
-              <y>58</y>
-              <width>668</width>
-              <height>3</height>
-             </rect>
-            </property>
-            <property name="minimumSize">
-             <size>
-              <width>0</width>
-              <height>3</height>
-             </size>
-            </property>
-            <property name="maximumSize">
-             <size>
-              <width>16777215</width>
-              <height>3</height>
-             </size>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">background-color: &quot;#474748&quot;;</string>
-            </property>
-            <property name="orientation">
-             <enum>Qt::Horizontal</enum>
-            </property>
-           </widget>
-           <widget class="QLabel" name="label_2">
-            <property name="geometry">
-             <rect>
-              <x>110</x>
-              <y>23</y>
-              <width>66</width>
-              <height>18</height>
-             </rect>
-            </property>
-            <property name="font">
-             <font>
-              <pointsize>15</pointsize>
-              <fontweight>DemiBold</fontweight>
-             </font>
-            </property>
-            <property name="text">
-             <string>Name</string>
-            </property>
-           </widget>
-           <widget class="QLabel" name="label_29">
-            <property name="geometry">
-             <rect>
-              <x>260</x>
-              <y>23</y>
-              <width>66</width>
-              <height>18</height>
-             </rect>
-            </property>
-            <property name="font">
-             <font>
-              <pointsize>15</pointsize>
-              <fontweight>DemiBold</fontweight>
-             </font>
-            </property>
-            <property name="text">
-             <string>Name</string>
-            </property>
-           </widget>
-           <widget class="QLabel" name="label_30">
-            <property name="geometry">
-             <rect>
-              <x>460</x>
-              <y>23</y>
-              <width>66</width>
-              <height>18</height>
-             </rect>
-            </property>
-            <property name="font">
-             <font>
-              <pointsize>15</pointsize>
-              <fontweight>DemiBold</fontweight>
-             </font>
-            </property>
-            <property name="text">
-             <string>Name</string>
-            </property>
-           </widget>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="label_2">
+                 <property name="text">
+                  <string>Name</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="label_29">
+                 <property name="text">
+                  <string>Ip</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="label_32">
+                 <property name="text">
+                  <string>Status</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="label_31">
+                 <property name="text">
+                  <string>Connected</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="label_30">
+                 <property name="text">
+                  <string>Delete</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
           </widget>
          </widget>
          <widget class="QWidget" name="configuration">
@@ -4022,10 +3833,16 @@ outline: none;</string>
        </item>
        <item>
         <widget class="QPushButton" name="UserBtn">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>64</height>
+          </size>
+         </property>
          <property name="maximumSize">
           <size>
            <width>16777215</width>
-           <height>70</height>
+           <height>64</height>
           </size>
          </property>
          <property name="cursor">
@@ -4042,11 +3859,11 @@ outline: none;</string>
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>../../../Downloads/Users.png</normaloff>../../../Downloads/Users.png</iconset>
+           <normaloff>../../Downloads/Users.png</normaloff>../../Downloads/Users.png</iconset>
          </property>
          <property name="iconSize">
           <size>
-           <width>35</width>
+           <width>30</width>
            <height>60</height>
           </size>
          </property>
@@ -4057,6 +3874,12 @@ outline: none;</string>
        </item>
        <item>
         <widget class="QPushButton" name="confBtn">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>64</height>
+          </size>
+         </property>
          <property name="maximumSize">
           <size>
            <width>16777215</width>
@@ -4077,7 +3900,7 @@ outline: none;</string>
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>../../../Downloads/Computer Support.png</normaloff>../../../Downloads/Computer Support.png</iconset>
+           <normaloff>../../Downloads/Computer Support.png</normaloff>../../Downloads/Computer Support.png</iconset>
          </property>
          <property name="iconSize">
           <size>

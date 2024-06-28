@@ -18,5 +18,6 @@
         <file>images/upload.png</file>
         <file>images/location.png</file>
         <file>images/new.png</file>
+        <file>images/delete.png</file>
     </qresource>
 </RCC>

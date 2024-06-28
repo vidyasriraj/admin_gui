@@ -8,6 +8,7 @@
 #include <QButtonGroup>
 #include <QPropertyAnimation>
 #include <QWidget>
+#include <QRandomGenerator>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -89,7 +90,17 @@ MainWindow::MainWindow(QWidget *parent)
     // Connect the parent radio button's toggled signal to the enableSubRadioButtons function
     connect(ui->man, &QRadioButton::toggled, this, &MainWindow::on_man_toggled);
 
+
+    currentUsers = new CurrentUsers(this);
+    ui->widget_2->layout()->addWidget(currentUsers);
+
+    // Connect the "Add" button to the addUser slot
+    connect(ui->addbutton, &QPushButton::clicked, this, &MainWindow::addUser);
+    connect(currentUsers, &CurrentUsers::userDeleted, this, &MainWindow::handleDeletedUser);
+    connect(ui->mainCheckBox, &QCheckBox::toggled, this, &MainWindow::onMainCheckBoxToggled);
+    connect(currentUsers, &CurrentUsers::checkBoxStateChanged, this, &MainWindow::updateMainCheckBox);
 }
+
 
 MainWindow::~MainWindow()
 {
@@ -342,7 +353,67 @@ void MainWindow::on_man_toggled(bool checked)
 
 }
 
+void MainWindow::addUser()
+{
+    // This is just an example. In a real application, you'd get this information from user input or a network connection.
+    QString name = "User " + QString::number(QRandomGenerator::global()->bounded(100));
+    QString ip = QString::number(QRandomGenerator::global()->bounded(256)) + "." +
+                 QString::number(QRandomGenerator::global()->bounded(256)) + "." +
+                 QString::number(QRandomGenerator::global()->bounded(256)) + "." +
+                 QString::number(QRandomGenerator::global()->bounded(256));
+    QString status = (QRandomGenerator::global()->bounded(2) == 0) ? "Online" : "Offline";
+    QString connectedTime = QString::number(QRandomGenerator::global()->bounded(24)) + ":" +
+                            QString("%1").arg(QRandomGenerator::global()->bounded(60), 2, 10, QChar('0'));
 
+    currentUsers->addUser(name, ip, status, connectedTime);
+}
 
+void MainWindow::handleDeletedUser(const QString &name, const QString &ip, const QString &status, const QString &connectedTime)
+{
+    qDebug() << "Deleted user details:";
+    qDebug() << "Name:" << name;
+    qDebug() << "IP:" << ip;
+    qDebug() << "Status:" << status;
+    qDebug() << "Connected Time:" << connectedTime;
 
+    // You can add more code here to handle the deleted user information as needed
+}
+void MainWindow::processCheckBoxes()
+{
+    QList<QCheckBox*> checkBoxes = currentUsers->getCheckBoxes();
+    for (int i = 0; i < checkBoxes.size(); ++i) {
+        QCheckBox *checkbox = checkBoxes[i];
+        qDebug() << "Checkbox" << i + 1 << "is" << (checkbox->isChecked() ? "checked" : "unchecked");
+    }
+}
+void MainWindow::onMainCheckBoxToggled(bool checked)
+{
+    currentUsers->setAllCheckBoxes(checked);
+}
+
+void MainWindow::updateMainCheckBox()
+{
+    QList<QCheckBox*> checkBoxes = currentUsers->getCheckBoxes();
+    bool allChecked = true;
+    bool anyChecked = false;
+
+    for (QCheckBox* checkbox : checkBoxes) {
+        if (checkbox->isChecked()) {
+            anyChecked = true;
+        } else {
+            allChecked = false;
+        }
+    }
+
+    // Block signals to prevent recursive calls
+    ui->mainCheckBox->blockSignals(true);
+    if (allChecked) {
+        ui->mainCheckBox->setCheckState(Qt::Checked);
+    } else if (anyChecked) {
+        ui->mainCheckBox->setCheckState(Qt::Unchecked);
+    } else {
+        ui->mainCheckBox->setCheckState(Qt::Unchecked);
+    }
+    ui->mainCheckBox->blockSignals(false);
+}
 

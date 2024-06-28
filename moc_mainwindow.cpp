@@ -22,8 +22,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_MainWindow_t {
-    QByteArrayData data[31];
-    char stringdata0[405];
+    QByteArrayData data[40];
+    char stringdata0[519];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -62,7 +62,16 @@ QT_MOC_LITERAL(26, 359, 7), // "checked"
 QT_MOC_LITERAL(27, 367, 15), // "applyBlurEffect"
 QT_MOC_LITERAL(28, 383, 8), // "QWidget*"
 QT_MOC_LITERAL(29, 392, 6), // "widget"
-QT_MOC_LITERAL(30, 399, 5) // "apply"
+QT_MOC_LITERAL(30, 399, 5), // "apply"
+QT_MOC_LITERAL(31, 405, 7), // "addUser"
+QT_MOC_LITERAL(32, 413, 17), // "handleDeletedUser"
+QT_MOC_LITERAL(33, 431, 4), // "name"
+QT_MOC_LITERAL(34, 436, 2), // "ip"
+QT_MOC_LITERAL(35, 439, 6), // "status"
+QT_MOC_LITERAL(36, 446, 13), // "connectedTime"
+QT_MOC_LITERAL(37, 460, 17), // "processCheckBoxes"
+QT_MOC_LITERAL(38, 478, 21), // "onMainCheckBoxToggled"
+QT_MOC_LITERAL(39, 500, 18) // "updateMainCheckBox"
 
     },
     "MainWindow\0showExpandedNavbar\0\0"
@@ -76,7 +85,10 @@ QT_MOC_LITERAL(30, 399, 5) // "apply"
     "setAdvancedSettings\0on_browse_clicked\0"
     "on_browse_2_clicked\0on_man_toggled\0"
     "checked\0applyBlurEffect\0QWidget*\0"
-    "widget\0apply"
+    "widget\0apply\0addUser\0handleDeletedUser\0"
+    "name\0ip\0status\0connectedTime\0"
+    "processCheckBoxes\0onMainCheckBoxToggled\0"
+    "updateMainCheckBox"
 };
 #undef QT_MOC_LITERAL
 
@@ -86,7 +98,7 @@ static const uint qt_meta_data_MainWindow[] = {
        8,       // revision
        0,       // classname
        0,    0, // classinfo
-      18,   14, // methods
+      23,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -94,24 +106,29 @@ static const uint qt_meta_data_MainWindow[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    0,  104,    2, 0x08 /* Private */,
-       3,    0,  105,    2, 0x08 /* Private */,
-       4,    2,  106,    2, 0x08 /* Private */,
-       7,    3,  111,    2, 0x08 /* Private */,
-      12,    0,  118,    2, 0x08 /* Private */,
-      13,    0,  119,    2, 0x08 /* Private */,
-      14,    0,  120,    2, 0x08 /* Private */,
-      15,    0,  121,    2, 0x08 /* Private */,
-      16,    0,  122,    2, 0x08 /* Private */,
-      17,    0,  123,    2, 0x08 /* Private */,
-      18,    2,  124,    2, 0x08 /* Private */,
-      20,    0,  129,    2, 0x08 /* Private */,
-      21,    0,  130,    2, 0x08 /* Private */,
-      22,    0,  131,    2, 0x08 /* Private */,
-      23,    0,  132,    2, 0x08 /* Private */,
-      24,    0,  133,    2, 0x08 /* Private */,
-      25,    1,  134,    2, 0x08 /* Private */,
-      27,    2,  137,    2, 0x08 /* Private */,
+       1,    0,  129,    2, 0x08 /* Private */,
+       3,    0,  130,    2, 0x08 /* Private */,
+       4,    2,  131,    2, 0x08 /* Private */,
+       7,    3,  136,    2, 0x08 /* Private */,
+      12,    0,  143,    2, 0x08 /* Private */,
+      13,    0,  144,    2, 0x08 /* Private */,
+      14,    0,  145,    2, 0x08 /* Private */,
+      15,    0,  146,    2, 0x08 /* Private */,
+      16,    0,  147,    2, 0x08 /* Private */,
+      17,    0,  148,    2, 0x08 /* Private */,
+      18,    2,  149,    2, 0x08 /* Private */,
+      20,    0,  154,    2, 0x08 /* Private */,
+      21,    0,  155,    2, 0x08 /* Private */,
+      22,    0,  156,    2, 0x08 /* Private */,
+      23,    0,  157,    2, 0x08 /* Private */,
+      24,    0,  158,    2, 0x08 /* Private */,
+      25,    1,  159,    2, 0x08 /* Private */,
+      27,    2,  162,    2, 0x08 /* Private */,
+      31,    0,  167,    2, 0x08 /* Private */,
+      32,    4,  168,    2, 0x08 /* Private */,
+      37,    0,  177,    2, 0x08 /* Private */,
+      38,    1,  178,    2, 0x08 /* Private */,
+      39,    0,  181,    2, 0x08 /* Private */,
 
  // slots: parameters
     QMetaType::Void,
@@ -132,6 +149,11 @@ static const uint qt_meta_data_MainWindow[] = {
     QMetaType::Void,
     QMetaType::Void, QMetaType::Bool,   26,
     QMetaType::Void, 0x80000000 | 28, QMetaType::Bool,   29,   30,
+    QMetaType::Void,
+    QMetaType::Void, QMetaType::QString, QMetaType::QString, QMetaType::QString, QMetaType::QString,   33,   34,   35,   36,
+    QMetaType::Void,
+    QMetaType::Void, QMetaType::Bool,   26,
+    QMetaType::Void,
 
        0        // eod
 };
@@ -160,6 +182,11 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 15: _t->on_browse_2_clicked(); break;
         case 16: _t->on_man_toggled((*reinterpret_cast< bool(*)>(_a[1]))); break;
         case 17: _t->applyBlurEffect((*reinterpret_cast< QWidget*(*)>(_a[1])),(*reinterpret_cast< bool(*)>(_a[2]))); break;
+        case 18: _t->addUser(); break;
+        case 19: _t->handleDeletedUser((*reinterpret_cast< const QString(*)>(_a[1])),(*reinterpret_cast< const QString(*)>(_a[2])),(*reinterpret_cast< const QString(*)>(_a[3])),(*reinterpret_cast< const QString(*)>(_a[4]))); break;
+        case 20: _t->processCheckBoxes(); break;
+        case 21: _t->onMainCheckBoxToggled((*reinterpret_cast< bool(*)>(_a[1]))); break;
+        case 22: _t->updateMainCheckBox(); break;
         default: ;
         }
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
@@ -220,13 +247,13 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 18)
+        if (_id < 23)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 18;
+        _id -= 23;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 18)
+        if (_id < 23)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 18;
+        _id -= 23;
     }
     return _id;
 }
