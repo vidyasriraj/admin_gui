@@ -10,12 +10,14 @@ CONFIG += c++17
 
 SOURCES += \
     currentusers.cpp \
+    customdelegate.cpp \
     main.cpp \
     mainwindow.cpp
 
 
 HEADERS += \
     currentusers.h \
+    customdelegate.h \
     mainwindow.h
 
 FORMS += \

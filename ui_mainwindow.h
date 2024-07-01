@@ -154,15 +154,17 @@ public:
     QWidget *users;
     QWidget *widget_2;
     QGridLayout *gridLayout_3;
-    QPushButton *addbutton;
     QGroupBox *groupBox_2;
     QHBoxLayout *horizontalLayout;
+    QSpacerItem *horizontalSpacer;
     QCheckBox *mainCheckBox;
     QLabel *label_2;
     QLabel *label_29;
     QLabel *label_32;
     QLabel *label_31;
     QLabel *label_30;
+    QSpacerItem *horizontalSpacer_3;
+    QPushButton *addbutton;
     QWidget *configuration;
     QWidget *widget;
     QFrame *frame_2;
@@ -1420,21 +1422,21 @@ public:
         gridLayout_3->setSpacing(0);
         gridLayout_3->setObjectName(QString::fromUtf8("gridLayout_3"));
         gridLayout_3->setContentsMargins(0, 0, 0, 0);
-        addbutton = new QPushButton(widget_2);
-        addbutton->setObjectName(QString::fromUtf8("addbutton"));
-        addbutton->setMinimumSize(QSize(150, 0));
-        addbutton->setMaximumSize(QSize(150, 16777215));
-
-        gridLayout_3->addWidget(addbutton, 0, 0, 1, 1);
-
         groupBox_2 = new QGroupBox(widget_2);
         groupBox_2->setObjectName(QString::fromUtf8("groupBox_2"));
+        groupBox_2->setMaximumSize(QSize(16777215, 550));
         horizontalLayout = new QHBoxLayout(groupBox_2);
         horizontalLayout->setSpacing(0);
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
         horizontalLayout->setContentsMargins(0, 0, 0, 0);
+        horizontalSpacer = new QSpacerItem(18, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+
+        horizontalLayout->addItem(horizontalSpacer);
+
         mainCheckBox = new QCheckBox(groupBox_2);
         mainCheckBox->setObjectName(QString::fromUtf8("mainCheckBox"));
+        mainCheckBox->setMinimumSize(QSize(50, 0));
+        mainCheckBox->setMaximumSize(QSize(80, 16777215));
         mainCheckBox->setStyleSheet(QString::fromUtf8("QCheckBox {\n"
 "    background-color: transparent; \n"
 "    color: white;\n"
@@ -1465,31 +1467,48 @@ public:
 
         label_2 = new QLabel(groupBox_2);
         label_2->setObjectName(QString::fromUtf8("label_2"));
+        label_2->setMinimumSize(QSize(80, 0));
+        label_2->setMaximumSize(QSize(80, 16777215));
 
         horizontalLayout->addWidget(label_2);
 
         label_29 = new QLabel(groupBox_2);
         label_29->setObjectName(QString::fromUtf8("label_29"));
+        label_29->setMaximumSize(QSize(150, 16777215));
 
         horizontalLayout->addWidget(label_29);
 
         label_32 = new QLabel(groupBox_2);
         label_32->setObjectName(QString::fromUtf8("label_32"));
+        label_32->setMaximumSize(QSize(80, 16777215));
 
         horizontalLayout->addWidget(label_32);
 
         label_31 = new QLabel(groupBox_2);
         label_31->setObjectName(QString::fromUtf8("label_31"));
+        label_31->setMaximumSize(QSize(80, 16777215));
 
         horizontalLayout->addWidget(label_31);
 
         label_30 = new QLabel(groupBox_2);
         label_30->setObjectName(QString::fromUtf8("label_30"));
+        label_30->setMaximumSize(QSize(100, 16777215));
 
         horizontalLayout->addWidget(label_30);
 
+        horizontalSpacer_3 = new QSpacerItem(100, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+
+        horizontalLayout->addItem(horizontalSpacer_3);
+
 
         gridLayout_3->addWidget(groupBox_2, 1, 0, 1, 2);
+
+        addbutton = new QPushButton(widget_2);
+        addbutton->setObjectName(QString::fromUtf8("addbutton"));
+        addbutton->setMinimumSize(QSize(150, 0));
+        addbutton->setMaximumSize(QSize(150, 16777215));
+
+        gridLayout_3->addWidget(addbutton, 0, 1, 1, 1);
 
         StackedMainView->addWidget(users);
         configuration = new QWidget();
@@ -2276,7 +2295,6 @@ public:
         infoDescription->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p>OpenVPN GUIv11.15\343\200\2010.0 -A Windows GUI for OpenVPN<br/>Copyright (C) 2004-2005 Mathias Sundman &lt;info@openvpn.se&gt; <br/>Copyright (C) 2008-2014 Heiko Hund &lt;heikoh@users.sf.net&gt;<br/>Copyright (C)2012-2018 OpenVPN GUI contributors <br/>https://github.com/OpenVPN/openvpn-gui/ <br/><br/>OpenVPN-An application to securely tunnel lP networks over a single CP/UDP port with support for SSL/TLS-based session authentic ation and key exchange. packet encryption, packet authentication. and packet compression.<br/>Copyright (C) 2002-2018 OpenVPN Technologies. Inc &lt;info@openvpn.net&gt; https://openvpn.net</p></body></html>", nullptr));
         infoTitle->setText(QCoreApplication::translate("MainWindow", "About Us", nullptr));
         quantumLogoInfo->setText(QString());
-        addbutton->setText(QCoreApplication::translate("MainWindow", "add", nullptr));
         groupBox_2->setTitle(QString());
         mainCheckBox->setText(QString());
         label_2->setText(QCoreApplication::translate("MainWindow", "Name", nullptr));
@@ -2284,6 +2302,7 @@ public:
         label_32->setText(QCoreApplication::translate("MainWindow", "Status", nullptr));
         label_31->setText(QCoreApplication::translate("MainWindow", "Connected", nullptr));
         label_30->setText(QCoreApplication::translate("MainWindow", "Delete", nullptr));
+        addbutton->setText(QCoreApplication::translate("MainWindow", "add", nullptr));
         label_3->setText(QCoreApplication::translate("MainWindow", "Qsleeve Server version", nullptr));
         label_4->setText(QCoreApplication::translate("MainWindow", "Server Name", nullptr));
         label_5->setText(QCoreApplication::translate("MainWindow", "Allowed Users", nullptr));

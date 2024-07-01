@@ -53,11 +53,13 @@ OBJECTS_DIR   = ./
 ####### Files
 
 SOURCES       = currentusers.cpp \
+		customdelegate.cpp \
 		main.cpp \
 		mainwindow.cpp qrc_resources.cpp \
 		moc_currentusers.cpp \
 		moc_mainwindow.cpp
 OBJECTS       = currentusers.o \
+		customdelegate.o \
 		main.o \
 		mainwindow.o \
 		qrc_resources.o \
@@ -141,7 +143,9 @@ DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/yacc.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/lex.prf \
 		Gui.pro currentusers.h \
+		customdelegate.h \
 		mainwindow.h currentusers.cpp \
+		customdelegate.cpp \
 		main.cpp \
 		mainwindow.cpp
 QMAKE_TARGET  = Gui
@@ -330,8 +334,8 @@ distdir: FORCE
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents resources.qrc $(DISTDIR)/
 	$(COPY_FILE) --parents /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/data/dummy.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents currentusers.h mainwindow.h $(DISTDIR)/
-	$(COPY_FILE) --parents currentusers.cpp main.cpp mainwindow.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents currentusers.h customdelegate.h mainwindow.h $(DISTDIR)/
+	$(COPY_FILE) --parents currentusers.cpp customdelegate.cpp main.cpp mainwindow.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents mainwindow.ui $(DISTDIR)/
 
 
@@ -425,6 +429,9 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 
 currentusers.o: currentusers.cpp currentusers.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o currentusers.o currentusers.cpp
+
+customdelegate.o: customdelegate.cpp customdelegate.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o customdelegate.o customdelegate.cpp
 
 main.o: main.cpp mainwindow.h \
 		currentusers.h

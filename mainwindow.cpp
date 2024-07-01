@@ -115,7 +115,7 @@ MainWindow::~MainWindow()
 
 // method to show expanded navbar
 void MainWindow::showExpandedNavbar() {
-    int startX = -ui->compressedNav->width();  // Start from the 0 x-coordinate (left edge of the window)
+    int startX = -ui->compressedNav->width(); // Start from the 0 x-coordinate (left edge of the window)
     int endX = ui->compressedNav->width();  // End at the right edge of the compressedNav
     int startY = ui->expandedNav->y();  // Y-coordinate remains unchanged
     int height = ui->expandedNav->height();  // Height remains unchanged
@@ -150,9 +150,6 @@ void MainWindow::showExpandedNavbar() {
 
     moveAnimation->start(QAbstractAnimation::DeleteWhenStopped);
 }
-
-
-
 
 
 
@@ -361,7 +358,7 @@ void MainWindow::addUser()
                  QString::number(QRandomGenerator::global()->bounded(256)) + "." +
                  QString::number(QRandomGenerator::global()->bounded(256)) + "." +
                  QString::number(QRandomGenerator::global()->bounded(256));
-    QString status = (QRandomGenerator::global()->bounded(2) == 0) ? "Online" : "Offline";
+    QString status = (QRandomGenerator::global()->bounded(2) == 0) ? "Active" : "Inactive";
     QString connectedTime = QString::number(QRandomGenerator::global()->bounded(24)) + ":" +
                             QString("%1").arg(QRandomGenerator::global()->bounded(60), 2, 10, QChar('0'));
 

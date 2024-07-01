@@ -26,6 +26,7 @@ signals:
 private:
     QScrollArea *scrollArea;
     QWidget *scrollWidget;
+
     QVBoxLayout *scrollLayout;
     QList<QCheckBox*> checkBoxes;
     void deleteUser();
