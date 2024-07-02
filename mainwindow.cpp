@@ -4,6 +4,7 @@
 #include <QDebug>
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "customdelegate.h"
 #include <QGraphicsDropShadowEffect>
 #include <QButtonGroup>
 #include <QPropertyAnimation>
@@ -99,6 +100,11 @@ MainWindow::MainWindow(QWidget *parent)
     connect(currentUsers, &CurrentUsers::userDeleted, this, &MainWindow::handleDeletedUser);
     connect(ui->mainCheckBox, &QCheckBox::toggled, this, &MainWindow::onMainCheckBoxToggled);
     connect(currentUsers, &CurrentUsers::checkBoxStateChanged, this, &MainWindow::updateMainCheckBox);
+
+    connect(ui->confBtn, &QPushButton::clicked, this, &MainWindow::value_read);
+    connect(ui->expandedConfBtn, &QPushButton::clicked, this, &MainWindow::value_read);
+
+
 }
 
 
@@ -412,5 +418,42 @@ void MainWindow::updateMainCheckBox()
         ui->mainCheckBox->setCheckState(Qt::Unchecked);
     }
     ui->mainCheckBox->blockSignals(false);
+}
+
+
+
+
+void MainWindow::value_read()
+{
+    QMap<QString, QString> keyValuePairs = readKeyValuePairsFromFile(":/logos/config.txt");
+    ui->table->setRowCount(keyValuePairs.size());
+    ui->table->setColumnCount(2);
+    ui->table->horizontalHeader()->setVisible(false);
+    ui->table->verticalHeader()->setVisible(false);
+    ui->table->setSelectionMode(QAbstractItemView::NoSelection);
+    ui->table->setFocusPolicy(Qt::NoFocus);
+
+    // Remove row numbers
+    ui->table->setVerticalHeader(nullptr);
+
+
+    int row = 0;
+    ui->table->setRowHeight(row, 60);
+
+    for (auto it = keyValuePairs.cbegin(); it != keyValuePairs.cend(); it++) {
+        QTableWidgetItem *keyItem = new QTableWidgetItem(it.key());
+        QTableWidgetItem *valueItem = new QTableWidgetItem(it.value());
+
+        ui->table->setItem(row, 0, keyItem);
+        ui->table->setColumnWidth(0, 360);
+        ui->table->setItem(row, 1, valueItem);
+        ui->table->setColumnWidth(1,160);
+
+        row++;
+        ui->table->setRowHeight(row, 60);
+    }
+
+    ui->table->setItemDelegate(new CustomDelegate(ui->table));  // Set custom delegate for drawing lines
+
 }
 

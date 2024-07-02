@@ -9,9 +9,11 @@ CurrentUsers::CurrentUsers(QWidget *parent) : QWidget(parent)
     scrollArea->setMinimumWidth(650);  // Minimum width
     scrollArea->setMaximumWidth(650);  // Maximum width
     scrollWidget = new QWidget(scrollArea);
-
+    QFont font("Sans Serif", 12); // Specify the font family and size
+    scrollWidget->setFont(font);
     scrollLayout = new QVBoxLayout(scrollWidget);
-
+    QSpacerItem *verticalSpacer = new QSpacerItem(20, 10, QSizePolicy::Fixed, QSizePolicy::Fixed);
+    scrollLayout->addItem(verticalSpacer);
     // Add a spacer at the bottom to push everything to the top
     scrollLayout->addStretch();
     scrollWidget->setMinimumWidth(530);  // Minimum width
@@ -121,13 +123,16 @@ void CurrentUsers::addUser(const QString &name, const QString &ip, const QString
 
     // Set column stretch to adjust the spacing between columns
     userLayout->setColumnStretch(0, 160); // Checkbox column
-    userLayout->setColumnStretch(1, 290); // Name column
-    userLayout->setColumnStretch(2, 530); // IP column
-    userLayout->setColumnStretch(3, 350); // Status column
+    userLayout->setColumnStretch(1, 400); // Name column
+    userLayout->setColumnStretch(2, 500); // IP column
+    userLayout->setColumnStretch(3, 320); // Status column
     userLayout->setColumnStretch(4, 310); // Connected time column
     userLayout->setColumnStretch(5, 100); // Delete button column
     // Add user layout before the stretch (spacer)
-    scrollLayout->insertLayout(scrollLayout->count() - 1, userLayout);
+    scrollLayout->insertLayout(0, userLayout);
+    QSpacerItem *spacer = new QSpacerItem(20, 10, QSizePolicy::Fixed, QSizePolicy::Fixed);
+    scrollLayout->insertItem(1, spacer);
+
 
 
     connect(deleteButton, &QPushButton::clicked, [=]() {

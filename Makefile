@@ -365,6 +365,7 @@ compiler_rcc_clean:
 	-$(DEL_FILE) qrc_resources.cpp
 qrc_resources.cpp: resources.qrc \
 		/usr/lib/qt5/bin/rcc \
+		config.txt \
 		images/Group\ 10.png \
 		images/Group\ 11.png \
 		images/Downloading.png \
@@ -439,7 +440,8 @@ main.o: main.cpp mainwindow.h \
 
 mainwindow.o: mainwindow.cpp mainwindow.h \
 		currentusers.h \
-		ui_mainwindow.h
+		ui_mainwindow.h \
+		customdelegate.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainwindow.o mainwindow.cpp
 
 qrc_resources.o: qrc_resources.cpp 

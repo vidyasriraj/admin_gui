@@ -15,6 +15,8 @@
 #include <QMessageBox>
 #include <QMap>
 #include <QVBoxLayout>
+#include <QTableWidget>
+
 #include "currentusers.h"
 
 QT_BEGIN_NAMESPACE
@@ -73,6 +75,26 @@ private slots:
     void onMainCheckBoxToggled(bool checked);
     void updateMainCheckBox();
 
+    QMap<QString, QString> readKeyValuePairsFromFile(const QString &filePath) {
+        QMap<QString, QString> keyValuePairs;
+        QFile file(filePath);
+        if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+            // Handle file open error
+            return keyValuePairs;
+        }
+
+        QTextStream in(&file);
+        while (!in.atEnd()) {
+            QString line = in.readLine();
+            QStringList parts = line.split("=");
+            if (parts.size() == 2) {
+                keyValuePairs.insert(parts[0].trimmed(), parts[1].trimmed());
+            }
+        }
+        file.close();
+        return keyValuePairs;
+    }
+    void value_read();
 private:
     Ui::MainWindow *ui;
     QPushButton *previousPage;
@@ -86,5 +108,6 @@ private:
     QPixmap setPixmapOpacity(const QPixmap &pixmap, qreal opacity);
     bool toggleFlag;
     CurrentUsers *currentUsers;
+
 };
 #endif // MAINWINDOW_H
