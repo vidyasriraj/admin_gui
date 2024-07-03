@@ -95,6 +95,8 @@ private slots:
         return keyValuePairs;
     }
     void value_read();
+    void on_delete_2_clicked();
+
 private:
     Ui::MainWindow *ui;
     QPushButton *previousPage;

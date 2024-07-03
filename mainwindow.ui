@@ -743,7 +743,7 @@ QWidget[hidden=&quot;true&quot;] {
 </string>
          </property>
          <property name="currentIndex">
-          <number>4</number>
+          <number>1</number>
          </property>
          <widget class="QWidget" name="dashboardPage">
           <property name="minimumSize">
@@ -944,7 +944,7 @@ text-align: center;</string>
                    </font>
                   </property>
                   <property name="text">
-                   <string>Upload</string>
+                   <string>Transmission</string>
                   </property>
                   <property name="icon">
                    <iconset resource="resources.qrc">
@@ -1010,7 +1010,7 @@ text-align: center;</string>
                    </font>
                   </property>
                   <property name="text">
-                   <string>Download</string>
+                   <string>Receiving</string>
                   </property>
                   <property name="icon">
                    <iconset resource="resources.qrc">
@@ -1234,7 +1234,7 @@ QWidget[hidden=&quot;true&quot;] {
                 </size>
                </property>
                <property name="styleSheet">
-                <string notr="true">background-color: rgb(121, 121, 121);
+                <string notr="true">background-color:&quot;#545759&quot;;
 border-radius: &quot;20px&quot;;
 </string>
                </property>
@@ -1785,6 +1785,165 @@ QWidget[hidden=&quot;true&quot;] {
            <property name="spacing">
             <number>0</number>
            </property>
+           <item row="0" column="1">
+            <widget class="QFrame" name="selectSettingsFrame">
+             <property name="minimumSize">
+              <size>
+               <width>200</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgba(23, 28, 31, 0.56);
+color: rgb(255, 255, 255);
+text-align: left;
+</string>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_9">
+              <property name="spacing">
+               <number>0</number>
+              </property>
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="topMargin">
+               <number>10</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+              <item alignment="Qt::AlignHCenter">
+               <widget class="QLabel" name="settingsTitle">
+                <property name="font">
+                 <font>
+                  <pointsize>14</pointsize>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">background-color: transparent;
+margin: &quot;10px&quot;;</string>
+                </property>
+                <property name="text">
+                 <string>Settings</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="generalSettingsBtn">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>40</height>
+                 </size>
+                </property>
+                <property name="font">
+                 <font>
+                  <pointsize>13</pointsize>
+                 </font>
+                </property>
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">background-color: rgba(45, 50, 51, 1);
+padding-left: &quot;8px&quot;;
+</string>
+                </property>
+                <property name="text">
+                 <string>General</string>
+                </property>
+                <property name="checkable">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="proxySettingsBtn">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>40</height>
+                 </size>
+                </property>
+                <property name="font">
+                 <font>
+                  <pointsize>13</pointsize>
+                 </font>
+                </property>
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">background-color: transparent;
+padding-left: &quot;8px&quot;;</string>
+                </property>
+                <property name="text">
+                 <string>Proxy</string>
+                </property>
+                <property name="checkable">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="advancedSettingsBtn">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>40</height>
+                 </size>
+                </property>
+                <property name="font">
+                 <font>
+                  <pointsize>13</pointsize>
+                 </font>
+                </property>
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">background-color: transparent;
+padding-left: &quot;8px&quot;;</string>
+                </property>
+                <property name="text">
+                 <string>Advanced</string>
+                </property>
+                <property name="checkable">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="verticalSpacer_3">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </widget>
+           </item>
            <item row="0" column="2">
             <widget class="QStackedWidget" name="stackedSettingsView">
              <property name="font">
@@ -2724,9 +2883,15 @@ QWidget[hidden=&quot;true&quot;] {
                 <rect>
                  <x>102</x>
                  <y>50</y>
-                 <width>300</width>
+                 <width>250</width>
                  <height>20</height>
                 </rect>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>250</width>
+                 <height>16777215</height>
+                </size>
                </property>
                <property name="styleSheet">
                 <string notr="true">background-color: rgba(255, 255, 255,50);</string>
@@ -2735,7 +2900,7 @@ QWidget[hidden=&quot;true&quot;] {
               <widget class="QPushButton" name="browse">
                <property name="geometry">
                 <rect>
-                 <x>420</x>
+                 <x>380</x>
                  <y>50</y>
                  <width>92</width>
                  <height>20</height>
@@ -2753,9 +2918,15 @@ QWidget[hidden=&quot;true&quot;] {
                 <rect>
                  <x>102</x>
                  <y>170</y>
-                 <width>300</width>
+                 <width>250</width>
                  <height>20</height>
                 </rect>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>250</width>
+                 <height>16777215</height>
+                </size>
                </property>
                <property name="styleSheet">
                 <string notr="true">background-color: rgba(255, 255, 255,50);</string>
@@ -2764,7 +2935,7 @@ QWidget[hidden=&quot;true&quot;] {
               <widget class="QPushButton" name="browse_2">
                <property name="geometry">
                 <rect>
-                 <x>420</x>
+                 <x>380</x>
                  <y>170</y>
                  <width>92</width>
                  <height>20</height>
@@ -2788,6 +2959,9 @@ QWidget[hidden=&quot;true&quot;] {
                </property>
                <property name="styleSheet">
                 <string notr="true">background-color: rgba(255, 255, 255,50);</string>
+               </property>
+               <property name="text">
+                <string>.ovpn</string>
                </property>
               </widget>
               <widget class="QLineEdit" name="path_4">
@@ -2941,7 +3115,7 @@ color: rgb(255, 255, 255);</string>
 color: rgb(255, 255, 255);</string>
                </property>
                <property name="text">
-                <string>Folder</string>
+                <string>File</string>
                </property>
               </widget>
               <widget class="QLabel" name="label_16">
@@ -3015,7 +3189,7 @@ color: rgb(255, 255, 255);</string>
 color: rgb(255, 255, 255);</string>
                </property>
                <property name="text">
-                <string>Folder</string>
+                <string>File</string>
                </property>
               </widget>
               <widget class="QLabel" name="label_18">
@@ -3053,165 +3227,6 @@ color: rgb(255, 255, 255);</string>
                </property>
               </widget>
              </widget>
-            </widget>
-           </item>
-           <item row="0" column="1">
-            <widget class="QFrame" name="selectSettingsFrame">
-             <property name="minimumSize">
-              <size>
-               <width>200</width>
-               <height>0</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>16777215</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">background-color: rgba(23, 28, 31, 0.56);
-color: rgb(255, 255, 255);
-text-align: left;
-</string>
-             </property>
-             <property name="frameShape">
-              <enum>QFrame::StyledPanel</enum>
-             </property>
-             <property name="frameShadow">
-              <enum>QFrame::Raised</enum>
-             </property>
-             <layout class="QVBoxLayout" name="verticalLayout_9">
-              <property name="spacing">
-               <number>0</number>
-              </property>
-              <property name="leftMargin">
-               <number>0</number>
-              </property>
-              <property name="topMargin">
-               <number>10</number>
-              </property>
-              <property name="rightMargin">
-               <number>0</number>
-              </property>
-              <property name="bottomMargin">
-               <number>0</number>
-              </property>
-              <item alignment="Qt::AlignHCenter">
-               <widget class="QLabel" name="settingsTitle">
-                <property name="font">
-                 <font>
-                  <pointsize>14</pointsize>
-                 </font>
-                </property>
-                <property name="styleSheet">
-                 <string notr="true">background-color: transparent;
-margin: &quot;10px&quot;;</string>
-                </property>
-                <property name="text">
-                 <string>Settings</string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QPushButton" name="generalSettingsBtn">
-                <property name="minimumSize">
-                 <size>
-                  <width>0</width>
-                  <height>40</height>
-                 </size>
-                </property>
-                <property name="font">
-                 <font>
-                  <pointsize>13</pointsize>
-                 </font>
-                </property>
-                <property name="cursor">
-                 <cursorShape>PointingHandCursor</cursorShape>
-                </property>
-                <property name="styleSheet">
-                 <string notr="true">background-color: rgba(45, 50, 51, 1);
-padding-left: &quot;8px&quot;;
-</string>
-                </property>
-                <property name="text">
-                 <string>General</string>
-                </property>
-                <property name="checkable">
-                 <bool>true</bool>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QPushButton" name="proxySettingsBtn">
-                <property name="minimumSize">
-                 <size>
-                  <width>0</width>
-                  <height>40</height>
-                 </size>
-                </property>
-                <property name="font">
-                 <font>
-                  <pointsize>13</pointsize>
-                 </font>
-                </property>
-                <property name="cursor">
-                 <cursorShape>PointingHandCursor</cursorShape>
-                </property>
-                <property name="styleSheet">
-                 <string notr="true">background-color: transparent;
-padding-left: &quot;8px&quot;;</string>
-                </property>
-                <property name="text">
-                 <string>Proxy</string>
-                </property>
-                <property name="checkable">
-                 <bool>true</bool>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QPushButton" name="advancedSettingsBtn">
-                <property name="minimumSize">
-                 <size>
-                  <width>0</width>
-                  <height>40</height>
-                 </size>
-                </property>
-                <property name="font">
-                 <font>
-                  <pointsize>13</pointsize>
-                 </font>
-                </property>
-                <property name="cursor">
-                 <cursorShape>PointingHandCursor</cursorShape>
-                </property>
-                <property name="styleSheet">
-                 <string notr="true">background-color: transparent;
-padding-left: &quot;8px&quot;;</string>
-                </property>
-                <property name="text">
-                 <string>Advanced</string>
-                </property>
-                <property name="checkable">
-                 <bool>true</bool>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <spacer name="verticalSpacer_3">
-                <property name="orientation">
-                 <enum>Qt::Vertical</enum>
-                </property>
-                <property name="sizeHint" stdset="0">
-                 <size>
-                  <width>20</width>
-                  <height>40</height>
-                 </size>
-                </property>
-               </spacer>
-              </item>
-             </layout>
             </widget>
            </item>
           </layout>
@@ -3290,7 +3305,7 @@ outline: none;
                 </size>
                </property>
                <property name="styleSheet">
-                <string notr="true">background-color: rgb(121, 121, 121);
+                <string notr="true">background-color: &quot;#545759&quot;;
 color: rgb(255, 255, 255);
 border-radius: &quot;20px&quot;;
 </string>
@@ -3422,6 +3437,25 @@ outline: none;
             <property name="spacing">
              <number>0</number>
             </property>
+            <item row="0" column="1">
+             <widget class="QPushButton" name="addbutton">
+              <property name="minimumSize">
+               <size>
+                <width>150</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>150</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>add</string>
+              </property>
+             </widget>
+            </item>
             <item row="1" column="0" colspan="2">
              <widget class="QGroupBox" name="groupBox_2">
               <property name="maximumSize">
@@ -3623,25 +3657,6 @@ QCheckBox::indicator:unchecked {
                 </spacer>
                </item>
               </layout>
-             </widget>
-            </item>
-            <item row="0" column="1">
-             <widget class="QPushButton" name="addbutton">
-              <property name="minimumSize">
-               <size>
-                <width>150</width>
-                <height>0</height>
-               </size>
-              </property>
-              <property name="maximumSize">
-               <size>
-                <width>150</width>
-                <height>16777215</height>
-               </size>
-              </property>
-              <property name="text">
-               <string>add</string>
-              </property>
              </widget>
             </item>
            </layout>

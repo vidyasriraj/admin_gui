@@ -62,6 +62,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     // Replace with actual name from your UI form
     browseButton2= ui->browse_2;
+
     connect(ui->browse_2, SIGNAL(clicked()), this, SLOT(on_browse_2_clicked()));
 
 
@@ -319,21 +320,49 @@ void MainWindow:: setAdvancedSettings() {
 
 void MainWindow::on_browse_clicked()
 {
-    QString directory = QFileDialog::getExistingDirectory(this, "Select Directory");
+    QFileDialog fileDialog(this, "Select .ovpn File");
 
-    if (!directory.isEmpty()) {
-        ui->path->setText(directory);
+    // Set options for the file dialog to only show files
+    fileDialog.setFileMode(QFileDialog::ExistingFile);
+    fileDialog.setNameFilter("OpenVPN Files (*.ovpn)");
+
+    // Show the dialog and get the selected file
+    QString fileName = fileDialog.getOpenFileName(this, "Select .ovpn File", "", "OpenVPN Files (*.ovpn)");
+
+    // Check if a file was selected
+    if (!fileName.isEmpty()) {
+        // Set the selected file path to the UI element
+        ui->path->setText(fileName);
     }
+
+    // Close the dialog explicitly (though it closes automatically when the selection is made)
+    fileDialog.close();
 }
+
 
 
 void MainWindow::on_browse_2_clicked()
 {
 
-    QString directory1 = QFileDialog::getExistingDirectory(this, "Select Directory");
-    if (!directory1.isEmpty()) {
-        ui->path_2->setText(directory1);
+    QFileDialog fileDialog(this, "Select .ovpn File");
+
+    // Set options for the file dialog to only show files
+    fileDialog.setFileMode(QFileDialog::ExistingFile);
+    fileDialog.setNameFilter("Text Files (*.txt)");
+
+    // Show the dialog and get the selected file
+    QString fileName = fileDialog.getOpenFileName(this, "Select .txt File", "", "Text Files (*.txt)");
+
+    // Check if a file was selected
+    if (!fileName.isEmpty()) {
+        // Set the selected file path to the UI element
+        ui->path_2->setText(fileName);
     }
+
+    // Close the dialog explicitly (though it closes automatically when the selection is made)
+    fileDialog.close();
+
+
 }
 
 
@@ -454,6 +483,12 @@ void MainWindow::value_read()
     }
 
     ui->table->setItemDelegate(new CustomDelegate(ui->table));  // Set custom delegate for drawing lines
+
+}
+
+
+void MainWindow::on_delete_2_clicked()
+{
 
 }
 
