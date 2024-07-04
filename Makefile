@@ -369,6 +369,7 @@ qrc_resources.cpp: resources.qrc \
 		images/Group\ 10.png \
 		images/Group\ 11.png \
 		images/Downloading.png \
+		images/act.png \
 		images/Dashboard\ Layout.png \
 		images/upload.png \
 		images/Menu.png \
@@ -377,6 +378,7 @@ qrc_resources.cpp: resources.qrc \
 		images/location.png \
 		images/Ellipse\ 3.png \
 		images/connection.svg \
+		images/inact.png \
 		images/connected_icon.png \
 		images/connect_icon.png \
 		images/CMakeLists.txt.user \

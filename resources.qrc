@@ -20,5 +20,7 @@
         <file>images/new.png</file>
         <file>images/delete.png</file>
         <file>config.txt</file>
+        <file>images/act.png</file>
+        <file>images/inact.png</file>
     </qresource>
 </RCC>

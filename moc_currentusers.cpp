@@ -22,8 +22,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_CurrentUsers_t {
-    QByteArrayData data[8];
-    char stringdata0[76];
+    QByteArrayData data[7];
+    char stringdata0[69];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -37,13 +37,12 @@ QT_MOC_LITERAL(1, 13, 11), // "userDeleted"
 QT_MOC_LITERAL(2, 25, 0), // ""
 QT_MOC_LITERAL(3, 26, 4), // "name"
 QT_MOC_LITERAL(4, 31, 2), // "ip"
-QT_MOC_LITERAL(5, 34, 6), // "status"
-QT_MOC_LITERAL(6, 41, 13), // "connectedTime"
-QT_MOC_LITERAL(7, 55, 20) // "checkBoxStateChanged"
+QT_MOC_LITERAL(5, 34, 13), // "connectedTime"
+QT_MOC_LITERAL(6, 48, 20) // "checkBoxStateChanged"
 
     },
     "CurrentUsers\0userDeleted\0\0name\0ip\0"
-    "status\0connectedTime\0checkBoxStateChanged"
+    "connectedTime\0checkBoxStateChanged"
 };
 #undef QT_MOC_LITERAL
 
@@ -61,11 +60,11 @@ static const uint qt_meta_data_CurrentUsers[] = {
        2,       // signalCount
 
  // signals: name, argc, parameters, tag, flags
-       1,    4,   24,    2, 0x06 /* Public */,
-       7,    0,   33,    2, 0x06 /* Public */,
+       1,    3,   24,    2, 0x06 /* Public */,
+       6,    0,   31,    2, 0x06 /* Public */,
 
  // signals: parameters
-    QMetaType::Void, QMetaType::QString, QMetaType::QString, QMetaType::QString, QMetaType::QString,    3,    4,    5,    6,
+    QMetaType::Void, QMetaType::QString, QMetaType::QString, QMetaType::QString,    3,    4,    5,
     QMetaType::Void,
 
        0        // eod
@@ -77,14 +76,14 @@ void CurrentUsers::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id
         auto *_t = static_cast<CurrentUsers *>(_o);
         (void)_t;
         switch (_id) {
-        case 0: _t->userDeleted((*reinterpret_cast< const QString(*)>(_a[1])),(*reinterpret_cast< const QString(*)>(_a[2])),(*reinterpret_cast< const QString(*)>(_a[3])),(*reinterpret_cast< const QString(*)>(_a[4]))); break;
+        case 0: _t->userDeleted((*reinterpret_cast< const QString(*)>(_a[1])),(*reinterpret_cast< const QString(*)>(_a[2])),(*reinterpret_cast< const QString(*)>(_a[3]))); break;
         case 1: _t->checkBoxStateChanged(); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
         int *result = reinterpret_cast<int *>(_a[0]);
         {
-            using _t = void (CurrentUsers::*)(const QString & , const QString & , const QString & , const QString & );
+            using _t = void (CurrentUsers::*)(const QString & , const QString & , const QString & );
             if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&CurrentUsers::userDeleted)) {
                 *result = 0;
                 return;
@@ -141,9 +140,9 @@ int CurrentUsers::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 }
 
 // SIGNAL 0
-void CurrentUsers::userDeleted(const QString & _t1, const QString & _t2, const QString & _t3, const QString & _t4)
+void CurrentUsers::userDeleted(const QString & _t1, const QString & _t2, const QString & _t3)
 {
-    void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t2))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t3))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t4))) };
+    void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t2))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t3))) };
     QMetaObject::activate(this, &staticMetaObject, 0, _a);
 }
 

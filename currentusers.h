@@ -15,12 +15,12 @@ class CurrentUsers : public QWidget
 
 public:
     explicit CurrentUsers(QWidget *parent = nullptr);
-    void addUser(const QString &name, const QString &ip, const QString &status, const QString &connectedTime);
+    void addUser(const QString &name, const QString &ip, QLabel *status, const QString &connectedTime);
     QList<QCheckBox*> getCheckBoxes() const;
     void setAllCheckBoxes(bool checked);
 
 signals:
-    void userDeleted(const QString &name, const QString &ip, const QString &status, const QString &connectedTime);
+    void userDeleted(const QString &name, const QString &ip,  const QString &connectedTime);
     void checkBoxStateChanged();
 
 private:

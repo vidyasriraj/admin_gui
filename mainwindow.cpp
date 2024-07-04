@@ -393,19 +393,34 @@ void MainWindow::addUser()
                  QString::number(QRandomGenerator::global()->bounded(256)) + "." +
                  QString::number(QRandomGenerator::global()->bounded(256)) + "." +
                  QString::number(QRandomGenerator::global()->bounded(256));
-    QString status = (QRandomGenerator::global()->bounded(2) == 0) ? "Active" : "Inactive";
+    bool isActive = (QRandomGenerator::global()->bounded(2) == 0);
+
+    QLabel *statusLabel = new QLabel;
+    statusLabel->setFixedSize(80, 20); // Adjust size as needed
+
+    QPixmap pixmap; // Create a QPixmap object
+    if (isActive) {
+        pixmap = QPixmap(":/logos/images/act.png"); // Load active icon
+    } else {
+        pixmap = QPixmap(":/logos/images/inact.png"); // Load inactive icon
+    }
+
+    // Scale pixmap to fit the size of the QLabel
+    pixmap = pixmap.scaled(statusLabel->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation);
+
+    // Set pixmap to the QLabel
+    statusLabel->setPixmap(pixmap);
     QString connectedTime = QString::number(QRandomGenerator::global()->bounded(24)) + ":" +
                             QString("%1").arg(QRandomGenerator::global()->bounded(60), 2, 10, QChar('0'));
 
-    currentUsers->addUser(name, ip, status, connectedTime);
+    currentUsers->addUser(name, ip, statusLabel, connectedTime);
 }
 
-void MainWindow::handleDeletedUser(const QString &name, const QString &ip, const QString &status, const QString &connectedTime)
+void MainWindow::handleDeletedUser(const QString &name, const QString &ip,  const QString &connectedTime)
 {
     qDebug() << "Deleted user details:";
     qDebug() << "Name:" << name;
     qDebug() << "IP:" << ip;
-    qDebug() << "Status:" << status;
     qDebug() << "Connected Time:" << connectedTime;
 
     // You can add more code here to handle the deleted user information as needed
@@ -486,9 +501,4 @@ void MainWindow::value_read()
 
 }
 
-
-void MainWindow::on_delete_2_clicked()
-{
-
-}
 

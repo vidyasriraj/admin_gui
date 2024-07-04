@@ -70,7 +70,7 @@ private slots:
         }
     }
     void addUser();
-    void handleDeletedUser(const QString &name, const QString &ip, const QString &status, const QString &connectedTime);
+    void handleDeletedUser(const QString &name, const QString &ip,  const QString &connectedTime);
     void processCheckBoxes();
     void onMainCheckBoxToggled(bool checked);
     void updateMainCheckBox();
@@ -95,7 +95,7 @@ private slots:
         return keyValuePairs;
     }
     void value_read();
-    void on_delete_2_clicked();
+
 
 private:
     Ui::MainWindow *ui;

@@ -1,5 +1,6 @@
 #include "currentusers.h"
 #include <QIcon>
+#include <QMessageBox>
 
 CurrentUsers::CurrentUsers(QWidget *parent) : QWidget(parent)
 {
@@ -77,7 +78,7 @@ CurrentUsers::CurrentUsers(QWidget *parent) : QWidget(parent)
 
 }
 
-void CurrentUsers::addUser(const QString &name, const QString &ip, const QString &status, const QString &connectedTime)
+void CurrentUsers::addUser(const QString &name, const QString &ip, QLabel *status, const QString &connectedTime)
 {
     QGridLayout *userLayout = new QGridLayout();
 
@@ -110,24 +111,24 @@ void CurrentUsers::addUser(const QString &name, const QString &ip, const QString
 
     QLabel *nameLabel = new QLabel(name, this);
     QLabel *ipLabel = new QLabel(ip, this);
-    QLabel *statusLabel = new QLabel(status, this);
+
     QLabel *connectedTimeLabel = new QLabel(connectedTime, this);
     QPushButton *deleteButton = new QPushButton(QIcon(":/logos/images/delete.png"), "", this);
 
     userLayout->addWidget(checkbox, 0, 0);
     userLayout->addWidget(nameLabel, 0, 1);
     userLayout->addWidget(ipLabel, 0, 2);
-    userLayout->addWidget(statusLabel, 0, 3);
+    userLayout->addWidget(status, 0, 3);
     userLayout->addWidget(connectedTimeLabel, 0, 4);
     userLayout->addWidget(deleteButton, 0, 5);
 
     // Set column stretch to adjust the spacing between columns
-    userLayout->setColumnStretch(0, 160); // Checkbox column
-    userLayout->setColumnStretch(1, 400); // Name column
-    userLayout->setColumnStretch(2, 500); // IP column
-    userLayout->setColumnStretch(3, 320); // Status column
-    userLayout->setColumnStretch(4, 310); // Connected time column
-    userLayout->setColumnStretch(5, 100); // Delete button column
+    userLayout->setColumnStretch(0, 180); // Checkbox column
+    userLayout->setColumnStretch(1, 350); // Name column
+    userLayout->setColumnStretch(2, 470); // IP column
+    userLayout->setColumnStretch(3, 370); // Status column
+    userLayout->setColumnStretch(4, 300); // Connected time column
+    userLayout->setColumnStretch(5, 125); // Delete button column
     // Add user layout before the stretch (spacer)
     scrollLayout->insertLayout(0, userLayout);
     QSpacerItem *spacer = new QSpacerItem(20, 10, QSizePolicy::Fixed, QSizePolicy::Fixed);
@@ -136,17 +137,51 @@ void CurrentUsers::addUser(const QString &name, const QString &ip, const QString
 
 
     connect(deleteButton, &QPushButton::clicked, [=]() {
-        emit userDeleted(name, ip, status, connectedTime);
-        // Remove the user layout when the delete button is clicked
-        scrollLayout->removeItem(userLayout);
-        delete userLayout;
-        checkBoxes.removeOne(checkbox);
-        delete checkbox;
-        delete nameLabel;
-        delete ipLabel;
-        delete statusLabel;
-        delete connectedTimeLabel;
-        delete deleteButton;
+        // Create a message box for confirmation
+        QMessageBox msgBox;
+        msgBox.setWindowTitle("Delete User");
+        msgBox.setText("Are you sure you want to delete this user?");
+        msgBox.setStandardButtons(QMessageBox::Yes | QMessageBox::No);
+
+        // Apply black color stylesheet
+        msgBox.setStyleSheet(
+            "QMessageBox {"
+            "    background-color: #ffffff;"    // Dark background
+            "    color: #ffffff;"               // White text
+            "}"
+            "QPushButton {"
+            "    background-color: #333333;"    // Dark grey button
+            "    color: #ffffff;"               // White text
+            "    border: 1px solid #555555;"    // Border color
+            "    padding: 5px 10px;"            // Button padding
+            "}"
+            "QPushButton:hover {"
+            "    background-color: #444444;"    // Slightly lighter button on hover
+            "}"
+            "QPushButton:pressed {"
+            "    background-color: #555555;"    // Even lighter button on press
+            "}"
+            );
+
+        // Center the message box on the parent widget
+
+        msgBox.setModal(true);
+
+        // Execute the message box and handle the response
+        if (msgBox.exec() == QMessageBox::Yes) {
+            emit userDeleted(name, ip, connectedTime);
+
+            // Remove the user layout when the delete button is clicked
+            scrollLayout->removeItem(userLayout);
+            delete userLayout;
+            checkBoxes.removeOne(checkbox);
+            delete checkbox;
+            delete nameLabel;
+            delete ipLabel;
+            delete status;
+            delete connectedTimeLabel;
+            delete deleteButton;
+        }
     });
 }
 
